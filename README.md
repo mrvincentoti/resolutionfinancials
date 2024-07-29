@@ -14,4 +14,24 @@
 7. Start the project by running `php artisan serve`
 
 
-
+### Collaborating on the Project
+1. Create a New Branch: Before making any changes, switch to a new branch using:
+    ```
+    git checkout -b feature/your-feature-name
+    ```
+2. Make Your Changes: Work on your feature or fix.
+3. Commit Changes: After making changes, commit them using:
+   ```
+   git add .
+   ```
+   ```
+   git commit -m "A descriptive message about your changes"
+   ```
+4. Push Changes: Push your branch to the remote repository with:
+   ```
+   git push origin feature/your-feature-name
+   ```
+5. Open a Pull Request (PR): Go to the repository on GitHub, and open a new Pull Request from your branch to the main 
+   branch. Ensure you assign mrvincentoti for review.
+6. Code Review: Wait for the PR to be reviewed. Make any requested changes.
+7. Merge to Main: Once the PR is approved, merge it into the main branch.
