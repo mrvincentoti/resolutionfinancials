@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog CMS - Admin Panel</title>
+    <title>Nasida CMS - Admin Panel</title>
     <meta name="author" content="Yasser Elgammal">
     <meta name="description" content="">
 
@@ -44,6 +44,13 @@
         .account-link:hover {
             background: #3d68ff;
         }
+               /* Optional: Add a transition for the button */
+        .add-row-button {
+            transition: background-color 0.3s ease;
+        }
+        .add-row-button:hover {
+            background-color: #2563eb; /* Tailwind blue-600 */
+        }
     </style>
     <style>
         @import url(https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css);
@@ -51,6 +58,22 @@
         .active\:bg-gray-50:active {
             --tw-bg-opacity: 1;
             background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+        }
+    </style>
+    <style>
+        .dropdown-menu-enter-active,
+        .dropdown-menu-leave-active {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+    
+        .dropdown-menu-enter {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+    
+        .dropdown-menu-leave-to {
+            opacity: 0;
+            transform: translateY(-10px);
         }
     </style>
 </head>
@@ -67,16 +90,73 @@
                     Writer
                 @endcan
             </a>
-            <button onclick="location.href='{{ route('admin.post.create') }}';"
+            <!-- <button onclick="location.href='{{ route('admin.post.create') }}';"
                 class="w-full bg-white cta-btn font-semibold py-2 mt-1 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
                 <i class="fas fa-plus mr-3"></i> New Post
-            </button>
+            </button> -->
         </div>
         <nav class="text-white text-base font-semibold">
             <a href="{{ route('admin.index') }}"
                 class="{{ request()->routeIs('admin.index') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white py-4 pl-6 nav-item">
                 <i class="fas fa-tachometer-alt mr-3"></i>
                 Dashboard
+            </a>
+            <!-- @can('admin-only')
+                <a href="{{ route('admin.project.index') }}"
+                    class="{{ request()->routeIs('*.project.*') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white py-4 pl-6 nav-item">
+                    <i class="far fa-file mr-3"></i>
+                    Project
+                </a>
+                <a href="{{ route('admin.agency.index') }}"
+                    class="{{ request()->routeIs('*.agency.*') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white py-4 pl-6 nav-item">
+                    <i class="far fa-file mr-3"></i>
+                    Sponsoring Agency
+                </a>
+                <a href="{{ route('admin.announcement.index') }}"
+                    class="{{ request()->routeIs('*.announcement.*') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white py-4 pl-6 nav-item">
+                    <i class="far fa-file mr-3"></i>
+                    Project Announcement
+                </a>
+            @endcan -->
+        @can('admin-only')
+            <div class="relative">
+                <a id="dropdown-button"
+                    class="flex items-center text-white py-4 pl-6 rounded-lg">
+                    <i class="far fa-file mr-3"></i>
+                    Manage Project
+                    <i class="ml-2 fas fa-chevron-down"></i>
+                </a>
+                <div id="dropdown-menu"
+                    class="hidden mt-2 w-full bg-white border border-gray-50 rounded-lg shadow-lg z-10 transition duration-300 ease-in-out">
+                    <a href="{{ route('admin.project.index') }}"
+                        class="{{ request()->routeIs('*.project.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
+                        <i class="far fa-file mr-3"></i>
+                        Project
+                    </a>
+                    <a href="{{ route('admin.agency.index') }}"
+                        class="{{ request()->routeIs('*.agency.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
+                        <i class="far fa-file mr-3"></i>
+                        Agency
+                    </a>
+                    <a href="{{ route('admin.announcement.index') }}"
+                        class="{{ request()->routeIs('*.announcement.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
+                        <i class="far fa-file mr-3"></i>
+                        Announcement
+                    </a>
+                </div>
+            </div>
+        @endcan
+            @can('admin-only')
+                <a href="{{ route('admin.banner.index') }}"
+                    class="{{ request()->routeIs('*.banner.*') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white py-4 pl-6 nav-item">
+                    <i class="far fa-file mr-3"></i>
+                    Banner
+                </a>
+            @endcan
+            <a href="{{ route('admin.post.index') }}"
+                class="{{ request()->routeIs('*.post.*') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white  py-4 pl-6 nav-item">
+                <i class="fas fa-newspaper mr-3"></i>
+                Posts
             </a>
             @can('admin-only')
                 <a href="{{ route('admin.category.index') }}"
@@ -85,11 +165,6 @@
                     Categories
                 </a>
             @endcan
-            <a href="{{ route('admin.post.index') }}"
-                class="{{ request()->routeIs('*.post.*') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white  py-4 pl-6 nav-item">
-                <i class="fas fa-newspaper mr-3"></i>
-                Posts
-            </a>
             <a href="{{ route('admin.tag.index') }}"
                 class="{{ request()->routeIs('*.tag.*') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white  py-4 pl-6 nav-item">
                 <i class="fas fa-tag mr-3"></i>
@@ -374,6 +449,263 @@
             });
         </script>
     @endif
+
+    @if (request()->routeIs('*.banner.create') || request()->routeIs('*.banner.edit'))
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+            integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+        <script>
+            $('#summernote1').summernote({
+                placeholder: 'Hello ..!',
+                tabsize: 2,
+                height: 120,
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'video']],
+                    ['view', ['codeview', 'help']]
+                ]
+            });
+        </script>
+        <script>
+            $('#summernote2').summernote({
+                placeholder: 'Hello ..!',
+                tabsize: 2,
+                height: 120,
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'video']],
+                    ['view', ['codeview', 'help']]
+                ]
+            });
+        </script>
+        <script>
+            $('#project_need').summernote({
+                placeholder: 'Hello ..!',
+                tabsize: 2,
+                height: 120,
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'video']],
+                    ['view', ['codeview', 'help']]
+                ]
+            });
+        </script>
+        <script>
+            $('#description_of_asset').summernote({
+                placeholder: 'Hello ..!',
+                tabsize: 2,
+                height: 120,
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'video']],
+                    ['view', ['codeview', 'help']]
+                ]
+            });
+        </script>
+        <script>
+            $('#description_of_service').summernote({
+                placeholder: 'Hello ..!',
+                tabsize: 2,
+                height: 120,
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'video']],
+                    ['view', ['codeview', 'help']]
+                ]
+            });
+        </script>
+        <script>
+            $('#rationale_for_selection').summernote({
+                placeholder: 'Hello ..!',
+                tabsize: 2,
+                height: 120,
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'video']],
+                    ['view', ['codeview', 'help']]
+                ]
+            });
+        </script>
+        <script>
+            $('#stakeholder_consultations').summernote({
+                placeholder: 'Hello ..!',
+                tabsize: 2,
+                height: 120,
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'video']],
+                    ['view', ['codeview', 'help']]
+                ]
+            });
+        </script>
+        <script>
+            $('#title').change(function (e) {
+                $.get('{{ route('admin.banner.getslug') }}', {
+                    'title': $(this).val()
+                },
+                    function (data) {
+                        $('#slug').val(data.slug);
+                    }
+                );
+            });
+        </script>
+    @endif
+
+    @if (request()->routeIs('*.project.create') || request()->routeIs('*.project.edit'))
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+            integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
+        <script>
+            $('#project_need').summernote({
+                placeholder: 'Hello ..!',
+                tabsize: 2,
+                height: 120,
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'video']],
+                    ['view', ['codeview', 'help']]
+                ]
+            });
+        </script>
+        <script>
+            $('#description_of_asset').summernote({
+                placeholder: 'Hello ..!',
+                tabsize: 2,
+                height: 120,
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'video']],
+                    ['view', ['codeview', 'help']]
+                ]
+            });
+        </script>
+        <script>
+            $('#description_of_service').summernote({
+                placeholder: 'Hello ..!',
+                tabsize: 2,
+                height: 120,
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'video']],
+                    ['view', ['codeview', 'help']]
+                ]
+            });
+        </script>
+        <script>
+            $('#rationale_for_selection').summernote({
+                placeholder: 'Hello ..!',
+                tabsize: 2,
+                height: 120,
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'video']],
+                    ['view', ['codeview', 'help']]
+                ]
+            });
+        </script>
+        <script>
+            $('#stakeholder_consultations').summernote({
+                placeholder: 'Hello ..!',
+                tabsize: 2,
+                height: 120,
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'video']],
+                    ['view', ['codeview', 'help']]
+                ]
+            });
+        </script>
+            <script>
+                $('#rationale_for_selection').summernote({
+                    placeholder: 'Hello ..!',
+                    tabsize: 2,
+                    height: 120,
+                    toolbar: [
+                        ['style', ['style']],
+                        ['font', ['bold', 'underline', 'clear']],
+                        ['color', ['color']],
+                        ['para', ['ul', 'ol', 'paragraph']],
+                        ['table', ['table']],
+                        ['insert', ['link', 'video']],
+                        ['view', ['codeview', 'help']]
+                    ]
+                });
+            </script>
+        <script>
+            $('#project_title').change(function (e) {
+                $.get('{{ route('admin.project.getslug') }}', {
+                    'project_title': $(this).val()
+                },
+                    function (data) {
+                        $('#slug').val(data.slug);
+                    }
+                );
+            });
+        </script>
+    @endif
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const dropdownButton = document.getElementById('dropdown-button');
+            const dropdownMenu = document.getElementById('dropdown-menu');
+
+            dropdownButton.addEventListener('click', function () {
+                dropdownMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
 
 </body>
 

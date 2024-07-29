@@ -11,9 +11,10 @@ class HomeController extends Controller
     public function index()
     {
         // Get the active posts with (Category and User) details
-        $posts = Post::published()->with(['category', 'user'])->latest('created_at')->paginate(10);
+        //$posts = Post::published()->with(['category', 'user'])->latest('created_at')->paginate(10);
 
-        return view('front.index', compact('posts'));
+        // return view('front.index', compact('posts'));
+        return view('front.index');
     }
 
 }

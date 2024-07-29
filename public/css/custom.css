@@ -1,0 +1,29 @@
+#example {
+    border-collapse: collapse;
+}
+
+#example th, #example td {
+    border: 1px solid #ddd; /* Customize the border style and color */
+    padding: 15px;
+    border: 1px solid rgba(66, 173, 78, 1) !important;
+}
+
+/* Style the search input field */
+#dt-search-0 label {
+    font-size: 16px; /* Change the font size */
+    font-weight: bold; /* Make the label bold */
+    color: #333; /* Change the label color */
+}
+
+#dt-search-0 {
+    padding: 5px; /* Add padding inside the input */
+    margin-left: 10px; /* Add some space between the label and input */
+    border: 1px solid rgba(66, 173, 78, 1) !important; /* Change the border color */
+    border-radius: 3px; /* Add rounded corners */
+    outline: none; /* Remove the default outline */
+}
+
+#dt-search-0:focus {
+    border-color: rgba(66, 173, 78, 1) !important; /* Change the border color when focused */
+    box-shadow: 0 0 5px rgba(66, 173, 78, 1) !important; /* Add shadow effect when focused */
+}

@@ -20,5 +20,10 @@ class DatabaseSeeder extends Seeder
         \App\Models\Post::factory(50)->create();
         \App\Models\Page::factory(10)->create();
         \App\Models\Tag::factory(10)->create();
+
+        $this->call([
+            SectorsTableSeeder::class,
+            PhasesTableSeeder::class,
+        ]);
     }
 }
