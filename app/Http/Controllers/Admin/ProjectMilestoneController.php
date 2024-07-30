@@ -1,50 +1,51 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\MilestoneRequest;
 use App\Models\ProjectMilestone;
 use Illuminate\Http\Request;
 
 class ProjectMilestoneController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+    public function __construct()
     {
-        //
+        $this->authorizeResource(ProjectMilestone::class, 'milestone');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    public function index()
+    {
+        $milestones = ProjectMilestone::with([])->latest()->paginate(15);
+
+        return view('admin.milestone.index', compact('milestones'));
+    }
+
+
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    public function store(MilestoneRequest $request)
     {
-        //
+        $milestone_data = $request->safe()->except('image');
+
+        $agency = ProjectMilestone::create($milestone_data);
+
+        return back()->with('success', 'Your data has been saved successfully!');
     }
 
-    /**
-     * Display the specified resource.
-     */
+  
     public function show(ProjectMilestone $projectMilestone)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+    
     public function edit(ProjectMilestone $projectMilestone)
     {
-        //
+
     }
 
     /**
