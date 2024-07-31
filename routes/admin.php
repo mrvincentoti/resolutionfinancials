@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AnnouncementController;
+use App\Http\Controllers\Admin\ContractInformationController;
 use App\Http\Controllers\Admin\ProjectMilestoneController;
 use App\Models\SponsoringAgency;
 use Illuminate\Support\Facades\Route;
@@ -32,6 +33,7 @@ Route::middleware(['auth', 'can:admin-login'])->name('admin.')->prefix('/admin')
         'agency' => SponsoringAgencyController::class,
         'announcement' => AnnouncementController::class,
         'milestone' => ProjectMilestoneController::class,
+        'contract' => ContractInformationController::class,
     ]);
     Route::resource('/account', AccountController::class, ['only' => ['index', 'update']]);
     // Special To Admin Role Only

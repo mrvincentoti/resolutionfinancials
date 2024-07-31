@@ -76,6 +76,26 @@
             transform: translateY(-10px);
         }
     </style>
+    <style>
+        /* Custom styles to hide the default file input */
+        .file-input-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+    
+        .file-input-wrapper input[type=file] {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            padding: 0;
+            font-size: 100px;
+            cursor: pointer;
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+    </style>
 </head>
 
 <body class="bg-gray-100 font-family-karla flex">
@@ -147,6 +167,11 @@
                         class="{{ request()->routeIs('*.milestone.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
                         <i class="far fa-file mr-3"></i>
                         Milestone
+                    </a>
+                    <a href="{{ route('admin.contract.index') }}"
+                        class="{{ request()->routeIs('*.contract.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
+                        <i class="far fa-file mr-3"></i>
+                        Contract Information
                     </a>
                 </div>
             </div>
@@ -673,22 +698,22 @@
                 ]
             });
         </script>
-            <script>
-                $('#rationale_for_selection').summernote({
-                    placeholder: 'Hello ..!',
-                    tabsize: 2,
-                    height: 120,
-                    toolbar: [
-                        ['style', ['style']],
-                        ['font', ['bold', 'underline', 'clear']],
-                        ['color', ['color']],
-                        ['para', ['ul', 'ol', 'paragraph']],
-                        ['table', ['table']],
-                        ['insert', ['link', 'video']],
-                        ['view', ['codeview', 'help']]
-                    ]
-                });
-            </script>
+        <script>
+            $('#rationale_for_selection').summernote({
+                placeholder: 'Hello ..!',
+                tabsize: 2,
+                height: 120,
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'video']],
+                    ['view', ['codeview', 'help']]
+                ]
+            });
+        </script>
         <script>
             $('#project_title').change(function (e) {
                 $.get('{{ route('admin.project.getslug') }}', {
@@ -711,6 +736,27 @@
             });
         });
     </script>
+   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Select all file input wrappers
+      const fileInputWrappers = document.querySelectorAll('.file-input-wrapper');
+
+      // Add event listeners to each file input and button pair
+      fileInputWrappers.forEach(wrapper => {
+        const fileInput = wrapper.querySelector('input[type=file]');
+        const fileInputButton = wrapper.querySelector('button');
+
+        fileInputButton.addEventListener('click', function () {
+          fileInput.click();
+        });
+
+        fileInput.addEventListener('change', function () {
+          const fileName = fileInput.files.length > 0 ? fileInput.files[0].name : 'Choose a file';
+          fileInputButton.textContent = fileName;
+        });
+      });
+    });
+  </script>
 
 </body>
 
