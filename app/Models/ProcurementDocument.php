@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class ProcurementDocument extends Model
 {
     use HasFactory;
+    protected $fillable = ['document_name', 'image','project_id'];
 }
