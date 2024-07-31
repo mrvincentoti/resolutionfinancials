@@ -65,12 +65,12 @@
         .dropdown-menu-leave-active {
             transition: opacity 0.3s ease, transform 0.3s ease;
         }
-    
+
         .dropdown-menu-enter {
             opacity: 0;
             transform: translateY(-10px);
         }
-    
+
         .dropdown-menu-leave-to {
             opacity: 0;
             transform: translateY(-10px);
@@ -83,7 +83,7 @@
             overflow: hidden;
             display: inline-block;
         }
-    
+
         .file-input-wrapper input[type=file] {
             position: absolute;
             top: 0;
@@ -172,6 +172,11 @@
                         class="{{ request()->routeIs('*.contract.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
                         <i class="far fa-file mr-3"></i>
                         Contract Information
+                    </a>
+                    <a href="{{ route('admin.summary.index') }}"
+                        class="{{ request()->routeIs('*.summary.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
+                        <i class="far fa-file mr-3"></i>
+                        Summary Document
                     </a>
                 </div>
             </div>
