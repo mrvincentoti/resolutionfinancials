@@ -50,44 +50,38 @@
                                 <div class="font-bold text-xl mb-2">Summary Documents</div>
                                 <hr>
                                 <!-- Start of Rows -->
-                                <div class="mt-4">
-                                    <!-- Row 1 -->
-                                    <div class="flex items-center mb-4">
-                                        <img src="https://via.placeholder.com/50" alt="Placeholder Image"
-                                            class="w-12 h-12 object-cover  mr-4">
-                                        <div>
-                                            <div class="font-bold text-lg">Title 1</div>
-                                            <p class="text-gray-600 text-sm">Small description for title 1.</p>
+                                <form method="POST" action="{{ route('admin.summary.store') }}" enctype="multipart/form-data">
+                                        @csrf
+                                        <div class="grid gap-6 mb-6 md:grid-cols-1">
+                                            <div class="mb-1">
+                                                <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Title</label>
+                                                <input type="text" id="title" value="{{ old('title') }}" name="title"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    placeholder="Title of the post" required>
+                                            </div>
+                                            <!-- <div class="mb-1">
+                                                <label class="block text-sm text-gray-600" for="message">Image</label>
+                                                <input type="file" id="myimage" name="image">
+                                                <input type="hidden"  name="project_id" value="{{ $project->id}}">
+                                            </div> -->
+                                            <div class="file-input-wrapper mb-1">
+                                                <button type="button"
+                                                    class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full text-center">
+                                                    Select Image
+                                                </button>
+                                                <input type="file" id="myimage" name="image" required>
+                                                <input type="hidden" name="project_id" value="{{ $project->id}}">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <!-- Row 2 -->
-                                    <div class="flex items-center mb-4">
-                                        <img src="https://via.placeholder.com/50" alt="Placeholder Image"
-                                            class="w-12 h-12 object-cover  mr-4">
-                                        <div>
-                                            <div class="font-bold text-lg">Title 2</div>
-                                            <p class="text-gray-600 text-sm">Small description for title 2.</p>
-                                        </div>
-                                    </div>
-                                    <!-- Row 3 -->
-                                    <div class="flex items-center mb-4">
-                                        <img src="https://via.placeholder.com/50" alt="Placeholder Image"
-                                            class="w-12 h-12 object-cover rounded-full mr-4">
-                                        <div>
-                                            <div class="font-bold text-lg">Title 3</div>
-                                            <p class="text-gray-600 text-sm">Small description for title 3.</p>
-                                        </div>
-                                    </div>
-                                    <!-- Add more rows as needed -->
-                                </div>
-                                <!-- End of Rows -->
-                                <button id="add-row" class="mt-4 bg-blue-500 text-white font-bold py-2 px-4 rounded add-row-button w-full">
-                                    Add Document
-                                </button>
+                                        <!-- <button type="submit" class="px-4 py-1 text-white font-light tracking-wider bg-blue-600 rounded">Add</button> -->
+                                        <button type="submit" id="add-row" class="mt-4 bg-blue-500 text-white font-bold py-2 px-4 rounded add-row-button w-full">
+                                            Add Summary
+                                        </button>
+                                    </form>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- <div>
                         <img class="h-auto max-w-full rounded-lg"
                             src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="">
@@ -226,7 +220,7 @@
                     </div> -->
                 </div>
                 <div class="grid gap-3">
- 
+
                     <div>
                         <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
                             <div class="px-10 py-6">

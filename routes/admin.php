@@ -17,6 +17,7 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\SponsoringAgencyController;
+use App\Http\Controllers\Admin\SummaryDocumentController;
 
 Route::middleware(['auth', 'can:admin-login'])->name('admin.')->prefix('/admin')->group(function () {
     // This Roles can manage with Admin & Writers with specific policies.
@@ -34,6 +35,7 @@ Route::middleware(['auth', 'can:admin-login'])->name('admin.')->prefix('/admin')
         'announcement' => AnnouncementController::class,
         'milestone' => ProjectMilestoneController::class,
         'contract' => ContractInformationController::class,
+        'summary' => SummaryDocumentController::class,
     ]);
     Route::resource('/account', AccountController::class, ['only' => ['index', 'update']]);
     // Special To Admin Role Only

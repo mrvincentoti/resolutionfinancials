@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class SummaryDocument extends Model
 {
     use HasFactory;
+    protected $fillable = ['title', 'image','project_id'];
 }

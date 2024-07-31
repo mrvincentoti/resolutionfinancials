@@ -1,7 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\SummaryDocumentRequest;
 use App\Models\SummaryDocument;
 use Illuminate\Http\Request;
 
@@ -12,7 +14,8 @@ class SummaryDocumentController extends Controller
      */
     public function index()
     {
-        //
+        $summaries = SummaryDocument::with([])->latest()->paginate(15);
+        return view("admin.summary.index", compact("summaries"));
     }
 
     /**
@@ -26,9 +29,17 @@ class SummaryDocumentController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(SummaryDocumentRequest $request)
     {
-        //
+        $summary_data = $request->safe()->except('image');
+
+        if ($request->hasfile('image')) {
+            $get_file = $request->file('image')->store('images/agency');
+            $summary_data['image'] = $get_file;
+        }
+        $summary = SummaryDocument::create($summary_data);
+
+        return back()->with('success', 'Your data has been saved successfully!');
     }
 
     /**
