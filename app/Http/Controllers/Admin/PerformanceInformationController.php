@@ -1,7 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\PerformanceInformationRequest;
 use App\Models\PerformanceInformation;
 use Illuminate\Http\Request;
 
@@ -12,7 +14,8 @@ class PerformanceInformationController extends Controller
      */
     public function index()
     {
-        //
+        $performances = PerformanceInformation::with([])->latest()->paginate(15);
+        return view("admin.performance.index", compact("performances"));
     }
 
     /**
@@ -26,9 +29,13 @@ class PerformanceInformationController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(PerformanceInformationRequest $request)
     {
-        //
+        $performance_data = $request->safe()->except('image');
+
+        $performance = PerformanceInformation::create($performance_data);
+
+        return back()->with('success', 'Your data has been saved successfully!');
     }
 
     /**

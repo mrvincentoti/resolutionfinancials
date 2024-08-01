@@ -340,40 +340,38 @@
                                 <div class="font-bold text-xl mb-2">Performance Information</div>
                                 <hr>
                                 <!-- Start of Rows -->
-                                <div class="mt-4">
-                                    <!-- Row 1 -->
-                                    <div class="flex items-center mb-4">
-                                        <img src="https://via.placeholder.com/50" alt="Placeholder Image"
-                                            class="w-12 h-12 object-cover  mr-4">
-                                        <div>
-                                            <div class="font-bold text-lg">Title 1</div>
-                                            <p class="text-gray-600 text-sm">Small description for title 1.</p>
+                                <form method="POST" action="{{ route('admin.performance.store') }}" enctype="multipart/form-data">
+                                    @csrf
+                                    <div class="grid gap-6 mb-6 md:grid-cols-1">
+                                        <div class="mb-1">
+                                            <label for="kpi" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Key Performance Indicators</label>
+                                            <input type="text" id="kpi" value="{{ old('key_performance_indicators') }}" name="key_performance_indicators"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                placeholder="Key Performance Indicators" required>
                                         </div>
-                                    </div>
-                                    <!-- Row 2 -->
-                                    <div class="flex items-center mb-4">
-                                        <img src="https://via.placeholder.com/50" alt="Placeholder Image"
-                                            class="w-12 h-12 object-cover  mr-4">
-                                        <div>
-                                            <div class="font-bold text-lg">Title 2</div>
-                                            <p class="text-gray-600 text-sm">Small description for title 2.</p>
+                                        <div class="mb-1">
+                                            <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Performance Failures</label>
+                                            <input type="text" id="title" value="{{ old('performance_failures') }}" name="performance_failures"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                placeholder="Performance Failures" required>
                                         </div>
-                                    </div>
-                                    <!-- Row 3 -->
-                                    <div class="flex items-center mb-4">
-                                        <img src="https://via.placeholder.com/50" alt="Placeholder Image"
-                                            class="w-12 h-12 object-cover rounded-full mr-4">
-                                        <div>
-                                            <div class="font-bold text-lg">Title 3</div>
-                                            <p class="text-gray-600 text-sm">Small description for title 3.</p>
+                                        <div class="mb-1">
+                                            <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Performance Assesment</label>
+                                            <textarea class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="description" name="performance_assessment">{{ old('performance_assessment') }}</textarea>
                                         </div>
+                                        <input type="hidden" name="project_id" value="{{ $project->id}}">
+                                        <!-- <div class="mb-1">
+                                            <label class="block text-sm text-gray-600" for="message">Image</label>
+                                            <input type="file" id="myimage" name="document">
+                                            <input type="hidden" name="project_id" value="{{ $project->id}}">
+                                        </div> -->
                                     </div>
-                                    <!-- Add more rows as needed -->
-                                </div>
-                                <!-- End of Rows -->
-                                <button id="add-row" class="mt-4 bg-blue-500 text-white font-bold py-2 px-4 rounded add-row-button w-full">
-                                    Add Document
-                                </button>
+                                    <!-- <button type="submit" class="px-4 py-1 text-white font-light tracking-wider bg-blue-600 rounded">Add</button> -->
+                                    <button type="submit" id="add-row"
+                                        class="mt-4 bg-blue-500 text-white font-bold py-2 px-4 rounded add-row-button w-full">
+                                        Add Performance
+                                    </button>
+                                </form>
                             </div>
                         </div>
                     </div>
