@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\SponsoringAgencyRequest;
 use App\Models\SponsoringAgency;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class SponsoringAgencyController extends Controller
 {
@@ -53,17 +54,31 @@ class SponsoringAgencyController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(SponsoringAgency $sponsoringAgency)
+    public function edit(SponsoringAgency $agency)
     {
-        //
+        return view('admin.agency.edit', compact('agency'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, SponsoringAgency $sponsoringAgency)
+    public function update(SponsoringAgencyRequest $request, SponsoringAgency $agency)
     {
-        //
+        $agency_data = $request->safe()->except('image');
+
+        if ($request->hasfile('image')) {
+            // Delete the old image if exists
+            if ($agency->image) {
+                Storage::delete($agency->image);
+            }
+            // Store the new image and save the path
+            $get_file = $request->file('image')->store('images/agency');
+            $agency_data['image'] = $get_file;
+        }
+
+        $agency->update($agency_data);
+
+        return redirect()->route('admin.agency.index')->with('message', 'Supporting Agency Document updated successfully!');
     }
 
     /**
