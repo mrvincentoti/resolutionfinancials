@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\ProcurementDocumentRequest;
 use App\Models\ProcurementDocument;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProcurementDocumentController extends Controller
 {
@@ -53,9 +54,9 @@ class ProcurementDocumentController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(ProcurementDocument $procurementDocument)
+    public function edit(ProcurementDocument $procurement)
     {
-        //
+        return view('admin.procurement.edit', compact('procurement'));
     }
 
     /**
