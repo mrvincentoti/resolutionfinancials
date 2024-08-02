@@ -24,6 +24,7 @@ class Project extends Model
         'rationale_for_selection',
         'stakeholder_consultations',
         'slug',
+        'lga_id'
     ];
 
     protected function createdAt(): Attribute
@@ -41,5 +42,10 @@ class Project extends Model
     public function phase()
     {
         return $this->belongsTo(Phase::class);
+    }
+
+    public function lga()
+    {
+        return $this->belongsTo(Lga::class);
     }
 }

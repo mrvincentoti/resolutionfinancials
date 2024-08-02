@@ -12,13 +12,27 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('projects', function (Blueprint $table) {
-            $table->string('location')->nullable()->change();
-            $table->string('value')->nullable()->change();
-            $table->text('project_need')->nullable()->change();
-            $table->text('description_of_asset')->nullable()->change();
-            $table->text('description_of_service')->nullable()->change();
-            $table->text('rationale_for_selection')->nullable()->change();
-            $table->text('stakeholder_consultations')->nullable()->change();
+            if (Schema::hasColumn('projects', 'location')) {
+                $table->string('location')->nullable()->change();
+            }
+            if (Schema::hasColumn('projects', 'value')) {
+                $table->string('value')->nullable()->change();
+            }
+            if (Schema::hasColumn('projects', 'project_need')) {
+                $table->text('project_need')->nullable()->change();
+            }
+            if (Schema::hasColumn('projects', 'description_of_asset')) {
+                $table->text('description_of_asset')->nullable()->change();
+            }
+            if (Schema::hasColumn('projects', 'description_of_service')) {
+                $table->text('description_of_service')->nullable()->change();
+            }
+            if (Schema::hasColumn('projects', 'rationale_for_selection')) {
+                $table->text('rationale_for_selection')->nullable()->change();
+            }
+            if (Schema::hasColumn('projects', 'stakeholder_consultations')) {
+                $table->text('stakeholder_consultations')->nullable()->change();
+            }
         });
     }
 
@@ -28,13 +42,27 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('projects', function (Blueprint $table) {
-            $table->string('location')->nullable(false)->change();
-            $table->string('value')->nullable(false)->change();
-            $table->string('project_need')->nullable(false)->change();
-            $table->string('description_of_asset')->nullable(false)->change();
-            $table->string('description_of_service')->nullable(false)->change();
-            $table->string('rationale_for_selection')->nullable(false)->change();
-            $table->string('stakeholder_consultations')->nullable(false)->change();
+            if (Schema::hasColumn('projects', 'location')) {
+                $table->string('location')->nullable(false)->change();
+            }
+            if (Schema::hasColumn('projects', 'value')) {
+                $table->string('value')->nullable(false)->change();
+            }
+            if (Schema::hasColumn('projects', 'project_need')) {
+                $table->text('project_need')->nullable(false)->change();
+            }
+            if (Schema::hasColumn('projects', 'description_of_asset')) {
+                $table->text('description_of_asset')->nullable(false)->change();
+            }
+            if (Schema::hasColumn('projects', 'description_of_service')) {
+                $table->text('description_of_service')->nullable(false)->change();
+            }
+            if (Schema::hasColumn('projects', 'rationale_for_selection')) {
+                $table->text('rationale_for_selection')->nullable(false)->change();
+            }
+            if (Schema::hasColumn('projects', 'stakeholder_consultations')) {
+                $table->text('stakeholder_consultations')->nullable(false)->change();
+            }
         });
     }
 };

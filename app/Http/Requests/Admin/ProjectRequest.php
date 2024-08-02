@@ -28,6 +28,7 @@ class ProjectRequest extends FormRequest
             'project_title' => ['required'],
             'sector_id' => [],
             'phase_id' => [],
+            'lga_id' => [],
             'location' => [],
             'value' => [],
             'last_update' => [],

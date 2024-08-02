@@ -79,11 +79,15 @@
     <!-- Topbar End -->
 
 
-    <!-- Navbar & Carousel Start -->
+    <!-- Navbar & Carousel Start #164516 -->
     <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
-            <a href="index.html" class="navbar-brand p-0">
-                <img src="img/logo.png" />
+        @if (request()->is('/') || request()->is('/home'))
+            <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+        @else
+            <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0 custom-green-menu">
+        @endif
+            <a href="{{ route('webhome') }}" class="navbar-brand p-0">
+                <img src="{{ asset('img/logo.png') }}" />
                 <!-- <h1 class="m-0"><i class="fa fa-user-tie me-2"></i>Startup</h1> -->
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -91,9 +95,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="" class="nav-item nav-link">Projects</a>
-                    <a href="" class="nav-item nav-link">Announcements</a>
+                    <a href="{{ route('webhome') }}" class="nav-item nav-link active">Home</a>
+                    <a href="{{ route('project.all') }}" class="nav-item nav-link">Projects</a>
+                    <a href="{{ route('announcement') }}" class="nav-item nav-link">Announcements</a>
                     <a href="" class="nav-item nav-link">PPPs In Nigeria</a>
                     <a href="" class="nav-item nav-link">PPP Disclosure Framework</a>
 
@@ -120,53 +124,13 @@
                 <!-- <a href="" class="btn btn-primary py-2 px-4 ms-3">Download</a> -->
             </div>
         </nav>
-
-        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="w-100" src="img/carousel-1.jpg" alt="Image">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 900px;">
-                            <h4 class="display-1 text-white mb-md-4 animated zoomIn">IBOM DEEP WATER PORT</h4>
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">The development of Lekki
-                                Deep Sea Port has been conceptualized on the basis
-                                of a significant gap in projected demand and capacity. Market studies indicate that the
-                                demand for containers is expected to grow at a CAGR of 12.9% up to 2025...
-                            </h5>
-                            <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                            <!-- <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contact Us</a> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="w-100" src="img/carousel-2.jpg" alt="Image">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 900px;">
-                            <h2 class="display-1 text-white mb-md-4 animated zoomIn">KAINJI AND JEBBA HYDROELECTRIC
-                                POWER PLANTS</h2>
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Hydro power is the most
-                                important and widely-used renewable source of energy.
-                                The national peak power demand forecast figure is 12,800MW as against the available
-                                power of less than 4000MW...
-                            </h5>
-                            <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                            <!-- <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contact Us</a> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+        <!--Start Banner-->
+        @if (request()->is('/') || request()->is('/home'))
+            @include('front.partials.banner', ['data' => 'banners'])
+        @endif
+        <!--End Banner-->
     </div>
     <!-- Navbar & Carousel End -->
-
 
     <!-- Full Screen Search Start -->
     <div class="modal fade" id="searchModal" tabindex="-1">

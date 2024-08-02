@@ -1,13 +1,21 @@
 <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container py-5">
+    @if (request()->is('/') || request()->is('/home'))
+        <div class="container py-5">
+    @else
+        <div class="container-fluid py-5 px-5">
+    @endif
         <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
             <h5 class="fw-bold text-primary text-uppercase">Projects</h5>
         </div>
         <div class="row g-5">
+            @if (request()->is('/') || request()->is('/home'))
             <div class="col-lg-3">
+            @else
+            <div class="col-lg-2">
+            @endif
                 <div class="row g-5">
                     <div class="accordion accordion-flush" id="accordionFlushExample">
-                        <div class="accordion-item">
+                        <!-- <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingOne">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#flush-collapseOne" aria-expanded="false"
@@ -23,7 +31,7 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -101,10 +109,54 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                    Filter by LGA
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                            Akwanga
+                                        </li>
+                                        <li class="list-group-item">
+                                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                            Awe
+                                        </li>
+                                        <li class="list-group-item">
+                                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                            Doma
+                                        </li>
+                                        <li class="list-group-item">
+                                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                            Karu
+                                        </li>
+                                        <li class="list-group-item">
+                                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                            Keana
+                                        </li>
+                                        <li class="list-group-item">
+                                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                            Keffi
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            
+            @if (request()->is('/') || request()->is('/home'))
             <div class="col-lg-9  wow zoomIn" data-wow-delay="0.9s" style="min-height: 350px;">
+            @else
+            <div class="col-lg-10  wow zoomIn" data-wow-delay="0.9s" style="min-height: 350px;">
+            @endif
                 <table id="example" class="display nowrap responsive">
                     <thead>
                         <tr>

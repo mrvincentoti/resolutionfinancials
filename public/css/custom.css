@@ -27,3 +27,7 @@
     border-color: rgba(66, 173, 78, 1) !important; /* Change the border color when focused */
     box-shadow: 0 0 5px rgba(66, 173, 78, 1) !important; /* Add shadow effect when focused */
 }
+
+.custom-green-menu{
+    background: #164516 !important;
+}

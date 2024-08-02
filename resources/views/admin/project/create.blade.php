@@ -47,11 +47,22 @@
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="ex: bla bla bla">
                         </div>
-                        <div class="mb-1">
+                        <!-- <div class="mb-1">
                                 <label for="location" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Location</label>
                                 <input type="text" id="location" value="{{ old('location') }}" name="location"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     placeholder="ex: bla bla bla">
+                        </div> -->
+                        <div class="mb-1">
+                            <label for="cat" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Location</label>
+                            <select
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                id="selectType" name="lga_id">
+                                <option>Select Lga</option>
+                                @foreach ($lgas as $lga)
+                                    <option value="{{ $lga->id }}">{{ $lga->name }}</option>
+                                @endforeach
+                            </select>
                         </div>
                         <div class="mb-1">
                             <label for="value" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Value</label>
