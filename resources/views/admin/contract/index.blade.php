@@ -43,17 +43,17 @@
                             @foreach ($contracts as $contract)
                                 <tr class="hover:bg-grey-lighter">
                                     <td class="py-4 px-6 border-b border-grey-light">{{ $contract->id }}</td>
-                                    <td class="py-4 px-6 border-b border-grey-light">{{ $contract->title }}</td>       
+                                    <td class="py-4 px-6 border-b border-grey-light">{{ $contract->title }}</td>
                                     <td class="py-4 px-6 border-b border-grey-light">
                                         @can('update', $contract)
                                             <button
                                                 class="px-4 py-1 text-white font-light tracking-wider bg-green-600 rounded"
                                                 type="button"
-                                                onclick="location.href='{{ route('admin.milestone.edit', $contract->id) }}';">Edit</button>
+                                                onclick="location.href='{{ route('admin.contract.edit', $contract->id) }}';">Edit</button>
                                         @endcan
                                         @can('delete', $contract)
                                             <form type="submit" method="POST" style="display: inline"
-                                                action="{{ route('admin.milestone.destroy', $contract->id) }}"
+                                                action="{{ route('admin.contract.destroy', $contract->id) }}"
                                                 onsubmit="return confirm('Are you sure?')">
                                                 @csrf
                                                 @method('DELETE')

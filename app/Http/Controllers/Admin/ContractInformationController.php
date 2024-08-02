@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\ContractRequest;
 use App\Models\ContractInformation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ContractInformationController extends Controller
 {
@@ -83,17 +84,49 @@ class ContractInformationController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(ContractInformation $contractInformation)
+    public function edit(ContractInformation $contract)
     {
-        //
+        return view('admin.contract.edit', compact('contract'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, ContractInformation $contractInformation)
+    public function update(ContractRequest $request, ContractInformation $contract)
     {
-        //
+        // Initialize an array to hold the data for saving to the database
+        $contract_data = $request->safe()->except([
+            'redacted_ppp_agreement',
+            'financial_structure',
+            'risk',
+            'government_support',
+            'tariff',
+            'termination_provisions',
+            'renegotiations'
+        ]);
+
+        // List of file fields to check and store
+        $fileFields = [
+            'redacted_ppp_agreement',
+            'financial_structure',
+            'risk',
+            'government_support',
+            'tariff',
+            'termination_provisions',
+            'renegotiations'
+        ];
+
+        // Loop through each file field, check for file, store and save path
+        foreach ($fileFields as $field) {
+            if ($request->hasFile($field)) {
+                $file = $request->file($field)->store('images/announcement');
+                $contract_data[$field] = $file;
+            }
+        }
+
+        $contract->update($contract_data);
+
+        return redirect()->route('admin.contract.index')->with('message', 'Contract Information Document updated successfully!');
     }
 
     /**
