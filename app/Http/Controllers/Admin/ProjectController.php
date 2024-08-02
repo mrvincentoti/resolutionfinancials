@@ -10,6 +10,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Sector;
 use App\Models\Phase;
+use App\Models\Lga;
+use App\Models\AnnouncementType;
 
 class ProjectController extends Controller
 {
@@ -34,7 +36,8 @@ class ProjectController extends Controller
     {
         $sectors = Sector::all();
         $phases = Phase::all();
-        return view('admin.project.create', compact('sectors', 'phases'));
+        $lgas = Lga::all(); 
+        return view('admin.project.create', compact('sectors', 'phases','lgas'));
     }
 
     /**
@@ -58,8 +61,9 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
+        $types = AnnouncementType::all();
         $project = Project::with(['sector', 'phase'])->findOrFail($project->id);
-        return view('admin.project.show', compact('project'));
+        return view('admin.project.show', compact('project','types'));
     }
 
     /**
@@ -69,7 +73,8 @@ class ProjectController extends Controller
     {
         $sectors = Sector::all();
         $phases = Phase::all();
-        return view('admin.project.edit', compact('project','sectors','phases'));
+        $lgas = Lga::all();
+        return view('admin.project.edit', compact('project','sectors','phases','lgas'));
     }
 
     /**

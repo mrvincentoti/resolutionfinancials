@@ -24,6 +24,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             SectorsTableSeeder::class,
             PhasesTableSeeder::class,
+            LgasTableSeeder::class,
+            TypeTableSeeder::class,
         ]);
     }
 }

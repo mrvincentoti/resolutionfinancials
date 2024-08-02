@@ -8,6 +8,8 @@ use App\Http\Controllers\Front\CategoryController as FrontCategoryController;
 use App\Http\Controllers\Front\CommentController;
 use App\Http\Controllers\Front\PageController as FrontPageController;
 use App\Http\Controllers\Front\TagController as FrontTagController;
+use App\Http\Controllers\Front\ProjectController as FrontProjectController;
+use App\Http\Controllers\Front\AnnouncementController as FrontAnnouncementController;
 
 // FrontEnd Routes [Public routes]
 Route::get('/', [HomeController::class, 'index'])->name('webhome');
@@ -17,6 +19,10 @@ Route::get('/post/{slug}', [FrontPostController::class, 'getPostBySlug'])->name(
 Route::get('/category/{slug}', [FrontCategoryController::class, 'getCategoryBySlug'])->name('category.show');
 Route::get('/page/{slug}', [FrontPageController::class, 'getPageBySlug'])->name('page.show');
 Route::get('/tag/{slug}', [FrontTagController::class, 'getPostsPerTags'])->name('tag.show');
+
+//Projects
+Route::get('/project/all', [FrontProjectController::class, 'index'])->name('project.all');
+Route::get('/announcement/all', [FrontAnnouncementController::class, 'index'])->name('announcement');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
