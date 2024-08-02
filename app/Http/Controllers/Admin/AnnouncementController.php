@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\AnnouncementRequest;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use App\Models\AnnouncementType;
 
 class AnnouncementController extends Controller
 {
@@ -55,15 +57,30 @@ class AnnouncementController extends Controller
      */
     public function edit(Announcement $announcement)
     {
-        //
+        $types = AnnouncementType::all();
+        return view('admin.announcement.edit', compact('announcement', 'types'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Announcement $announcement)
+    public function update(AnnouncementRequest $request, Announcement $announcement)
     {
-        //
+        $announcement_data = $request->safe()->except('document');
+
+        if ($request->hasfile('document')) {
+            // Delete the old image if exists
+            if ($announcement->document) {
+                Storage::delete($announcement->document);
+            }
+            // Store the new image and save the path
+            $get_file = $request->file('document')->store('images/announcement');
+            $announcement_data['document'] = $get_file;
+        }
+
+        $announcement->update($announcement_data);
+
+        return redirect()->route('admin.announcement.index')->with('message', 'Announcement Document updated successfully!');
     }
 
     /**

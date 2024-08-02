@@ -30,6 +30,7 @@ class AnnouncementRequest extends FormRequest
             'title' => ['required'],
             'announcement_type_id' => [],
             'document' => ['image', 'mimes:jpeg,png,jpg', 'max:2048', Rule::requiredIf(!$this?->agency?->id)],
+            'content' => [],
         ];
     }
 
