@@ -7,13 +7,13 @@
         <div class="row g-5 px-5">
             <!-- Latest project -->
             <div class="col-lg-6">
-                    @include('front.partials.projects-announcement', ['data' => $announcements,'title'=>'General Announcement','type'=>'general'])
+                    @include('front.partials.general-announcement', ['data' => $general_announcements,'title'=>'General Announcement','type'=>'general'])
             </div>
             <!-- Latest project End -->
 
             <!-- Project Announcements Start -->
             <div class="col-lg-6">
-                @include('front.partials.projects-announcement', ['data' => $announcements, 'title' => 'Project Announcement', 'type' => 'project'])
+                @include('front.partials.projects-announcement', ['data' => $project_announcements, 'title' => 'Project Announcement', 'type' => 'project'])
             </div>
             <!-- Project Announcements End -->
         </div>

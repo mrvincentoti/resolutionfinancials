@@ -13,8 +13,13 @@ class AnnouncementController extends Controller
      */
     public function index()
     {
-        $announcements = Announcement::with([])->latest()->paginate(15);
-        return view("front.announcement.index", compact("announcements"));
+        // $announcements = Announcement::with([])->latest()->paginate(15);
+        // return view("front.announcement.index", compact("announcements"));
+
+        $general_announcements = Announcement::with([])->where('announcement_type_id', 1)->latest()->paginate(15);
+        $project_announcements = Announcement::with([])->where('announcement_type_id', 2)->latest()->paginate(15);
+
+        return view("front.announcement.index", compact(['general_announcements', 'project_announcements']));
     }
 
     /**
