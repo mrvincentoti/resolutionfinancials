@@ -62,9 +62,23 @@ class ProcurementDocumentController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, ProcurementDocument $procurementDocument)
+    public function update(ProcurementDocumentRequest $request, ProcurementDocument $procurement)
     {
-        //
+        $procurement_data = $request->safe()->except('image');
+
+        if ($request->hasfile('image')) {
+            // Delete the old image if exists
+            if ($procurement->image) {
+                Storage::delete($procurement->image);
+            }
+            // Store the new image and save the path
+            $get_file = $request->file('image')->store('images/procurement');
+            $procurement_data['image'] = $get_file;
+        }
+
+        $procurement->update($procurement_data);
+
+        return redirect()->route('admin.procurement.index')->with('message', 'Procurement Document updated successfully!');
     }
 
     /**
