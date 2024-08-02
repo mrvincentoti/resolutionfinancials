@@ -25,7 +25,7 @@
                                 <div class="w-full bg-white mb-2"><span class="text-gray-700 text-xl">Value:</span><span>{{$project->value}}</span></div>
                                 <div class="w-full bg-white mb-2"><span class="text-gray-700 text-xl">Last Update:</span><span>{{$project->last_update}}</span></div>
                             </div>
-                            <div class="px-10 py-6">
+                            <!-- <div class="px-10 py-6">
                                 <div class="font-bold text-xl mb-2">General Information</div>
                                 <hr>
                                 <div class="w-full bg-white mb-2"><span class="text-gray-700 text-xl">Title:</span>
@@ -40,7 +40,7 @@
                                 </div>
                                 <div class="w-full bg-white mb-2"><span class="text-gray-700 text-xl">Last
                                         Update:</span><span>{{$project->last_update}}</span></div>
-                            </div>
+                            </div> -->
                         </div>
                         <!--end-->
                     </div>

@@ -55,7 +55,8 @@ class SummaryDocumentController extends Controller
      */
     public function edit(SummaryDocument $summaryDocument)
     {
-        //
+        $summaries = SummaryDocument::with([])->latest()->paginate(15);
+        return view('admin.project.edit', compact('summaries'));
     }
 
     /**
