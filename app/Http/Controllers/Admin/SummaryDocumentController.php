@@ -34,7 +34,7 @@ class SummaryDocumentController extends Controller
         $summary_data = $request->safe()->except('image');
 
         if ($request->hasfile('image')) {
-            $get_file = $request->file('image')->store('images/agency');
+            $get_file = $request->file('image')->store('images/summary');
             $summary_data['image'] = $get_file;
         }
         $summary = SummaryDocument::create($summary_data);
@@ -53,18 +53,32 @@ class SummaryDocumentController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(SummaryDocument $summaryDocument)
+    public function edit(SummaryDocument $summary)
     {
-        $summaries = SummaryDocument::with([])->latest()->paginate(15);
-        return view('admin.project.edit', compact('summaries'));
+        // Retrieve any additional data if necessary
+        return view('admin.summary.edit', compact('summary'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, SummaryDocument $summaryDocument)
+    public function update(SummaryDocumentRequest $request, SummaryDocument $summary)
     {
-        //
+        $summary_data = $request->safe()->except('image');
+
+        if ($request->hasfile('image')) {
+            // Delete the old image if exists
+            if ($summary->image) {
+                Storage::delete($summary->image);
+            }
+            // Store the new image and save the path
+            $get_file = $request->file('image')->store('images/summary');
+            $summary_data['image'] = $get_file;
+        }
+
+        $summary->update($summary_data);
+
+        return redirect()->route('admin.summary.index')->with('message', 'Summary Document updated successfully!');
     }
 
     /**
