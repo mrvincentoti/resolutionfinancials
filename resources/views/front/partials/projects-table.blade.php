@@ -15,23 +15,6 @@
             @endif
                 <div class="row g-5">
                     <div class="accordion accordion-flush" id="accordionFlushExample">
-                        <!-- <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                    aria-controls="flush-collapseOne">
-                                    Map
-                                </button>
-                            </h2>
-                            <div id="flush-collapseOne" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    <ul>
-                                        <li>Map</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div> -->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -44,21 +27,12 @@
                                 aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body">
                                     <ul class="list-group">
-                                        <li class="list-group-item">
-                                            <input class="form-check-input me-1" type="checkbox" value=""
-                                                aria-label="...">
-                                            Development
-                                        </li>
-                                        <li class="list-group-item">
-                                            <input class="form-check-input me-1" type="checkbox" value=""
-                                                aria-label="...">
-                                            Procurement
-                                        </li>
-                                        <li class="list-group-item">
-                                            <input class="form-check-input me-1" type="checkbox" value=""
-                                                aria-label="...">
-                                            Implementation
-                                        </li>
+                                        @foreach ($phases as $phase)
+                                            <li class="list-group-item">
+                                                <input class="form-check-input me-1" type="checkbox" value="{{ $phase->id }}" id="level{{ $phase->id }}" name="level">
+                                                {{ $phase->name }}
+                                            </li>
+                                        @endforeach
                                     </ul>
                                 </div>
                             </div>
@@ -75,36 +49,12 @@
                                 aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body">
                                     <ul class="list-group">
-                                        <li class="list-group-item">
-                                            <input class="form-check-input me-1" type="checkbox" value=""
-                                                aria-label="...">
-                                            Energy
-                                        </li>
-                                        <li class="list-group-item">
-                                            <input class="form-check-input me-1" type="checkbox" value=""
-                                                aria-label="...">
-                                            Industrial
-                                        </li>
-                                        <li class="list-group-item">
-                                            <input class="form-check-input me-1" type="checkbox" value=""
-                                                aria-label="...">
-                                            Social & Health
-                                        </li>
-                                        <li class="list-group-item">
-                                            <input class="form-check-input me-1" type="checkbox" value=""
-                                                aria-label="...">
-                                            Telecom
-                                        </li>
-                                        <li class="list-group-item">
-                                            <input class="form-check-input me-1" type="checkbox" value=""
-                                                aria-label="...">
-                                            Transport
-                                        </li>
-                                        <li class="list-group-item">
-                                            <input class="form-check-input me-1" type="checkbox" value=""
-                                                aria-label="...">
-                                            Water & Waste
-                                        </li>
+                                        @foreach ($sectors as $sector)
+                                            <li class="list-group-item">
+                                                <input class="form-check-input me-1" type="checkbox" value="{{ $sector->id }}" id="sector{{ $sector->id }}" name="sector">
+                                                {{ $sector->name }}
+                                            </li>
+                                        @endforeach
                                     </ul>
                                 </div>
                             </div>
@@ -120,30 +70,12 @@
                                 data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body">
                                     <ul class="list-group">
-                                        <li class="list-group-item">
-                                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                            Akwanga
-                                        </li>
-                                        <li class="list-group-item">
-                                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                            Awe
-                                        </li>
-                                        <li class="list-group-item">
-                                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                            Doma
-                                        </li>
-                                        <li class="list-group-item">
-                                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                            Karu
-                                        </li>
-                                        <li class="list-group-item">
-                                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                            Keana
-                                        </li>
-                                        <li class="list-group-item">
-                                            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                            Keffi
-                                        </li>
+                                        @foreach ($lgas as $lga)
+                                            <li class="list-group-item">
+                                                <input class="form-check-input me-1" type="checkbox" value="{{ $lga->id }}" id="lga{{ $lga->id }}" name="lga">
+                                                {{ $lga->name }}
+                                            </li>
+                                        @endforeach
                                     </ul>
                                 </div>
                             </div>
@@ -168,7 +100,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        @foreach($projects as $project)
+                            <tr>
+                                <td>{{$project->project_title}}</td>
+                                <td>{{$project->sector->name}}</td>
+                                <td><span>{{$project->phase->name}}</span></td>
+                                <td>{{$project->project_title}}</td>
+                                <td><span>{{$project->value}}</span></td>
+                            </tr>
+                        @endforeach
+                        <!-- <tr>
                             <td>Tiger Nixon</td>
                             <td>System Architect</td>
                             <td><span>Edinburgh</span></td>
@@ -566,7 +507,7 @@
                             <td><span>New York</span></td>
                             <td>Nigerian Shippers' Council</td>
                             <td><span>$112,000.00</span></td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                     <tfoot>
                         <tr>

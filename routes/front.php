@@ -22,6 +22,7 @@ Route::get('/tag/{slug}', [FrontTagController::class, 'getPostsPerTags'])->name(
 
 //Projects
 Route::get('/project/all', [FrontProjectController::class, 'index'])->name('project.all');
+Route::get('/filter-projects', [FrontProjectController::class, 'filterProjects']);
 Route::get('/announcement/all', [FrontAnnouncementController::class, 'index'])->name('announcement');
 
 Route::get('/dashboard', function () {

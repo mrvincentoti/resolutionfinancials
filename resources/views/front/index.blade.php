@@ -48,7 +48,7 @@
     </div>
     <!-- Facts Start -->
     
-    @include('front.partials.projects-table', ['data' => 'Projects'])
+    @include('front.partials.projects-table', ['projects' => $projects, 'sectors'=>$sectors, 'phases'=>$phases, 'lgas'=>$lgas])
 
     @include('front.partials.projects-chart', ['data' => 'Projects'])
 

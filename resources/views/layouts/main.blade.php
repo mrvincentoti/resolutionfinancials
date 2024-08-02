@@ -347,6 +347,57 @@
         // initiate drawing the chart
         chart.draw();
     </script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const checkboxes = document.querySelectorAll('.form-check-input');
+
+                checkboxes.forEach(checkbox => {
+                    checkbox.addEventListener('change', filterTable);
+                });
+
+                function filterTable() {
+                    const stageFilters = [];
+                    const sectorFilters = [];
+                    const lgaFilters = [];
+
+                    document.querySelectorAll('#flush-collapseTwo .form-check-input:checked').forEach(cb => stageFilters.push(cb.value));
+                    document.querySelectorAll('#flush-collapseThree .form-check-input:checked').forEach(cb => sectorFilters.push(cb.value));
+                    document.querySelectorAll('#flush-collapseFour .form-check-input:checked').forEach(cb => lgaFilters.push(cb.value));
+
+                    $.ajax({
+                        url: '/filter-projects',
+                        method: 'GET',
+                        data: {
+                            stage: stageFilters,
+                            sector: sectorFilters,
+                            lga: lgaFilters
+                        },
+                        success: function (response) {
+                            updateTable(response);
+                        }
+                    });
+                }
+
+                function updateTable(data) {
+                    console.log(data);
+                    //return;
+                    const tbody = document.querySelector('#example tbody');
+                    tbody.innerHTML = '';
+
+                    data.forEach(project => {
+                        const row = `<tr>
+                                        <td>${project.project_title}</td>
+                                        <td>${project.sector.name}</td>
+                                        <td>${project.phase.name}</td>
+                                        <td>${project.project_title}</td>
+                                        <td>${project.value}</td>
+                                    </tr>`;
+                        tbody.innerHTML += row;
+                    });
+                }
+            });
+        </script>
 </body>
 
 </html>
