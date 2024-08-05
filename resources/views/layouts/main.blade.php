@@ -126,7 +126,7 @@
         </nav>
         <!--Start Banner-->
         @if (request()->is('/') || request()->is('/home'))
-            @include('front.partials.banner', ['data' => 'banners'])
+            @include('front.partials.banner', ['banners' => $banners])
         @endif
         <!--End Banner-->
     </div>

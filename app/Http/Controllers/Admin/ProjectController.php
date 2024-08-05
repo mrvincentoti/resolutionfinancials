@@ -45,10 +45,10 @@ class ProjectController extends Controller
      */
     public function store(ProjectRequest $request)
     {
-        $project_data = $request->safe()->except('image');
-        if ($request->hasfile('image')) {
-            $get_file = $request->file('image')->store('images/projects');
-            $project_data['image'] = $get_file;
+        $project_data = $request->safe()->except('project_image');
+        if ($request->hasfile('project_image')) {
+            $get_file = $request->file('project_image')->store('images/projects');
+            $project_data['project_image'] = $get_file;
         }
 
         $project = Project::create($project_data);
@@ -82,12 +82,12 @@ class ProjectController extends Controller
      */
     public function update(ProjectRequest $request, Project $project)
     {
-        $project_data = $request->safe()->except('image');
+        $project_data = $request->safe()->except('project_image');
 
-        if ($request->hasfile('image')) {
-            Storage::delete($project->image);
-            $get_file = $request->file('image')->store('images/projects');
-            $project_data['image'] = $get_file;
+        if ($request->hasfile('project_image')) {
+            Storage::delete($project->project_image);
+            $get_file = $request->file('project_image')->store('images/projects');
+            $project_data['project_image'] = $get_file;
         }
 
         $project->update($project_data);

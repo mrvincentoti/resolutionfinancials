@@ -9,6 +9,7 @@ use App\Models\Project;
 use App\Models\Sector;
 use App\Models\Phase;
 use App\Models\Lga;
+use App\Models\Banner;
 
 
 class HomeController extends Controller
@@ -25,7 +26,9 @@ class HomeController extends Controller
         $phases = Phase::all();
         $lgas = Lga::all();
         $project_announcements = Announcement::with([])->where('announcement_type_id', 2)->latest()->paginate(15);
-        return view('front.index', compact(['project_announcements','projects','sectors','phases','lgas']));
+        $banners = Project::with(['sector', 'phase'])->orderBy('created_at', 'desc')->take(3)->get();
+
+        return view('front.index', compact(['project_announcements','projects','sectors','phases','lgas', 'banners']));
     }
 
 }

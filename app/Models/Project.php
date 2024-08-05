@@ -24,7 +24,8 @@ class Project extends Model
         'rationale_for_selection',
         'stakeholder_consultations',
         'slug',
-        'lga_id'
+        'lga_id',
+        'project_image'
     ];
 
     protected function createdAt(): Attribute
