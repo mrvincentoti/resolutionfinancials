@@ -29,7 +29,7 @@
                                     <ul class="list-group">
                                         @foreach ($phases as $phase)
                                             <li class="list-group-item">
-                                                <input class="form-check-input me-1" type="checkbox" value="{{ $phase->id }}" id="level{{ $phase->id }}" name="level">
+                                                <input class="form-check-input me-1" type="checkbox" value="{{ $phase->id }}" id="phase{{ $phase->id }}" name="phase">
                                                 {{ $phase->name }}
                                             </li>
                                         @endforeach

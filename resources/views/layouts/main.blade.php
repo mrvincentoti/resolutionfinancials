@@ -380,8 +380,6 @@
                 }
 
                 function updateTable(data) {
-                    console.log(data);
-                    //return;
                     const tbody = document.querySelector('#example tbody');
                     tbody.innerHTML = '';
 

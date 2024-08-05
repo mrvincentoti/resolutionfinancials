@@ -29,16 +29,15 @@ class ProjectController extends Controller
         // Log::log('Sector IDs:', $request->input('sector'));
         // Log::log('LGA IDs:', $request->input('lga'));
 
-        $phaseIds = $request->input('level');
+        $stageIds = $request->input('stage');
         $sectorIds = $request->input('sector');
         $lgaIds = $request->input('lga');
 
-        //return $phaseIds;
 
         $query = Project::query();
 
-        if ($phaseIds) {
-            $query->whereIn('phase_id', $phaseIds);
+        if ($stageIds) {
+            $query->whereIn('phase_id', $stageIds);
         }
 
         if ($sectorIds) {
