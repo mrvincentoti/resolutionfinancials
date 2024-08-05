@@ -8,7 +8,6 @@ use App\Models\Project;
 use App\Models\Sector;
 use App\Models\Phase;
 use App\Models\Lga;
-use Illuminate\Support\Facades\DB;
 
 
 class HomeController extends Controller

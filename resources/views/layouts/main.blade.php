@@ -292,24 +292,29 @@
 
     <!-- Pie Chart -->
     <script>
-        // create data
-        var data = [
-            { x: "Development", value: 637166 },
-            { x: "Procurement", value: 721630 },
-            { x: "Implementation", value: 148662 },
-        ];
+        $(document).ready(function () {
+            $.ajax({
+                url: '{{ route('getProjectsCountByPhase') }}',
+                method: 'GET',
+                success: function (data) {
+                    var chartData = data.map(function (item) {
+                        return { x: item.phase_name, value: item.total };
+                    });
 
-        // create a chart and set the data
-        chart = anychart.pie(data);
+                    var chart = anychart.pie(chartData);
 
-        // set the container id
-        chart.container("project-by-stage");
+                    chart.container("project-by-stage");
 
-        // initiate drawing the chart
-        chart.draw();
+                    chart.draw();
+                },
+                error: function (error) {
+                    console.log("Error fetching data:", error);
+                }
+            });
+        });
     </script>
 
-    <script>
+    <!-- <script>
         // create data
         var data = [
             { x: "Health", value: 10000 },
@@ -346,6 +351,41 @@
 
         // initiate drawing the chart
         chart.draw();
+    </script> -->
+
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: '{{ route('getProjectsCountBySector') }}', // Adjust the route name as needed
+                method: 'GET',
+                success: function (data) {
+                    var maxValue = Math.max(...data.map(item => item.total));
+                    var minValue = Math.min(...data.map(item => item.total));
+
+                    var chartData = data.map(function (item) {
+                        var color = "#4898e6";
+                        if (item.total === maxValue) {
+                            color = "#42ad4e";
+                        } else if (item.total === minValue) {
+                            color = "#dc3545";
+                        }
+
+                        return { x: item.sector_name, value: item.total, normal: { fill: color } };
+                    });
+
+                    var chart = anychart.bar();
+
+                    var series = chart.bar(chartData);
+
+                    chart.container("project-by-sector");
+
+                    chart.draw();
+                },
+                error: function (error) {
+                    console.log("Error fetching data:", error);
+                }
+            });
+        });
     </script>
 
         <script>

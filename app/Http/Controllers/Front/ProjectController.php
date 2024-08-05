@@ -4,13 +4,11 @@ namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use App\Models\Project;
-use App\Traits\SlugCreater;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 use App\Models\Sector;
 use App\Models\Phase;
 use App\Models\Lga;
-use Log;
+use Illuminate\Support\Facades\DB;
 
 class ProjectController extends Controller
 {
@@ -51,6 +49,28 @@ class ProjectController extends Controller
         $projects = $query->with(['phase', 'sector', 'lga'])->get();
 
         return response()->json($projects);
+    }
+
+    public function getProjectsCountByPhase()
+    {
+        $projectCounts = DB::table('projects')
+            ->join('phases', 'projects.phase_id', '=', 'phases.id')
+            ->select('phases.name as phase_name', DB::raw('count(*) as total'))
+            ->groupBy('phases.name')
+            ->get();
+
+        return response()->json($projectCounts);
+    }
+
+    public function getProjectsCountBySector()
+    {
+        $projectCounts = DB::table('projects')
+            ->join('sectors', 'projects.sector_id', '=', 'sectors.id')
+            ->select('sectors.name as sector_name', DB::raw('count(*) as total'))
+            ->groupBy('sectors.name')
+            ->get();
+
+        return response()->json($projectCounts);
     }
 
 }

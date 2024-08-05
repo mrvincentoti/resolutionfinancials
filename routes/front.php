@@ -24,6 +24,10 @@ Route::get('/tag/{slug}', [FrontTagController::class, 'getPostsPerTags'])->name(
 Route::get('/project/all', [FrontProjectController::class, 'index'])->name('project.all');
 Route::get('/filter-projects', [FrontProjectController::class, 'filterProjects']);
 Route::get('/announcement/all', [FrontAnnouncementController::class, 'index'])->name('announcement');
+Route::get('/get-projects-count-by-phase', [FrontProjectController::class, 'getProjectsCountByPhase'])->name('getProjectsCountByPhase');
+Route::get('/get-projects-count-by-sector', [FrontProjectController::class,'getProjectsCountBySector'])->name('getProjectsCountBySector');
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
