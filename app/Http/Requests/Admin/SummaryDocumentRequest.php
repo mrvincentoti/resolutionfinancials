@@ -24,11 +24,26 @@ class SummaryDocumentRequest extends FormRequest
      */
     public function rules()
     {
-        return [
+        // return [
+        //     'project_id' => [],
+        //     'title' => ['required'],
+        //     'image' => ['image', 'mimes:jpeg,png,jpg', 'max:2048', Rule::requiredIf(!$this?->agency?->id)],
+        // ];
+
+        $rules = [
             'project_id' => [],
             'title' => ['required'],
-            'image' => ['image', 'mimes:jpeg,png,jpg', 'max:2048', Rule::requiredIf(!$this?->agency?->id)],
         ];
+
+        if ($this->isMethod('post')) {
+            // Only require document on create (POST)
+            $rules['image'] = ['image', 'mimes:jpeg,png,jpg', 'max:2048', Rule::requiredIf(!$this?->agency?->id)];
+        } else {
+            // Document is optional on update (PUT/PATCH)
+            $rules['image'] = ['sometimes', 'image', 'mimes:jpeg,png,jpg', 'max:2048'];
+        }
+
+        return $rules;
     }
 
     public function prepareForValidation()

@@ -24,14 +24,32 @@ class AnnouncementRequest extends FormRequest
      */
     public function rules()
     {
-        return [
+        // return [
+        //     'project_id' => [],
+        //     'announcement_date' => ['required'],
+        //     'title' => ['required'],
+        //     'announcement_type_id' => [],
+        //     'document' => ['image', 'mimes:jpeg,png,jpg', 'max:2048', Rule::requiredIf(!$this?->agency?->id)],
+        //     'content' => [],
+        // ];
+
+        $rules = [
             'project_id' => [],
             'announcement_date' => ['required'],
             'title' => ['required'],
             'announcement_type_id' => [],
-            'document' => ['image', 'mimes:jpeg,png,jpg', 'max:2048', Rule::requiredIf(!$this?->agency?->id)],
             'content' => [],
         ];
+
+        if ($this->isMethod('post')) {
+            // Only require document on create (POST)
+            $rules['document'] = ['image', 'mimes:jpeg,png,jpg', 'max:2048', Rule::requiredIf(!$this?->agency?->id)];
+        } else {
+            // Document is optional on update (PUT/PATCH)
+            $rules['document'] = ['sometimes', 'image', 'mimes:jpeg,png,jpg', 'max:2048'];
+        }
+
+        return $rules;
     }
 
     public function prepareForValidation()
