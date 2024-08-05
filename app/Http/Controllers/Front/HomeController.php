@@ -20,11 +20,10 @@ class HomeController extends Controller
         //$posts = Post::published()->with(['category', 'user'])->latest('created_at')->paginate(10);
 
         // return view('front.index', compact('posts'));
-        $projects = Project::with(['sector', 'phase']);
+        $projects = Project::with(['sector', 'phase'])->get();
         $sectors = Sector::all();
         $phases = Phase::all();
         $lgas = Lga::all();
-
         $project_announcements = Announcement::with([])->where('announcement_type_id', 2)->latest()->paginate(15);
         return view('front.index', compact(['project_announcements','projects','sectors','phases','lgas']));
     }
