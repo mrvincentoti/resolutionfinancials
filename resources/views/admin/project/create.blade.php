@@ -78,9 +78,24 @@
                         </div>
                         <div class="mb-1">
                             <label for="last_update" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Last Update</label>
-                            <input type="text" id="last_update" value="{{ old('last_update') }}" name="last_update"
+                            <input type="date" id="last_update" value="{{ old('last_update') }}" name="last_update"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="ex: bla bla bla">
+                        </div>
+                        <div class="mb-1">
+                            <label for="supervising_authority" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Supervising
+                                Authority</label>
+                            <input type="text" id="supervising_authority" value="{{ old('supervising_authority') }}"
+                                name="supervising_authority"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="ex: bla bla bla">
+                        </div>
+                        <div class="mb-1">
+                            <label for="screening_report" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">PPP and Climate
+                                Screening Report</label>
+                            <input type="file" id="screening_report" value="{{ old('screening_report') }}" name="screening_report"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="Screening Report">
                         </div>
                      </div>
                     <div class="grid gap-6 mb-6 md:grid-cols-1">
@@ -88,7 +103,7 @@
                             <label class="block text-sm text-gray-600" for="message">Project Need</label>
                             <textarea
                                 class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                id="project_need" name="project_need">{{ old('project_need') }}</textarea>
+                                id="project_need" name="project_need" required>{{ old('project_need') }}</textarea>
                         </div>
                         <div class="mb-2">
                             <label class="block text-sm text-gray-600" for="message">Description Of Asset</label>

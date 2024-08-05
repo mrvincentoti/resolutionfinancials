@@ -25,7 +25,9 @@ class Project extends Model
         'stakeholder_consultations',
         'slug',
         'lga_id',
-        'project_image'
+        'project_image',
+        'screening_report',
+        'supervising_authority'
     ];
 
     protected function createdAt(): Attribute
