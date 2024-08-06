@@ -51,4 +51,9 @@ class Project extends Model
     {
         return $this->belongsTo(Lga::class);
     }
+
+    public function milestones()
+    {
+        return $this->hasMany(ProjectMilestone::class);
+    }
 }

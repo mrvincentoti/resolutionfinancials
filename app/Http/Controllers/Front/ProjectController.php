@@ -77,12 +77,12 @@ class ProjectController extends Controller
     public function getProjectBySlug($slug)
     {
         // I've Pass Slug to Get the Category per it's Slug
-        $project = Project::with(['sector', 'phase'])->whereSlug($slug)->firstOrFail();
+        $project = Project::with(['sector', 'phase','milestones'])->whereSlug($slug)->firstOrFail();
 
         //$comments = $post->comments;
         //$post_title = $post->title;
 
-        //dd($project);
+        //dd($project->milestones);
         return view('front.project.details', compact('project'));
     }
 

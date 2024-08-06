@@ -86,3 +86,7 @@ ul, ol {
     top: 0;
     width: 2px;
 }
+
+.text-justify {
+    text-align: justify !important;
+}
