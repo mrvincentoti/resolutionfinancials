@@ -31,3 +31,90 @@
 .custom-green-menu{
     background: #164516 !important;
 }
+
+.project-menu {
+    margin: 0 auto;
+}
+
+.project-menu ul {
+    padding: 0;
+    border-bottom: 1px solid rgba(66, 173, 78, 1);
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+ol, ul {
+    list-style: none;
+}
+ul, ol {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0;
+}
+ul, ol {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.project-menu li:first-child {
+    padding-left: 0;
+}
+.project-menu li {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.project-menu li a {
+    text-decoration: none;
+    color: rgba(66, 173, 78, 1);
+    text-transform: uppercase;
+}
+
+.bg-green {
+    --bs-bg-opacity: 1;
+    background-color: rgba(66, 173, 78, 1) !important;
+}
+
+.text-light {
+    --bs-text-opacity: 1;
+    color: #ffffff !important;
+}
+
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #164516 !important;
+    --bs-btn-border-color: #164516 !important;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #164516 !important;
+    --bs-btn-hover-border-color: #164516 !important;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #164516 !important;
+    --bs-btn-active-border-color: #164516;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #164516 !important;
+    --bs-btn-disabled-border-color: #164516 !important;
+}
+
+.underline {
+    position: relative;
+    display: inline-block;
+}
+
+.underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px; /* Adjust this value to set the distance of the underline from the text */
+    height: 2px; /* Adjust this value to set the thickness of the underline */
+    background-color: currentColor; /* This will use the color of the text */
+    width: 100%;
+}

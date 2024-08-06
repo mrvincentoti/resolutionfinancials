@@ -58,13 +58,13 @@
             <div class="row g-5">
                 <!-- Latest project -->
                 <div class="col-lg-8">
-                     @include('front.partials.latest-project', ['data' => 'Projects'])
+                     @include('front.partials.latest-project', ['latest_projects' => $latest_projects])
                 </div>
                 <!-- Latest project End -->
 
                 <!-- Project Announcements Start -->
                 <div class="col-lg-4">
-                     @include('front.partials.projects-announcement', ['data' => 'Projects'])
+                     @include('front.partials.projects-announcement', ['project_announcements' => $project_announcements])
                 </div>
                 <!-- Project Announcements End -->
             </div>
