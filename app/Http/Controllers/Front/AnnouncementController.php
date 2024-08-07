@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Front;
 use App\Http\Controllers\Controller;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cookie;
 
 class AnnouncementController extends Controller
 {
@@ -31,9 +32,12 @@ class AnnouncementController extends Controller
     }
 
 
-    public function show(Announcement $announcement)
+    public function show($slug)
     {
-        //
+        // Fetch announcement by slug with necessary relations
+        $announcement = Announcement::where('slug', $slug)->firstOrFail();
+
+        return view('front.announcement.show', compact('announcement'));
     }
 
     /**
