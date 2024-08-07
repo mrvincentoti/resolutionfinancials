@@ -51,7 +51,7 @@
                             </div>
                             @if($announcement->document)
                                 <div class="mt-2">
-                                    <a href="{{ asset('storage/' . $announcement->document) }}" target="_blank" class="text-blue-500">
+                                    <a href="{{ asset($announcement->document) }}" target="_blank" class="text-blue-500">
                                         View Current Document
                                     </a>
                                 </div>

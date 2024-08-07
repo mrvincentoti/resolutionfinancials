@@ -28,7 +28,7 @@
                     <div class="card mb-4">
                         <div class="card-body p-3">
                             <h6 class="project-comment text-muted">{{ $announcement->content }}</h6>
-                            <a class="btn btn-primary my-4" href="{{ asset('storage/' . $announcement->document) }}" download target="_blank">Download Document</a>
+                            <a class="btn btn-primary my-4" href="{{ asset($announcement->document) }}" download target="_blank">Download Document</a>
                         </div>
                         <div class="card-footer bg-primary text-white text-center w-100 p-2">
                             {{ date_format($date, "D, M d, Y g:i A") }}

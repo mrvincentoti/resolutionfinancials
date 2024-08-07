@@ -35,10 +35,19 @@ class AnnouncementController extends Controller
     {
         $announcement_data = $request->safe()->except('document');
 
-        if ($request->hasfile('document')) {
-            $get_file = $request->file('document')->store('images/announcement');
-            $announcement_data['document'] = $get_file;
+        if ($request->hasFile('document')) {
+            // Get the file from the request
+            $file = $request->file('document');
+            // Generate a unique filename with extension
+            $filename = time() . '-' . $file->getClientOriginalName();
+            // Define the path to store the file
+            $destinationPath = public_path('images/announcement');
+            // Move the file to the public/images/announcement directory
+            $file->move($destinationPath, $filename);
+            // Store the filename in the announcement data
+            $announcement_data['document'] = 'images/announcement/' . $filename;
         }
+
         $announcement = Announcement::create($announcement_data);
 
         return back()->with('success', 'Your data has been saved successfully!');
@@ -68,14 +77,25 @@ class AnnouncementController extends Controller
     {
         $announcement_data = $request->safe()->except('document');
 
-        if ($request->hasfile('document')) {
-            // Delete the old image if exists
+        if ($request->hasFile('document')) {
+            // Delete the old document if it exists
             if ($announcement->document) {
-                Storage::delete($announcement->document);
+                $oldFilePath = public_path($announcement->document);
+                if (file_exists($oldFilePath)) {
+                    unlink($oldFilePath);
+                }
             }
-            // Store the new image and save the path
-            $get_file = $request->file('document')->store('images/announcement');
-            $announcement_data['document'] = $get_file;
+
+            // Get the new file from the request
+            $file = $request->file('document');
+            // Generate a unique filename with extension
+            $filename = time() . '-' . $file->getClientOriginalName();
+            // Define the path to store the file
+            $destinationPath = public_path('images/announcement');
+            // Move the file to the public/images/announcement directory
+            $file->move($destinationPath, $filename);
+            // Store the filename in the announcement data
+            $announcement_data['document'] = 'images/announcement/' . $filename;
         }
 
         $announcement->update($announcement_data);
