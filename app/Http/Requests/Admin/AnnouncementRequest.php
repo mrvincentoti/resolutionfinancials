@@ -37,6 +37,7 @@ class AnnouncementRequest extends FormRequest
             'project_id' => [],
             'announcement_date' => ['required'],
             'title' => ['required'],
+            'slug' => ['required'],
             'announcement_type_id' => [],
             'content' => [],
         ];
