@@ -27,7 +27,7 @@ Route::get('/announcement/all', [FrontAnnouncementController::class, 'index'])->
 Route::get('/get-projects-count-by-phase', [FrontProjectController::class, 'getProjectsCountByPhase'])->name('getProjectsCountByPhase');
 Route::get('/get-projects-count-by-sector', [FrontProjectController::class,'getProjectsCountBySector'])->name('getProjectsCountBySector');
 Route::get('/project/{slug}', [FrontProjectController::class, 'getProjectBySlug'])->name('project.details');
-Route::get('/announcement/{slug}', [FrontAnnouncementController::class, 'show'])->name('announcement.show');
+Route::get('/announcement/{slug}', [FrontAnnouncementController::class, 'getAnnouncementBySlug'])->name('announcement.details');
 
 
 Route::get('/dashboard', function () {
