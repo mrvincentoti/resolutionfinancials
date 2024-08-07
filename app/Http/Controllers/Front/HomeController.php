@@ -30,7 +30,9 @@ class HomeController extends Controller
         $dev_projects  = Project::with(['sector', 'phase'])->where('phase_id', 2)->count();
         $imp_projects  = Project::with(['sector', 'phase'])->where('phase_id', 3)->count();
 
-        return view('front.index', compact(['project_announcements','projects','sectors','phases','lgas', 'banners','pro_projects','dev_projects','imp_projects']));
+        $latest_projects = Project::with(['sector', 'phase'])->orderBy('created_at', 'desc')->take(6)->get();
+
+        return view('front.index', compact(['project_announcements','projects','sectors','phases','lgas', 'banners','pro_projects','dev_projects','imp_projects','latest_projects']));
     }
 
 }

@@ -154,7 +154,7 @@ h6,
 
 .sticky-top.navbar-dark .navbar-nav .nav-link {
     padding: 20px 0;
-    color: var(--dark);
+    color: #ffffff;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
@@ -202,7 +202,7 @@ h6,
         border-bottom: 1px solid rgba(256, 256, 256, .1);
         z-index: 999;
     }
-    
+
     .sticky-top.navbar-dark {
         position: fixed;
         background: #FFFFFF;
@@ -595,4 +595,10 @@ h6,
 .date .day,
 .date .month-year {
     transition: color 0.3s !important;
+}
+
+.card-footer {
+    /* margin-left: -10px;
+    margin-right: -10px;  */
+    border-radius: 0 0 5px 5px; /* Ensure rounded corners if card has them */
 }

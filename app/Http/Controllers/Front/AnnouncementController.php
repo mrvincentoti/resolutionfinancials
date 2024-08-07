@@ -32,7 +32,7 @@ class AnnouncementController extends Controller
     }
 
 
-    public function show($slug)
+    public function getAnnouncementBySlug($slug)
     {
         // Fetch announcement by slug with necessary relations
         $announcement = Announcement::where('slug', $slug)->firstOrFail();

@@ -45,10 +45,29 @@ class ProjectController extends Controller
      */
     public function store(ProjectRequest $request)
     {
-        $project_data = $request->safe()->except('project_image');
-        if ($request->hasfile('project_image')) {
-            $get_file = $request->file('project_image')->store('images/projects');
-            $project_data['project_image'] = $get_file;
+        $project_data = $request->safe()->except([
+            'project_image',
+            'screening_report'
+        ]);
+
+        $fileFields = [
+            'project_image',
+            'screening_report'
+        ];
+
+        foreach ($fileFields as $field) {
+            if ($request->hasFile($field)) {
+                // Get the file from the request
+                $file = $request->file($field);
+                // Generate a unique filename with extension
+                $filename = time() . '-' . $file->getClientOriginalName();
+                // Define the path to store the file
+                $destinationPath = public_path('img');
+                // Move the file to the public/images directory
+                $file->move($destinationPath, $filename);
+                // Store the filename in the project data
+                $project_data[$field] = 'img/' . $filename;
+            }
         }
 
         $project = Project::create($project_data);
@@ -82,18 +101,42 @@ class ProjectController extends Controller
      */
     public function update(ProjectRequest $request, Project $project)
     {
-        $project_data = $request->safe()->except('project_image');
+        $project_data = $request->safe()->except([
+            'project_image',
+            'screening_report'
+        ]);
 
-        if ($request->hasfile('project_image')) {
-            Storage::delete($project->project_image);
-            $get_file = $request->file('project_image')->store('images/projects');
-            $project_data['project_image'] = $get_file;
+        $fileFields = [
+            'project_image',
+            'screening_report'
+        ];
+
+        foreach ($fileFields as $field) {
+            if ($request->hasFile($field)) {
+                // Delete the old file if it exists
+                if ($project->$field) {
+                    $oldFilePath = public_path($project->$field);
+                    if (file_exists($oldFilePath)) {
+                        unlink($oldFilePath);
+                    }
+                }
+
+                // Handle the new file upload
+                $file = $request->file($field);
+                $filename = time() . '-' . $file->getClientOriginalName();
+                $destinationPath = public_path('images');
+                $file->move($destinationPath, $filename);
+
+                // Update the project data with the new file path
+                $project_data[$field] = 'images/' . $filename;
+            }
         }
 
         $project->update($project_data);
 
         return to_route('admin.project.index')->with('message', trans('admin.project_updated'));
     }
+
 
     /**
      * Remove the specified resource from storage.
