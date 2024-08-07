@@ -2,7 +2,7 @@
     <div class="carousel-inner">
         @foreach($banners as $banner)
             <div class="carousel-item  {{ $loop->iteration == 1 ? 'active' : '' }}">
-                <img class="w-100" src="{{ asset('storage/' . $banner->project_image) }}" alt="Image">
+                <img class="w-100" src="{{ asset( $banner->project_image) }}" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="p-3" style="max-width: 900px;">
                         <h4 class="display-1 text-white mb-md-4 animated zoomIn">{{$banner->project_title}}</h4>

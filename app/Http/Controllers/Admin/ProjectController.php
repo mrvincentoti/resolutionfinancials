@@ -57,8 +57,16 @@ class ProjectController extends Controller
 
         foreach ($fileFields as $field) {
             if ($request->hasFile($field)) {
-                $file = $request->file($field)->store('images/projects');
-                $project_data[$field] = $file;
+                // Get the file from the request
+                $file = $request->file($field);
+                // Generate a unique filename with extension
+                $filename = time() . '-' . $file->getClientOriginalName();
+                // Define the path to store the file
+                $destinationPath = public_path('img');
+                // Move the file to the public/images directory
+                $file->move($destinationPath, $filename);
+                // Store the filename in the project data
+                $project_data[$field] = 'img/' . $filename;
             }
         }
 
@@ -93,16 +101,6 @@ class ProjectController extends Controller
      */
     public function update(ProjectRequest $request, Project $project)
     {
-        // $project_data = $request->safe()->except('project_image');
-
-        // if ($request->hasfile('project_image')) {
-        //     Storage::delete($project->project_image);
-        //     $get_file = $request->file('project_image')->store('images/projects');
-        //     $project_data['project_image'] = $get_file;
-        // }
-
-
-
         $project_data = $request->safe()->except([
             'project_image',
             'screening_report'
@@ -115,8 +113,22 @@ class ProjectController extends Controller
 
         foreach ($fileFields as $field) {
             if ($request->hasFile($field)) {
-                $file = $request->file($field)->store('images/projects');
-                $project_data[$field] = $file;
+                // Delete the old file if it exists
+                if ($project->$field) {
+                    $oldFilePath = public_path($project->$field);
+                    if (file_exists($oldFilePath)) {
+                        unlink($oldFilePath);
+                    }
+                }
+
+                // Handle the new file upload
+                $file = $request->file($field);
+                $filename = time() . '-' . $file->getClientOriginalName();
+                $destinationPath = public_path('images');
+                $file->move($destinationPath, $filename);
+
+                // Update the project data with the new file path
+                $project_data[$field] = 'images/' . $filename;
             }
         }
 
@@ -124,6 +136,7 @@ class ProjectController extends Controller
 
         return to_route('admin.project.index')->with('message', trans('admin.project_updated'));
     }
+
 
     /**
      * Remove the specified resource from storage.
