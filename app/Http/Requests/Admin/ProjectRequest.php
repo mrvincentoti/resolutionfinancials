@@ -38,6 +38,8 @@ class ProjectRequest extends FormRequest
             'rationale_for_selection' => [],
             'stakeholder_consultations' => [],
             'slug' => ['required', Rule::unique('projects')->ignore($this?->project?->id)],
+            'supervising_authority' => [],
+            'screening_report' => [],
         ];
     }
 

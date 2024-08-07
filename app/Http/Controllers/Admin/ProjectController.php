@@ -45,10 +45,21 @@ class ProjectController extends Controller
      */
     public function store(ProjectRequest $request)
     {
-        $project_data = $request->safe()->except('project_image');
-        if ($request->hasfile('project_image')) {
-            $get_file = $request->file('project_image')->store('images/projects');
-            $project_data['project_image'] = $get_file;
+        $project_data = $request->safe()->except([
+            'project_image',
+            'screening_report'
+        ]);
+
+        $fileFields = [
+            'project_image',
+            'screening_report'
+        ];
+
+        foreach ($fileFields as $field) {
+            if ($request->hasFile($field)) {
+                $file = $request->file($field)->store('images/projects');
+                $project_data[$field] = $file;
+            }
         }
 
         $project = Project::create($project_data);
@@ -82,12 +93,31 @@ class ProjectController extends Controller
      */
     public function update(ProjectRequest $request, Project $project)
     {
-        $project_data = $request->safe()->except('project_image');
+        // $project_data = $request->safe()->except('project_image');
 
-        if ($request->hasfile('project_image')) {
-            Storage::delete($project->project_image);
-            $get_file = $request->file('project_image')->store('images/projects');
-            $project_data['project_image'] = $get_file;
+        // if ($request->hasfile('project_image')) {
+        //     Storage::delete($project->project_image);
+        //     $get_file = $request->file('project_image')->store('images/projects');
+        //     $project_data['project_image'] = $get_file;
+        // }
+
+
+
+        $project_data = $request->safe()->except([
+            'project_image',
+            'screening_report'
+        ]);
+
+        $fileFields = [
+            'project_image',
+            'screening_report'
+        ];
+
+        foreach ($fileFields as $field) {
+            if ($request->hasFile($field)) {
+                $file = $request->file($field)->store('images/projects');
+                $project_data[$field] = $file;
+            }
         }
 
         $project->update($project_data);

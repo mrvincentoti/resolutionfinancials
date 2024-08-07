@@ -9,6 +9,7 @@ use App\Models\Sector;
 use App\Models\Phase;
 use App\Models\Lga;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Cookie;
 
 class ProjectController extends Controller
 {
@@ -71,6 +72,18 @@ class ProjectController extends Controller
             ->get();
 
         return response()->json($projectCounts);
+    }
+
+    public function getProjectBySlug($slug)
+    {
+        // I've Pass Slug to Get the Category per it's Slug
+        $project = Project::with(['sector', 'phase','milestones'])->whereSlug($slug)->firstOrFail();
+
+        //$comments = $post->comments;
+        //$post_title = $post->title;
+
+        //dd($project->milestones);
+        return view('front.project.details', compact('project'));
     }
 
 }
