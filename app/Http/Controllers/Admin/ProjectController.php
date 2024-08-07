@@ -36,7 +36,7 @@ class ProjectController extends Controller
     {
         $sectors = Sector::all();
         $phases = Phase::all();
-        $lgas = Lga::all(); 
+        $lgas = Lga::all();
         return view('admin.project.create', compact('sectors', 'phases','lgas'));
     }
 
@@ -62,11 +62,11 @@ class ProjectController extends Controller
                 // Generate a unique filename with extension
                 $filename = time() . '-' . $file->getClientOriginalName();
                 // Define the path to store the file
-                $destinationPath = public_path('img');
+                $destinationPath = public_path('images/project');
                 // Move the file to the public/images directory
                 $file->move($destinationPath, $filename);
                 // Store the filename in the project data
-                $project_data[$field] = 'img/' . $filename;
+                $project_data[$field] = 'images/project/' . $filename;
             }
         }
 
@@ -124,11 +124,11 @@ class ProjectController extends Controller
                 // Handle the new file upload
                 $file = $request->file($field);
                 $filename = time() . '-' . $file->getClientOriginalName();
-                $destinationPath = public_path('images');
+                $destinationPath = public_path('images/project');
                 $file->move($destinationPath, $filename);
 
                 // Update the project data with the new file path
-                $project_data[$field] = 'images/' . $filename;
+                $project_data[$field] = 'images/project/' . $filename;
             }
         }
 

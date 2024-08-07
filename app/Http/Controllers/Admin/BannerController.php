@@ -54,6 +54,19 @@ class BannerController extends Controller
             $banner_data['image'] = $get_file;
         }
 
+        if ($request->hasFile('image')) {
+            // Get the file from the request
+            $file = $request->file('image');
+            // Generate a unique filename with extension
+            $filename = time() . '-' . $file->getClientOriginalName();
+            // Define the path to store the file
+            $destinationPath = public_path('images/announcement');
+            // Move the file to the public/images/announcement directory
+            $file->move($destinationPath, $filename);
+            // Store the filename in the announcement data
+            $banner_data['image'] = 'images/banner/' . $filename;
+        }
+
         $banner = Banner::create($banner_data);
 
         return to_route('admin.banner.index')->with('message', trans('admin.banner_created'));
@@ -81,10 +94,25 @@ class BannerController extends Controller
     {
         $banner_data = $request->safe()->except('image');
 
-        if ($request->hasfile('image')) {
-            Storage::delete($banner->image);
-            $get_file = $request->file('image')->store('images/banners');
-            $banner_data['image'] = $get_file;
+        if ($request->hasFile('image')) {
+            // Delete the old document if it exists
+            if ($banner->image) {
+                $oldFilePath = public_path($banner->image);
+                if (file_exists($oldFilePath)) {
+                    unlink($oldFilePath);
+                }
+            }
+
+            // Get the new file from the request
+            $file = $request->file('image');
+            // Generate a unique filename with extension
+            $filename = time() . '-' . $file->getClientOriginalName();
+            // Define the path to store the file
+            $destinationPath = public_path('images/banner');
+            // Move the file to the public/images/announcement directory
+            $file->move($destinationPath, $filename);
+            // Store the filename in the announcement data
+            $banner_data['image'] = 'images/banner/' . $filename;
         }
 
         $banner->update($banner_data);
