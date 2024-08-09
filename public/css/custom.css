@@ -135,7 +135,7 @@ ul, ol {
     background-color: #EEF9FF !important; /* Slightly darker grey for active row */
 }
 
-#example thead th {
+#example thead th, #example tfoot th {
     background-color: rgba(66, 173, 78, 1); /* Background color for header */
     color: #ffffff; /* Text color for header */
     font-size: 12px; /* Reduce font size */
@@ -144,7 +144,7 @@ ul, ol {
 }
 
 /* Optional: Add border or other styles */
-#example thead th {
+#example thead th, #example tfoot th {
     border: 1px solid #dddddd; /* Light border for header cells */
 }
 

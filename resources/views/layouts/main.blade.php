@@ -291,7 +291,7 @@
                 [1, 2, 50, -1], // Values
                 ['10 rows', '25 rows', '50 rows', 'Show all'] // Labels
             ],
-            pageLength: 4 // Default number of rows per page
+            pageLength: 10 // Default number of rows per page
         });
     </script>
 
