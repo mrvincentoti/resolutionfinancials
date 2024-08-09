@@ -29,6 +29,7 @@ Route::middleware(['auth', 'can:admin-login'])->name('admin.')->prefix('/admin')
     Route::get('/post/slug-get', [PostController::class, 'getSlug'])->name('post.getslug');
     Route::get('/banner/slug-get', [BannerController::class, 'getSlug'])->name('banner.getslug');
     Route::get('/project/slug-get', [ProjectController::class, 'getSlug'])->name('project.getslug');
+    Route::get('/announcement/slug-get', [AnnouncementController::class, 'getSlug'])->name('announcement.getslug');
     Route::resources([
         'post' => PostController::class,
         'tag' => TagController::class,

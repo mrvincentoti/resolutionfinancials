@@ -8,9 +8,16 @@ use App\Models\Announcement;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\AnnouncementType;
+use App\Traits\SlugCreater;
 
 class AnnouncementController extends Controller
 {
+    use SlugCreater;
+
+    public function __construct()
+    {
+        $this->authorizeResource(Announcement::class, 'announcement');
+    }
     /**
      * Display a listing of the resource.
      */
@@ -109,5 +116,12 @@ class AnnouncementController extends Controller
     public function destroy(Announcement $announcement)
     {
         //
+    }
+
+    public function getSlug(Request $request)
+    {
+        $slug = $this->createAnnouncementSlug($request, Announcement::class);
+
+        return response()->json(['slug' => $slug]);
     }
 }

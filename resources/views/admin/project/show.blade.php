@@ -16,14 +16,34 @@
                     <div>
                         <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white ">
                             <div class="px-10 py-6">
-                                <div class="font-bold text-xl mb-2">General Information</div>
-                                <hr>
-                                <div class="w-full bg-white mb-2"><span class="text-gray-700 text-xl">Title:</span> <span>{{$project->project_title}}</span></div>
-                                <div class="w-full bg-white mb-2"><span class="text-gray-700 text-xl">Sector:</span> <span>{{$project->sector->name}}</span></div>
-                                <div class="w-full bg-white mb-2"><span class="text-gray-700 text-xl">Phase:</span> <span>{{$project->phase->name}}</span></div>
-                                <div class="w-full bg-white mb-2"><span class="text-gray-700 text-xl">Location:</span><span>{{$project->location}}</span></div>
-                                <div class="w-full bg-white mb-2"><span class="text-gray-700 text-xl">Value:</span><span>{{$project->value}}</span></div>
-                                <div class="w-full bg-white mb-2"><span class="text-gray-700 text-xl">Last Update:</span><span>{{$project->last_update}}</span></div>
+                                <div class="font-bold text-xl mb-2">
+                                    General Information
+                                    <hr>
+                                    <hr>
+                                </div>
+                                <div class="w-full bg-white mb-2">
+                                    <img class="mb-5 mt-5" src="{{ asset($project->project_image) }}"/>
+                                    <hr>
+                                    <hr>
+                                </div>
+                                <div class="w-full bg-white mb-2"><span class="text-gray-700 text-xl"><b>Name:</b></span> <span>{{$project->project_title}}</span></div>
+                                <div class="w-full bg-white mb-2"><span class="text-gray-700 text-xl"><b>Sector:</b></span> <span>{{$project->sector->name}}</span></div>
+                                <div class="w-full bg-white mb-2"><span class="text-gray-700 text-xl"><b>Phase:</b></span> <span>{{$project->phase->name}}</span></div>
+                                <div class="w-full bg-white mb-2"><span class="text-gray-700 text-xl"><b>Local Government:</b></span><span>{{$project->lga->name}}</span></div>
+                                <div class="w-full bg-white mb-2"><span class="text-gray-700 text-xl"><b>Value:</b></span><span>{{$project->value}}</span></div>
+                                <div class="w-full bg-white mb-2"><span class="text-gray-700 text-xl"><b>Last Update:</b></span><span>{{$project->last_update}}</span></div>
+                                <div class="w-full bg-white mb-2"><span class="text-gray-700 text-xl"><b>Supervising Authority:</b></span><span>{{$project->supervising_authority}}</span></div>
+
+                                @if (empty($project->screening_report))
+                                    <div class="w-full bg-white mb-2"><span class="text-gray-700 text-xl"><b>NO:</b></span>></div>
+                                @else
+                                    <div class="w-full bg-white mb-2">
+                                        <span class="text-gray-700 text-xl"><b>Supervising Authority:</b></span>
+                                        <a class="text-green" href="{{ asset($project->screening_report) }}" download>
+                                            YES (Click to download)
+                                        </a>
+                                    </div>
+                                @endif
                             </div>
                             <!-- <div class="px-10 py-6">
                                 <div class="font-bold text-xl mb-2">General Information</div>
@@ -229,13 +249,13 @@
                                     <div class="grid gap-6 mb-6 md:grid-cols-1">
                                         <div class="mb-1">
                                             <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Title</label>
-                                            <input type="text" id="title" value="{{ old('title') }}" name="title"
+                                            <input type="text" id="announcement_title" value="{{ old('title') }}" name="title"
                                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                                 placeholder="Title of the post" required>
                                         </div>
                                         <div class="mb-1">
                                             <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Slug</label>
-                                            <input type="text" id="title" value="{{ old('slug') }}" name="slug"
+                                            <input type="text" id="slug" value="{{ old('slug') }}" name="slug"
                                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                                 placeholder="Slug of the post" required>
                                         </div>

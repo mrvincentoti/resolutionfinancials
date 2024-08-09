@@ -191,7 +191,7 @@
                 </div>
             </div>
         @endcan
-            @can('admin-only')
+            <!-- @can('admin-only')
                 <a href="{{ route('admin.banner.index') }}"
                     class="{{ request()->routeIs('*.banner.*') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white py-4 pl-6 nav-item">
                     <i class="far fa-file mr-3"></i>
@@ -202,8 +202,8 @@
                 class="{{ request()->routeIs('*.post.*') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white  py-4 pl-6 nav-item">
                 <i class="fas fa-newspaper mr-3"></i>
                 Posts
-            </a>
-            @can('admin-only')
+            </a> -->
+            <!-- @can('admin-only')
                 <a href="{{ route('admin.category.index') }}"
                     class="{{ request()->routeIs('*.category.*') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white py-4 pl-6 nav-item">
                     <i class="fas fa-sticky-note mr-3"></i>
@@ -214,13 +214,13 @@
                 class="{{ request()->routeIs('*.tag.*') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white  py-4 pl-6 nav-item">
                 <i class="fas fa-tag mr-3"></i>
                 Tags
-            </a>
+            </a> -->
             @can('admin-only')
-                <a href="{{ route('admin.page.index') }}"
+                <!-- <a href="{{ route('admin.page.index') }}"
                     class="{{ request()->routeIs('*.page.*') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white  py-4 pl-6 nav-item">
                     <i class="far fa-file mr-3"></i>
                     Pages
-                </a>
+                </a> -->
                 <a href="{{ route('admin.role.index') }}"
                     class="{{ request()->routeIs('*.role.*') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white  py-4 pl-6 nav-item">
                     <i class="fas fa-user-shield mr-3"></i>
@@ -739,6 +739,27 @@
                     }
                 );
             });
+        </script>
+    @endif
+
+    @if (request()->routeIs('*.announcement.edit') || request()->routeIs('*.project.show'))
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+            integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
+        <script>
+                $('#announcement_title').change(function (e) {
+                    console.log("i changed");
+                    $.get('{{ route('admin.announcement.getslug') }}', {
+                        'announcement_title': $(this).val()
+                    },
+                        function (data) {
+                            $('#slug').val(data.slug);
+                        }
+                    );
+        });
         </script>
     @endif
     <script>

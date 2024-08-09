@@ -11,45 +11,45 @@
 
                 <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white ">
                     <div class="px-10 py-6">
-                        <div class="font-bold text-xl mb-2 text-center">Categories</div>
+                        <div class="font-bold text-xl mb-2 text-center">Total Projects</div>
                         <p class="text-gray-700 text-5xl text-center">
-                            {{ $categories }}
+                            {{ $projects }}
                         </p>
                     </div>
                 </div>
 
                 <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white ">
                     <div class="px-10 py-6">
-                        <div class="font-bold text-xl mb-2 text-center">Posts</div>
+                        <div class="font-bold text-xl mb-2 text-center">Preparation</div>
                         <p class="text-gray-700 text-5xl text-center">
-                            {{ $posts }}
+                            {{ $prep_projects }}
                         </p>
                     </div>
                 </div>
 
                 <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white ">
                     <div class="px-10 py-6">
-                        <div class="font-bold text-xl mb-2 text-center">Tags</div>
+                        <div class="font-bold text-xl mb-2 text-center">Procurement</div>
                         <p class="text-gray-700 text-5xl text-center">
-                            {{ $tags }}
+                            {{ $pro_projects }}
                         </p>
                     </div>
                 </div>
 
                 <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white ">
                     <div class="px-10 py-6">
-                        <div class="font-bold text-xl mb-2 text-center">Users</div>
+                        <div class="font-bold text-xl mb-2 text-center">Implementation</div>
                         <p class="text-gray-700 text-5xl text-center">
-                            {{ $users }}
+                            {{ $imp_projects }}
                         </p>
                     </div>
                 </div>
 
                 <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white ">
                     <div class="px-10 py-6">
-                        <div class="font-bold text-xl mb-2 text-center">NewsLetter Subcribes</div>
+                        <div class="font-bold text-xl mb-2 text-center">Development</div>
                         <p class="text-gray-700 text-5xl text-center">
-                            {{ $news_letter_users }}
+                            {{ $dev_projects }}
                         </p>
                     </div>
                 </div>

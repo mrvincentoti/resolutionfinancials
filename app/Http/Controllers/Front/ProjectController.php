@@ -85,5 +85,4 @@ class ProjectController extends Controller
         //dd($project->milestones);
         return view('front.project.details', compact('project'));
     }
-
 }

@@ -7,17 +7,23 @@ use App\Models\Category;
 use App\Models\Post;
 use App\Models\Tag;
 use App\Models\User;
+use App\Models\Project;
 
 class AdminController extends Controller
 {
     public function index()
     {
-        $categories = Category::count();
         $posts = Post::count();
         $tags = Tag::count();
         $users = User::count();
         $news_letter_users = User::where('news_letter', true)->count();
+        $projects = Project::count();
 
-        return view('admin.index', compact('categories', 'posts', 'tags', 'users', 'news_letter_users'));
+        $pro_projects = Project::with(['sector', 'phase'])->where('phase_id', 1)->count();
+        $dev_projects = Project::with(['sector', 'phase'])->where('phase_id', 2)->count();
+        $imp_projects = Project::with(['sector', 'phase'])->where('phase_id', 3)->count();
+        $prep_projects = Project::with(['sector', 'phase'])->where('phase_id', 4)->count();
+
+        return view('admin.index', compact('projects','pro_projects','dev_projects','imp_projects','prep_projects'));
     }
 }

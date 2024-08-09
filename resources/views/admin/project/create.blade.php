@@ -12,7 +12,7 @@
                     @csrf
                     <div class="grid gap-6 mb-6 md:grid-cols-2">
                         <div class="mb-1">
-                            <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Title</label>
+                            <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Project Name</label>
                             <input type="text" id="project_title" value="{{ old('project_title') }}" name="project_title"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="Title of the post" required>
@@ -48,10 +48,10 @@
                     </div>
                     <div class="grid gap-6 mb-6 md:grid-cols-2">
                         <div class="mb-1">
-                            <label for="slug" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Slug</label>
+                            <label for="slug" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Slug <small class="text-danger">(Automatically Generated from Title)</small></label>
                             <input type="text" id="slug" value="{{ old('slug') }}" name="slug"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="ex: bla bla bla">
+                                placeholder="ex: bla bla bla" readonly>
                         </div>
                         <!-- <div class="mb-1">
                                 <label for="location" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Location</label>
@@ -60,7 +60,7 @@
                                     placeholder="ex: bla bla bla">
                         </div> -->
                         <div class="mb-1">
-                            <label for="cat" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Location</label>
+                            <label for="cat" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Local Government Area</label>
                             <select
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 id="selectType" name="lga_id">
@@ -71,8 +71,8 @@
                             </select>
                         </div>
                         <div class="mb-1">
-                            <label for="value" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Value</label>
-                            <input type="text" id="value" value="{{ old('value') }}" name="value"
+                            <label for="value" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Value (Million)</label>
+                            <input type="number" id="value" value="{{ old('value') }}" name="value"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="ex: bla bla bla">
                         </div>

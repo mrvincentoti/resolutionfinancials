@@ -8,7 +8,7 @@
         //echo date_format($date, "Y/m/d H:i:s");
         @endphp
         <div class="d-flex rounded overflow-hidden mb-3 card-container">
-            <a href="{{ route('announcement.details', $project->slug) }}"
+            <a href="{{ route('announcement.details', $project->slug ?? '') }}"
                 class="d-flex align-items-center bg-light px-1 w-100 text-decoration-none card-link">
                 <div class="date font-green text-center px-3">
                     <div class="day fw-bold">{{ date_format($date, "d") }}</div>

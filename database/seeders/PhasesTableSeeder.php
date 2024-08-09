@@ -17,6 +17,7 @@ class PhasesTableSeeder extends Seeder
             ['id' => 1, 'name' => 'Procurement'],
             ['id' => 2, 'name' => 'Development'],
             ['id' => 3, 'name' => 'Implementation'],
+            ['id' => 4, 'name' => 'Preparation'],
         ]);
     }
 }

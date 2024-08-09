@@ -14,16 +14,16 @@
                         <div class="mb-1">
                             <label for="title"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Title</label>
-                            <input type="text" id="title" value="{{ old('title', $announcement->title) }}" name="title"
+                            <input type="text" id="announcement_title" value="{{ old('title', $announcement->title) }}" name="title"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="Title of the announcement document" required>
                         </div>
                         <div class="mb-1">
                             <label for="title"
-                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Title</label>
-                            <input type="text" id="title" value="{{ old('slug', $announcement->slug) }}" name="slug"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Slug</label>
+                            <input type="text" id="slug" value="{{ old('slug', $announcement->slug) }}" name="slug"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="Slug of the announcement document" required>
+                                placeholder="Slug of the announcement document" required readonly>
                         </div>
                         <div class="mb-1">
                             <label for="announcement_type_id"

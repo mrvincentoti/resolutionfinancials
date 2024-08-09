@@ -30,6 +30,7 @@ Route::get('/project/{slug}', [FrontProjectController::class, 'getProjectBySlug'
 Route::get('/announcement/{slug}', [FrontAnnouncementController::class, 'getAnnouncementBySlug'])->name('announcement.details');
 
 
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
