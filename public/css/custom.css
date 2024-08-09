@@ -118,3 +118,33 @@ ul, ol {
     background-color: currentColor; /* This will use the color of the text */
     width: 100%;
 }
+
+/* Ensure rows have a default cursor style */
+#example tbody tr {
+    cursor: pointer !important; /* Pointer cursor to indicate clickable items */
+}
+
+/* Hover effect for rows */
+#example tbody tr:hover {
+    background-color: #EEF9FF !important; /* Light grey background on hover */
+    transition: background-color 0.3s ease !important; /* Smooth transition effect */
+}
+
+/* Optional: Add styling for active row to indicate selection */
+#example tbody tr.active {
+    background-color: #EEF9FF !important; /* Slightly darker grey for active row */
+}
+
+#example thead th {
+    background-color: rgba(66, 173, 78, 1); /* Background color for header */
+    color: #ffffff; /* Text color for header */
+    font-size: 12px; /* Reduce font size */
+    padding: 10px; /* Add padding for better spacing */
+    text-align: left; /* Align text to the left, adjust as needed */
+}
+
+/* Optional: Add border or other styles */
+#example thead th {
+    border: 1px solid #dddddd; /* Light border for header cells */
+}
+

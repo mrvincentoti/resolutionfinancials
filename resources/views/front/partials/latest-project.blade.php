@@ -6,7 +6,7 @@
                 <div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
                     <div class="blog-item bg-light rounded overflow-hidden">
                         <div class="blog-img position-relative overflow-hidden">
-                            <img class="img-fluid" src="{{ asset('storage/' . $project->project_image) }}" alt="">
+                            <img class="img-fluid" src="{{ asset($project->project_image) }}" alt="">
                             <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4"
                                 href="">{{$project->sector->name}}</a>
                         </div>
@@ -19,7 +19,7 @@
                                 <small><i class="far fa-calendar-alt text-primary me-2"></i> {{ date_format($date, "d M, Y") }}</small>                        </div>
                             <h4 class="mb-3">{{$project->project_title}}</h4>
                             <p> {!! \Illuminate\Support\Str::limit($project->project_need, 45) !!}</p>
-                            <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
+                            <a class="text-uppercase" href="{{ route('project.details', $project->slug) }}">Read More <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>

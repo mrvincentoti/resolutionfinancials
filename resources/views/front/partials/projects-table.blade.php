@@ -89,7 +89,7 @@
             @else
             <div class="col-lg-10  wow zoomIn" data-wow-delay="0.9s" style="min-height: 350px;">
             @endif
-                <table id="example" class="display responsive">
+                <table id="example" class="display hover responsive">
                     <thead>
                         <tr>
                             <th>S/N</th>
@@ -104,7 +104,7 @@
                     </thead>
                     <tbody>
                         @foreach($projects as $project)
-                            <tr>
+                            <tr data-href="{{ route('project.details', $project->slug) }}">
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{$project->project_title}}</td>
                                 <td>{{$project->sector->name}}</td>

@@ -13,27 +13,27 @@
     <!-- Blog Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
-            <div class="row mt-5 d-none d-lg-block">
+            <!-- <div class="row mt-5 d-none d-lg-block">
                 <div class="col-lg-12">
                     <div class="project-menu  hiddenAtPrint">
                         <ul>
                             <li><a href="#project-info" class="soft-scroll">Basic project information</a></li>
-                            <li><a href="#procurement-documents" class="soft-scroll">Procurement documents</a></li>
+                            <li><a href="#procurement-documents" class="soft-scroll">PPP and Climate Screening Report</a></li>
                             <li><a href="#announcements-section" class="soft-scroll">Announcements</a></li>
                             <li><a href="#gallery" class="soft-scroll">Gallery</a></li>
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="row g-5 mt-5">
                 <div class="col-lg-8">
                     <!-- Blog Detail Start -->
                     <div class="mb-5">
-                        <img class="img-fluid w-100 rounded mb-5" src="{{ asset('storage/' . $project->project_image) }}" alt="">
+                        <img class="img-fluid w-100 rounded mb-5" src="{{ asset($project->project_image) }}" alt="">
                         <h2 class="mb-4">{{ $project->project_title }}</h2>
 
-                        <div class="row mt-5 mb-5">
+                        <div class="row mt-5 mb-5" id="project-info">
                             <div class="col-lg-4 col-sm-6 col-6 mb-1">
                                 <div class="team-item rounded overflow-hidden p-2">
                                     <div class="text-left py-4">
@@ -123,11 +123,14 @@
                             <div class="row">
                                 <div class="col-md-3 col-sm-6 mb-4 text-center">
                                     <div class="card">
-                                        <a href="{{ asset('storage/' . $project->screening_report) }}" data-lightbox="documents" data-title="Document Title 1">
-                                            <img src="{{ asset('storage/' . $project->screening_report) }}" class="card-img-top" alt="Document 1">
+                                        <a href="{{ asset($project->screening_report) }}" data-lightbox="documents" data-title="Document Title 1">
+                                            <img src="{{ asset($project->screening_report) }}" class="card-img-top" alt="Document 1">
                                         </a>
                                         <div class="card-body">
-                                            <a href="{{ asset('storage/' . $project->screening_report) }}" class="text-green">Download</a>
+                                            <!-- <a href="{{ asset($project->screening_report) }}" class="text-green">Download</a> -->
+                                            <a class="text-green" href="{{ asset($project->screening_report) }}" download>
+                                                (Click to download)
+                                            </a>
                                         </div>
                                     </div>
                                 </div>                        

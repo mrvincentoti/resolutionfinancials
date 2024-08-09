@@ -274,6 +274,7 @@
     <script src="{{ asset('js/anychart-base.min.js') }}"></script>
     <script src="{{ asset('js/anychart-exports.min.js') }}"></script>
     <script src="{{ asset('js/anychart-ui.min.js') }}"></script>
+    
 
     <!-- Template Javascript -->
     <script src="{{ asset('js/main.js') }}"></script>
@@ -285,9 +286,15 @@
                 topStart: {
                     buttons: ['copy', 'csv', 'excel', 'pdf', 'print']
                 }
-            }
+            },
+            lengthMenu: [
+                [1, 2, 50, -1], // Values
+                ['10 rows', '25 rows', '50 rows', 'Show all'] // Labels
+            ],
+            pageLength: 4 // Default number of rows per page
         });
     </script>
+
 
     <!-- Pie Chart -->
     <script>
@@ -422,17 +429,26 @@
                     const tbody = document.querySelector('#example tbody');
                     tbody.innerHTML = '';
 
-                    data.forEach(project => {
-                        const row = `<tr>
+                    data.forEach((project, index) => {
+                        const row = `<tr data-href="/project/${project.slug}">
+                                        <td>${index + 1}</td>
                                         <td>${project.project_title}</td>
                                         <td>${project.sector.name}</td>
+                                         <td>${project.lga.name}</td>
                                         <td>${project.phase.name}</td>
-                                        <td>${project.project_title}</td>
                                         <td>${project.value}</td>
+                                        <td>${project.supervising_authority}</td>
+                                        <td>${project.screening_report}</td>
                                     </tr>`;
                         tbody.innerHTML += row;
                     });
                 }
+            });
+        </script>
+
+        <script>
+            $('#example').on('click', 'tbody tr', function() {
+                window.location = $(this).data('href');
             });
         </script>
 </body>

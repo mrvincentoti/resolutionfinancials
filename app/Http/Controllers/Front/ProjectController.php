@@ -85,6 +85,7 @@ class ProjectController extends Controller
         //$post_title = $post->title;
 
         //dd($project->milestones);
-        return view('front.project.details', compact('project'));
+        $settings = Setting::first();
+        return view('front.project.details', compact('project','settings'));
     }
 }

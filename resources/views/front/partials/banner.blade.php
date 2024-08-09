@@ -9,7 +9,7 @@
                         <h5 class="text-white text-uppercase mb-3 animated slideInDown">
                             {!! \Illuminate\Support\Str::limit($banner->project_need, 300) !!}
                         </h5>
-                        <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                        <a href="{{ route('project.details', $banner->slug) }}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
                     </div>
                 </div>
             </div>
