@@ -19,6 +19,7 @@ Route::get('/post/{slug}', [FrontPostController::class, 'getPostBySlug'])->name(
 Route::get('/category/{slug}', [FrontCategoryController::class, 'getCategoryBySlug'])->name('category.show');
 Route::get('/page/{slug}', [FrontPageController::class, 'getPageBySlug'])->name('page.show');
 Route::get('/tag/{slug}', [FrontTagController::class, 'getPostsPerTags'])->name('tag.show');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
 //Projects
 Route::get('/project/all', [FrontProjectController::class, 'index'])->name('project.all');

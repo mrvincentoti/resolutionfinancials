@@ -22,7 +22,7 @@
                     <input type="text" name="site_name" id="site_name" value="{{ $setting->site_name }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                 </div>
                 <div class="mb-1">
-                    <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Site Description</label>
+                    <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Address</label>
                     <input type="text" name="description" id="description" value="{{ $setting->description }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                 </div>
                 <div class="mb-1">
@@ -42,7 +42,7 @@
                     <input type="text" name="url_twitter" id="url_twitter" value="{{ $setting->url_twitter }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                 </div>
                 <div class="mb-1">
-                    <label for="url_linkedin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">LinkedIN URL</label>
+                    <label for="url_linkedin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">PhoneL</label>
                     <input type="text" name="url_linkedin" id="url_linkedin" value="{{ $setting->url_linkedin }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                 </div>
                 <div class="mb-1">

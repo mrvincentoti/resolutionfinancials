@@ -9,6 +9,7 @@ use App\Models\Sector;
 use App\Models\Phase;
 use App\Models\Lga;
 use Illuminate\Support\Facades\DB;
+use App\Models\Setting;
 use Illuminate\Support\Facades\Cookie;
 
 class ProjectController extends Controller
@@ -19,7 +20,8 @@ class ProjectController extends Controller
         $sectors = Sector::all();
         $phases = Phase::all();
         $lgas = Lga::all();
-        return view('front.project.index', compact(['projects', 'projects', 'sectors', 'phases', 'lgas']));
+        $settings = Setting::first();
+        return view('front.project.index', compact(['projects', 'projects', 'sectors', 'phases', 'lgas','settings']));
     }
 
     public function filterProjects(Request $request)

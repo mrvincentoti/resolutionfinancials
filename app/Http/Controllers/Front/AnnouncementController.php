@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use App\Models\Announcement;
+use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
 
@@ -19,8 +20,9 @@ class AnnouncementController extends Controller
 
         $general_announcements = Announcement::with([])->where('announcement_type_id', 1)->latest()->paginate(15);
         $project_announcements = Announcement::with([])->where('announcement_type_id', 2)->latest()->paginate(15);
+        $settings = Setting::first();
 
-        return view("front.announcement.index", compact(['general_announcements', 'project_announcements']));
+        return view("front.announcement.index", compact(['general_announcements', 'project_announcements','settings']));
     }
 
     /**

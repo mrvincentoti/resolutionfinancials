@@ -8,6 +8,7 @@ use App\Models\Project;
 use App\Models\Sector;
 use App\Models\Phase;
 use App\Models\Lga;
+use App\Models\Setting;
 
 
 class HomeController extends Controller
@@ -34,7 +35,13 @@ class HomeController extends Controller
 
         $latest_projects = Project::with(['sector', 'phase'])->orderBy('created_at', 'desc')->take(6)->get();
 
-        return view('front.index', compact(['project_announcements','projects','sectors','phases','lgas', 'banners','pro_projects','dev_projects','imp_projects','prep_projects','latest_projects']));
+        $settings = Setting::first();
+
+        return view('front.index', compact(['project_announcements','projects','sectors','phases','lgas', 'banners','pro_projects','dev_projects','imp_projects','prep_projects','latest_projects','settings']));
+    }
+
+    public function contact(){
+        return view('front.contact');
     }
 
 }

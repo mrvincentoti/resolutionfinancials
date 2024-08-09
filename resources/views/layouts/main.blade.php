@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>{{ config('app.name', 'Nasida') }} - Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Free HTML Templates">
+    <meta name="keywords" content="{{ $settings->description }}">
     <meta name="description" content="Free HTML Templates">
 
     <!-- Favicon -->
@@ -57,23 +57,23 @@
         <div class="row gx-0">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>123 Street, XYZ</small>
-                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+234 345 6789</small>
-                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@example.com</small>
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>{{ $settings->description }}</small>                   
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>{{ strtok($settings->url_linkedin, ",") }}</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>{{ $settings->contact_email }}</small>
                 </div>
             </div>
             <div class="col-lg-4 text-center text-lg-end">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="{{$settings->url_twitter}}"><i
                             class="fab fa-twitter fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="{{$settings->url_fb}}"><i
                             class="fab fa-facebook-f fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
-                            class="fab fa-linkedin-in fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+                    <!-- <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+                            class="fab fa-linkedin-in fw-normal"></i></a> -->
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="{{$settings->url_insta}}"><i
                             class="fab fa-instagram fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i
-                            class="fab fa-youtube fw-normal"></i></a>
+                    <!-- <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i
+                            class="fab fa-youtube fw-normal"></i></a> -->
                 </div>
             </div>
         </div>
@@ -120,7 +120,7 @@
                             <a href="quote.html" class="dropdown-item">Free Quote</a>
                         </div>
                     </div> -->
-                    <a href="" class="nav-item nav-link">Contact</a>
+                    <a href="{{ route('contact') }}" class="nav-item nav-link">Contact</a>
                 </div>
                 <!-- <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton> -->
                 <!-- <a href="" class="btn btn-primary py-2 px-4 ms-3">Download</a> -->
@@ -189,24 +189,24 @@
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-geo-alt text-light me-2"></i>
-                                <p class="mb-0">123 Street, XYZ</p>
+                                <p class="mb-0">{{$settings->description}}</p>
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-envelope-open text-light me-2"></i>
-                                <p class="mb-0">info@example.com</p>
+                                <p class="mb-0">{{$settings->contact_email}}</p>
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-telephone text-light me-2"></i>
-                                <p class="mb-0">+234 345 67890</p>
+                                <p class="mb-0">{{ strtok($settings->url_linkedin, ",") }}</p>
                             </div>
                             <div class="d-flex mt-4">
-                                <a class="btn btn-light btn-square me-2" href="#"><i
+                                <a class="btn btn-light btn-square me-2" href="{{ $settings->url_twitter }}"><i
                                         class="fab fa-twitter fw-normal"></i></a>
-                                <a class="btn btn-light btn-square me-2" href="#"><i
+                                <a class="btn btn-light btn-square me-2" href="{{ $settings->url_fb }}"><i
                                         class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-light btn-square me-2" href="#"><i
+                                <a class="btn btn-light btn-square me-2" href="{{ $settings->url_linkedin }}"><i
                                         class="fab fa-linkedin-in fw-normal"></i></a>
-                                <a class="btn btn-light btn-square" href="#"><i
+                                <a class="btn btn-light btn-square" href="{{ $settings->url_insta }}"><i
                                         class="fab fa-instagram fw-normal"></i></a>
                             </div>
                         </div>
@@ -215,17 +215,14 @@
                                 <h3 class="text-light mb-0">Quick Links</h3>
                             </div>
                             <div class="link-animated d-flex flex-column justify-content-start">
-                                <a class="text-light mb-2" href="#"><i
+                                <a class="text-light mb-2" href="{{ route('webhome') }}"><i
                                         class="bi bi-arrow-right text-light me-2"></i>Home</a>
-                                <a class="text-light mb-2" href="#"><i
-                                        class="bi bi-arrow-right text-light me-2"></i>About Us</a>
-                                <a class="text-light mb-2" href="#"><i
-                                        class="bi bi-arrow-right text-light me-2"></i>Our Services</a>
-                                <a class="text-light mb-2" href="#"><i
-                                        class="bi bi-arrow-right text-light me-2"></i>Meet The Team</a>
-                                <a class="text-light mb-2" href="#"><i
-                                        class="bi bi-arrow-right text-light me-2"></i>Latest Blog</a>
-                                <a class="text-light" href="#"><i
+                                <a class="text-light mb-2" href="{{ route('project.all') }}"><i
+                                        class="bi bi-arrow-right text-light me-2"></i>Projects</a>
+                                <a class="text-light mb-2" href="{{ route('announcement') }}"><i
+                                        class="bi bi-arrow-right text-light me-2"></i>Announcements</a>
+                         
+                                <a class="text-light" href="{{ route('contact') }}"><i
                                         class="bi bi-arrow-right text-light me-2"></i>Contact Us</a>
                             </div>
                         </div>

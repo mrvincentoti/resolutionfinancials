@@ -13,12 +13,7 @@ class AdminController extends Controller
 {
     public function index()
     {
-        $posts = Post::count();
-        $tags = Tag::count();
-        $users = User::count();
-        $news_letter_users = User::where('news_letter', true)->count();
         $projects = Project::count();
-
         $pro_projects = Project::with(['sector', 'phase'])->where('phase_id', 1)->count();
         $dev_projects = Project::with(['sector', 'phase'])->where('phase_id', 2)->count();
         $imp_projects = Project::with(['sector', 'phase'])->where('phase_id', 3)->count();
