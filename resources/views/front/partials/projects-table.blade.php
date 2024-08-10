@@ -83,7 +83,7 @@
                     </div>
                 </div>
             </div>
-            
+
             @if (request()->is('/') || request()->is('/home'))
             <div class="col-lg-10  wow zoomIn" data-wow-delay="0.9s" style="min-height: 350px;">
             @else
@@ -136,6 +136,7 @@
                             <th>PPP AND CLIMATE SCREENING REPORT</th>
                         </tr>
                     </tfoot>
+                    <div id="rowCount" class="mb-3"></div>
                 </table>
             </div>
         </div>

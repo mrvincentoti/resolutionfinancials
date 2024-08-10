@@ -40,8 +40,10 @@ class HomeController extends Controller
         return view('front.index', compact(['project_announcements','projects','sectors','phases','lgas', 'banners','pro_projects','dev_projects','imp_projects','prep_projects','latest_projects','settings']));
     }
 
-    public function contact(){
-        return view('front.contact');
+    public function contact()
+    {
+        $settings = Setting::first();
+        return view('front.contact', compact('settings'));
     }
 
 }

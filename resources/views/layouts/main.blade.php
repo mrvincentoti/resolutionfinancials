@@ -57,7 +57,7 @@
         <div class="row gx-0">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>{{ $settings->description }}</small>                   
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>{{ $settings->description }}</small>
                     <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>{{ strtok($settings->url_linkedin, ",") }}</small>
                     <small class="text-light"><i class="fa fa-envelope-open me-2"></i>{{ $settings->contact_email }}</small>
                 </div>
@@ -120,7 +120,7 @@
                             <a href="quote.html" class="dropdown-item">Free Quote</a>
                         </div>
                     </div> -->
-                    <a href="{{ route('contact') }}" class="nav-item nav-link">Contact</a>
+                    <a href="https://nasida.na.gov.ng/contact-us" class="nav-item nav-link" target="_blank">Contact</a>
                 </div>
                 <!-- <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton> -->
                 <!-- <a href="" class="btn btn-primary py-2 px-4 ms-3">Download</a> -->
@@ -129,6 +129,8 @@
         <!--Start Banner-->
         @if (request()->is('/') || request()->is('/home'))
             @include('front.partials.banner', ['banners' => $banners])
+        @elseif (request()->is('contact'))
+            @include('front.partials.contact')
         @endif
         <!--End Banner-->
     </div>
@@ -221,7 +223,7 @@
                                         class="bi bi-arrow-right text-light me-2"></i>Projects</a>
                                 <a class="text-light mb-2" href="{{ route('announcement') }}"><i
                                         class="bi bi-arrow-right text-light me-2"></i>Announcements</a>
-                         
+
                                 <a class="text-light" href="{{ route('contact') }}"><i
                                         class="bi bi-arrow-right text-light me-2"></i>Contact Us</a>
                             </div>
@@ -274,25 +276,35 @@
     <script src="{{ asset('js/anychart-base.min.js') }}"></script>
     <script src="{{ asset('js/anychart-exports.min.js') }}"></script>
     <script src="{{ asset('js/anychart-ui.min.js') }}"></script>
-    
+
 
     <!-- Template Javascript -->
     <script src="{{ asset('js/main.js') }}"></script>
 
 
     <script>
-        new DataTable('#example', {
+        var table = new DataTable('#example', {
             layout: {
                 topStart: {
                     buttons: ['copy', 'csv', 'excel', 'pdf', 'print']
                 }
             },
             lengthMenu: [
-                [1, 2, 50, -1], // Values
+                [10, 25, 50, -1], // Values
                 ['10 rows', '25 rows', '50 rows', 'Show all'] // Labels
             ],
             pageLength: 10 // Default number of rows per page
         });
+
+        // Update the row count display
+        table.on('draw', function () {
+            var info = table.page.info();
+            $('#rowCount').html('Showing ' + (info.end - info.start) + ' rows out of ' + info.recordsTotal);
+        });
+
+        // Initial row count display
+        var info = table.page.info();
+        $('#rowCount').html('Showing ' + (info.end - info.start) + ' rows out of ' + info.recordsTotal);
     </script>
 
 
