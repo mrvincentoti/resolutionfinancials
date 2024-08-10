@@ -18,7 +18,7 @@
         }
 
         .bg-sidebar {
-            background: #3d68ff;
+            background: rgba(66, 173, 78, 1);
         }
 
         .cta-btn {
@@ -30,26 +30,26 @@
         }
 
         .upgrade-btn:hover {
-            background: #0038fd;
+            background: #164516;
         }
 
         .active-nav-link {
-            background: #1947ee;
+            background: #164516;
         }
 
         .nav-item:hover {
-            background: #1947ee;
+            background: #164516;
         }
 
         .account-link:hover {
-            background: #3d68ff;
+            background: #164516;
         }
                /* Optional: Add a transition for the button */
         .add-row-button {
             transition: background-color 0.3s ease;
         }
         .add-row-button:hover {
-            background-color: #2563eb; /* Tailwind blue-600 */
+            background-color: #164516; /* Tailwind blue-600 */
         }
     </style>
     <style>
