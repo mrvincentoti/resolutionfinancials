@@ -110,7 +110,7 @@
                                 <td>{{$project->sector->name}}</td>
                                 <td>{{$project->lga->name}}</td>
                                 <td><span>{{$project->phase->name}}</span></td>
-                                <td><span>{{$project->value}}</span></td>
+                                <td><span>&#8358;{{number_format($project->value, 2)}}</span></td>
                                 <td>{{$project->supervising_authority}}</td>
                                 @if (empty($project->screening_report))
                                     <td>NO</td>
