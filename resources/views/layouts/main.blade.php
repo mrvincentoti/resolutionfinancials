@@ -283,28 +283,22 @@
 
 
     <script>
-        var table = new DataTable('#example', {
-            layout: {
-                topStart: {
-                    buttons: ['copy', 'csv', 'excel', 'pdf', 'print']
-                }
-            },
-            lengthMenu: [
-                [10, 25, 50, -1], // Values
-                ['10 rows', '25 rows', '50 rows', 'Show all'] // Labels
-            ],
-            pageLength: 10 // Default number of rows per page
+        $(document).ready(function() {
+            $('#example').DataTable({
+                layout: {
+                    topStart: {
+                        buttons: ['copy', 'csv', 'excel', 'pdf', 'print']
+                    }
+                },
+                lengthMenu: [
+                    [10, 25, 50, -1], // Values
+                    ['10 rows', '25 rows', '50 rows', 'Show all'] // Labels
+                ],
+                pageLength: 10, // Default number of rows per page
+                dom: 'lBfrtip', // 'l' is the length changing input control, 'B' is for buttons, 'f' is for the search, 'r' is for processing, 't' is for the table, 'i' is for table info, and 'p' is for pagination
+                buttons: ['copy', 'csv', 'excel', 'pdf', 'print'],
+            });
         });
-
-        // Update the row count display
-        table.on('draw', function () {
-            var info = table.page.info();
-            $('#rowCount').html('Showing ' + (info.end - info.start) + ' rows out of ' + info.recordsTotal);
-        });
-
-        // Initial row count display
-        var info = table.page.info();
-        $('#rowCount').html('Showing ' + (info.end - info.start) + ' rows out of ' + info.recordsTotal);
     </script>
 
 
