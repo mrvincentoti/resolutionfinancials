@@ -70,7 +70,7 @@
                                 <div class="team-item rounded overflow-hidden p-2">
                                     <div class="text-left py-4">
                                         <h5 class="text-primary">Indicative Value</h5>
-                                        <p class="text-uppercase m-0">{{$project->value}}</p>
+                                        <p class="text-uppercase m-0">{{number_format($project->value, 2)}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -89,30 +89,30 @@
                             <h5 class="mb-0">Project Need</h5>
                         </div>
 
-                       <p class="text-justify text-break">{!! $project->project_need ?? 'Information will be published as soon as it is available.' !!}</p> 
+                       <p class="text-justify text-break">{!! $project->project_need ?? 'Information will be published as soon as it is available.' !!}</p>
 
                         <div class="section-title section-title-sm position-relative pb-3 mb-4">
                             <h5 class="mb-0">Description Of Asset</h5>
                         </div>
-                        
+
                         <p>{!! $project->description_of_asset ?? 'Information will be published as soon as it is available.' !!}</p>
 
                         <div class="section-title section-title-sm position-relative pb-3 mb-4">
                             <h5 class="mb-0">Description Of Services</h5>
                         </div>
-                        
+
                         <p>{!! $project->description_of_service ?? 'Information will be published as soon as it is available.' !!}</p>
 
                         <div class="section-title section-title-sm position-relative pb-3 mb-4">
                             <h5 class="mb-0">Rationale for Selection of PPP Model</h5>
                         </div>
-                        
+
                         <p>{!! $project->rationale_for_selection ?? 'Information will be published as soon as it is available.' !!}</p>
 
                         <div class="section-title section-title-sm position-relative pb-3 mb-4">
                             <h5 class="mb-0">Stakeholder Consultations</h5>
                         </div>
-                        
+
                         <p>{!! $project->stakeholder_consultations ?? 'Information will be published as soon as it is available.' !!}</p>
 
                         @if($project->screening_report)
@@ -133,7 +133,7 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>                        
+                                </div>
                             </div>
                         @endif
                         <!-- <div class="section-title section-title-sm position-relative pb-3 mb-4">
@@ -163,7 +163,7 @@
                                     </div>
                                 </div>
                             </div>
-                           
+
                             <div class="col-md-3 col-sm-6 mb-4 text-center">
                                 <div class="card">
                                     <a href="{{ asset('img/blog-1.jpg')}}" data-lightbox="documents" data-title="Document Title 3">
@@ -175,7 +175,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
 
                         <div class="section-title section-title-sm position-relative pb-3 mb-4">
@@ -183,7 +183,7 @@
                         </div>
 
                         <div class="row">
-                         
+
                             <div class="col-md-3 col-sm-6 mb-4 text-center">
                                 <div class="card">
                                     <a href="{{ asset('img/blog-1.jpg')}}" data-lightbox="documents" data-title="Document Title 1">
@@ -194,7 +194,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-md-3 col-sm-6 mb-4 text-center">
                                 <div class="card">
                                     <a href="{{ asset('img/blog-1.jpg')}}" data-lightbox="documents" data-title="Document Title 2">
@@ -205,7 +205,7 @@
                                     </div>
                                 </div>
                             </div>
-                          
+
                             <div class="col-md-3 col-sm-6 mb-4 text-center">
                                 <div class="card">
                                     <a href="{{ asset('img/blog-1.jpg')}}" data-lightbox="documents" data-title="Document Title 3">
@@ -216,7 +216,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
 
                         <div class="section-title section-title-sm position-relative pb-3 mb-4">
@@ -224,7 +224,7 @@
                         </div>
 
                         <div class="row">
-                        
+
                             <div class="col-md-3 col-sm-6 mb-4 text-center">
                                 <div class="card">
                                     <a href="{{ asset('img/blog-1.jpg')}}" data-lightbox="documents" data-title="Document Title 1">
@@ -235,7 +235,7 @@
                                     </div>
                                 </div>
                             </div>
-                           
+
                             <div class="col-md-3 col-sm-6 mb-4 text-center">
                                 <div class="card">
                                     <a href="{{ asset('img/blog-1.jpg')}}" data-lightbox="documents" data-title="Document Title 2">
@@ -246,7 +246,7 @@
                                     </div>
                                 </div>
                             </div>
-                           
+
                             <div class="col-md-3 col-sm-6 mb-4 text-center">
                                 <div class="card">
                                     <a href="{{ asset('img/blog-1.jpg')}}" data-lightbox="documents" data-title="Document Title 3">
@@ -257,13 +257,13 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div> -->
                     </div>
                 </div>
-    
+
                 <!-- Sidebar Start -->
-                <div class="col-lg-4">    
+                <div class="col-lg-4">
                     <!-- Category Start -->
                     <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
                         <div class="section-title section-title-sm position-relative pb-3 mb-4">
@@ -308,7 +308,7 @@
                         @endif
                     </div>
                     <!-- Category End -->
-    
+
                     <!-- Recent Post Start -->
                     <!-- <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
                         <div class="section-title section-title-sm position-relative pb-3 mb-4">
@@ -358,13 +358,13 @@
                         </div>
                     </div> -->
                     <!-- Recent Post End -->
-    
+
                     <!-- Image Start -->
                     <!-- <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
                         <img src="img/blog-1.jpg" alt="" class="img-fluid rounded">
                     </div> -->
                     <!-- Image End -->
-    
+
                     <!-- Tags Start -->
                     <!-- <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
                         <div class="section-title section-title-sm position-relative pb-3 mb-4">
@@ -386,7 +386,7 @@
                         </div>
                     </div> -->
                     <!-- Tags End -->
-    
+
                     <!-- Plain Text Start -->
                     <!-- <div class="wow slideInUp" data-wow-delay="0.1s">
                         <div class="section-title section-title-sm position-relative pb-3 mb-4">

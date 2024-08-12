@@ -224,7 +224,7 @@
                                 <a class="text-light mb-2" href="{{ route('announcement') }}"><i
                                         class="bi bi-arrow-right text-light me-2"></i>Announcements</a>
 
-                                <a class="text-light" href="{{ route('contact') }}"><i
+                                <a class="text-light" href="https://nasida.na.gov.ng/contact-us" target="_blank"><i
                                         class="bi bi-arrow-right text-light me-2"></i>Contact Us</a>
                             </div>
                         </div>
