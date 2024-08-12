@@ -436,13 +436,18 @@
                     tbody.innerHTML = '';
 
                     data.forEach((project, index) => {
+                        const formattedValue = parseFloat(project.value).toLocaleString('en-US', {
+                            minimumFractionDigits: 2,
+                            maximumFractionDigits: 2
+                        });
+
                         const row = `<tr data-href="/project/${project.slug}">
                                         <td>${index + 1}</td>
                                         <td>${project.project_title}</td>
                                         <td>${project.sector.name}</td>
                                          <td>${project.lga.name}</td>
                                         <td>${project.phase.name}</td>
-                                        <td>${project.value}</td>
+                                        <td>&#8358;${formattedValue}</td>
                                         <td>${project.supervising_authority}</td>
                                         <td>${project.screening_report}</td>
                                     </tr>`;
