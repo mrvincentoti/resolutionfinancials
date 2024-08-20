@@ -11,6 +11,8 @@ use App\Http\Controllers\Front\TagController as FrontTagController;
 use App\Http\Controllers\Front\ProjectController as FrontProjectController;
 use App\Http\Controllers\Front\AnnouncementController as FrontAnnouncementController;
 
+Route::get('/sample-1', [HomeController::class, 's1'])->name('sample-1');
+Route::get('/sample-2', [HomeController::class, 's2'])->name('sample-2');
 // FrontEnd Routes [Public routes]
 Route::get('/', [HomeController::class, 'index'])->name('webhome');
 Route::post('/post/comment/{post}', [CommentController::class,'makeComment'])->name('post.comment');

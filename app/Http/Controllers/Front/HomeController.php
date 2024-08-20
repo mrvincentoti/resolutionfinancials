@@ -13,6 +13,14 @@ use App\Models\Setting;
 
 class HomeController extends Controller
 {
+    public function s1(){
+        return view('front.sample.s1');
+    }
+
+    public function s2()
+    {
+        return view('front.sample.s2');
+    }
     // Home Page
     public function index()
     {
