@@ -57,13 +57,13 @@
                             <span class="topbar__info__icon">
                                 <i class="icon-mail-1"></i>
                             </span>
-                            <a href="mailto:needhelp@company.com">needhelp@company.com</a>
+                            <a href="mailto:info@resolutionfinancelimited.com">info@resolutionfinancelimited.com</a>
                         </li>
                         <li>
                             <span class="topbar__info__icon topbar__info__icon--phone">
                                 <i class="icon-headset"></i>
                             </span>
-                            <a href="tel:16205">16205</a>
+                            <a href="tel:2348056798502,">08056798502</a>
                         </li>
                     </ul><!-- /.list-unstyled topbar__info -->
                     <div class="topbar__right">
@@ -371,8 +371,8 @@
                                 <h3 class="loan-calculator-form__title">How Much Do You Need?</h3>
                                 <div class="loan-calculator-form__content">
                                     <div class="input-box__top">
-                                        <span>$1000</span>
-                                        <span>$50000</span>
+                                        <span>₦1000</span>
+                                        <span>₦50000</span>
                                     </div><!-- /.input-box__top -->
                                     <div class="input-box">
                                         <div class="range-slider-count" id="loan-calculator-01-count"></div>
@@ -394,7 +394,7 @@
                                     </div><!-- /.input-box -->
                                     <p>
                                         <span>Pay Monthly</span>
-                                        <b>$<i class="loan-monthly-pay"></i></b>
+                                        <b>₦<i class="loan-monthly-pay"></i></b>
                                     </p>
                                     <p>
                                         <span>Term of Use</span>
@@ -402,7 +402,7 @@
                                     </p>
                                     <p>
                                         <span>Total Pay Back amount</span>
-                                        <b>$<i class="loan-total"></i></b>
+                                        <b>₦<i class="loan-total"></i></b>
                                     </p>
                                     <button type="submit" class="easilon-btn loan-calculator-form__btn">
                                         <span>Apply for loan</span>
@@ -460,17 +460,15 @@
                                         <div class="sec-title__shape__one"></div><!-- /.sec-title__shape__one -->
                                         <div class="sec-title__shape__two"></div><!-- /.sec-title__shape__one -->
                                     </div><!-- /.sec-title__shape -->
-                                    <h6 class="sec-title__tagline">welcome to easilon</h6><!-- /.sec-title__tagline -->
+                                    <h6 class="sec-title__tagline">welcome to Resolution Finance</h6><!-- /.sec-title__tagline -->
                                 </div><!-- /.sec-title__top -->
                                 <h3 class="sec-title__title">Our Loans will Fill Your <br> Dreams Come True</h3>
                                 <!-- /.sec-title__title -->
                             </div><!-- /.sec-title -->
                             <div class="about-one__text-box wow fadeInUp" data-wow-duration="1500ms">
-                                <p class="about-one__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                                    do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                    nostrud
-                                    exercitation ullamco</p><!-- /.about-one__text -->
+                                <p class="about-one__text">Empowering individuals and businesses with
+                                    accessible, low-interest loans tailored to your needs. We are committed
+                                    to being your trusted partner in achieving financial success and stability.</p><!-- /.about-one__text -->
                             </div><!-- /.about-one__text-box -->
                             <div class="about-one__list">
                                 <div class="about-one__list__left wow fadeInUp" data-wow-duration="1500ms"
@@ -479,13 +477,13 @@
                                         <span class="about-one__list__icon">
                                             <i class="icon-check-mark"></i>
                                         </span><!-- /.about-one__list__icon -->
-                                        quick loan process
+                                        Quick loan approval process
                                     </div>
                                     <div class="about-one__list__item">
                                         <span class="about-one__list__icon">
                                             <i class="icon-check-mark"></i>
                                         </span><!-- /.about-one__list__icon -->
-                                        very low rates
+                                        Competitive interest rates
                                     </div>
                                 </div><!-- /.about-one__list__left -->
                                 <div class="about-one__list__right wow fadeInUp" data-wow-duration="1500ms"
@@ -494,19 +492,19 @@
                                         <span class="about-one__list__icon">
                                             <i class="icon-check-mark"></i>
                                         </span><!-- /.about-one__list__icon -->
-                                        small business loan
+                                        Small business loans
                                     </div>
                                     <div class="about-one__list__item">
                                         <span class="about-one__list__icon">
                                             <i class="icon-check-mark"></i>
                                         </span><!-- /.about-one__list__icon -->
-                                        studying abroad loan
+                                        Education loans for studying abroad
                                     </div>
                                 </div><!-- /.about-one__list__right -->
                             </div><!-- /.about-one__list -->
                             <div class="about-one__button wow fadeInUp" data-wow-duration="1500ms">
                                 <a href="#" class="easilon-btn easilon-btn--border">
-                                    <span>know about us</span>
+                                    <span>Know about us</span>
                                     <span class="easilon-btn__icon">
                                         <i class="icon-double-right-arrow"></i>
                                     </span>
@@ -540,30 +538,26 @@
                 </div><!-- /.sec-title -->
             </div><!-- /.container -->
             <div class="services-one__slide">
-                <h2 class="services-one__slide__text services-one__slide__text--one">home loan</h2>
+                <h2 class="services-one__slide__text services-one__slide__text--one">personal loan</h2>
                 <!-- /.services-one__slide__text -->
                 <span class="services-one__slide__icon"><i class="icon-graduation"></i></span>
                 <!-- /.services-one__slide__icon -->
-                <h2 class="services-one__slide__text services-one__slide__text--two">education</h2>
+                <h2 class="services-one__slide__text services-one__slide__text--two">Business loan</h2>
                 <!-- /.services-one__slide__text -->
                 <span class="services-one__slide__icon"><i
                         class="icon-car"></i></span><!-- /.services-one__slide__icon -->
-                <h2 class="services-one__slide__text services-one__slide__text--one">auto loan</h2>
+                <h2 class="services-one__slide__text services-one__slide__text--one">Salary loan</h2>
                 <!-- /.services-one__slide__text -->
                 <span class="services-one__slide__icon"><i class="icon-graduation"></i></span>
                 <!-- /.services-one__slide__icon -->
-                <h2 class="services-one__slide__text services-one__slide__text--two">personal loan</h2>
+                <h2 class="services-one__slide__text services-one__slide__text--two">Cooperative loan</h2>
                 <!-- /.services-one__slide__text -->
                 <span class="services-one__slide__icon"><i
                         class="icon-car"></i></span><!-- /.services-one__slide__icon -->
-                <h2 class="services-one__slide__text services-one__slide__text--one">business loan</h2>
+                <h2 class="services-one__slide__text services-one__slide__text--one">Emergency loan</h2>
                 <!-- /.services-one__slide__text -->
                 <span class="services-one__slide__icon"><i class="icon-graduation"></i></span>
                 <!-- /.services-one__slide__icon -->
-                <h2 class="services-one__slide__text services-one__slide__text--two">bike loan</h2>
-                <!-- /.services-one__slide__text -->
-                <span class="services-one__slide__icon"><i
-                        class="icon-car"></i></span><!-- /.services-one__slide__icon -->
             </div>
             <div class="container">
                 <div class="services-one__main-tab-box tabs-box">
@@ -572,28 +566,28 @@
                         <ul class="tab-buttons">
                             <li data-tab="#auto-loan" class="tab-btn active-btn">
                                 <div class="tab-btn__inner">
-                                    auto loan
+                                    Personal loan
                                     <a href="service-d-auto-loan.html" class="tab-btn__icon"><i
                                             class="icon-next"></i></a>
                                 </div>
                             </li>
                             <li data-tab="#personal-loan" class="tab-btn">
                                 <div class="tab-btn__inner">
-                                    personal loan
+                                    Business loan
                                     <a href="service-d-personal-loan.html" class="tab-btn__icon"><i
                                             class="icon-next"></i></a>
                                 </div>
                             </li>
                             <li data-tab="#home-loan" class="tab-btn">
                                 <div class="tab-btn__inner">
-                                    buy home loan
+                                    Salary loan
                                     <a href="service-d-home-loan.html" class="tab-btn__icon"><i
                                             class="icon-next"></i></a>
                                 </div>
                             </li>
                             <li data-tab="#study-loan" class="tab-btn">
                                 <div class="tab-btn__inner">
-                                    study abroad loan
+                                    Cooperative loan
                                     <a href="service-d-study-loan.html" class="tab-btn__icon"><i
                                             class="icon-next"></i></a>
                                 </div>
@@ -663,11 +657,12 @@
                                     </div><!-- /.sec-title__shape -->
                                     <h6 class="sec-title__tagline">our features</h6><!-- /.sec-title__tagline -->
                                 </div><!-- /.sec-title__top -->
-                                <h3 class="sec-title__title">Quick Easy Flexible</h3><!-- /.sec-title__title -->
+                                <h3 class="sec-title__title">Why Choose Us</h3><!-- /.sec-title__title -->
                             </div><!-- /.sec-title -->
                             <div class="features-one__text-box">
-                                <p class="features-one__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore</p>
+                                <p class="features-one__text">We combine expertise,
+                                    convenience, and competitive rates to deliver financial solutions that truly benefit you.
+                                    Our commitment is to provide accessible, efficient, and tailored services that empower your financial journey.</p>
                                 <!-- /.features-one__text -->
                             </div><!-- /.features-one__text-box -->
                             <div class="features-one__features">
@@ -676,10 +671,11 @@
                                         <i class="icon-low-price"></i>
                                     </span><!-- /.features-one__features__icon -->
                                     <div class="features-one__features__content">
-                                        <h3 class="features-one__features__title">lower rates</h3>
+                                        <h3 class="features-one__features__title">Competitive rates</h3>
                                         <!-- /.features-one__features__title -->
-                                        <p class="features-one__features__text">Can we align on lunch orders those
-                                            options are already baked in with this model face time</p>
+                                        <p class="features-one__features__text">We offer some of the most
+                                            competitive interest rates in the market, ensuring you get the best value for
+                                            your financial needs without compromising on quality.</p>
                                         <!-- /.features-one__features__text -->
                                     </div><!-- /.features-one__features__content -->
                                 </div><!-- /.features-one__features__item -->
@@ -688,10 +684,11 @@
                                         <i class=" icon-loan-1"></i>
                                     </span><!-- /.features-one__features__icon -->
                                     <div class="features-one__features__content">
-                                        <h3 class="features-one__features__title">quick and easy</h3>
+                                        <h3 class="features-one__features__title">Quick and hassle-free process</h3>
                                         <!-- /.features-one__features__title -->
-                                        <p class="features-one__features__text">Ramp up high-level, and we need a
-                                            paradigm shift reach out, data-point, nor wheelhouse</p>
+                                        <p class="features-one__features__text">Our streamlined application
+                                            process is designed to get you the funds you need quickly and without
+                                            unnecessary hurdles, so you can focus on what matters most.</p>
                                         <!-- /.features-one__features__text -->
                                     </div><!-- /.features-one__features__content -->
                                 </div><!-- /.features-one__features__item -->
@@ -848,48 +845,30 @@
                                     <h6 class="sec-title__tagline">company transparency</h6>
                                     <!-- /.sec-title__tagline -->
                                 </div><!-- /.sec-title__top -->
-                                <h3 class="sec-title__title">our company core <br> value</h3><!-- /.sec-title__title -->
+                                <h3 class="sec-title__title">our company core <br> values</h3><!-- /.sec-title__title -->
                             </div><!-- /.sec-title -->
                             <div class="company-transparency-one__main-tab-box tabs-box wow fadeInUp animated"
                                 data-wow-duration="1500ms">
                                 <ul class="tab-buttons">
-                                    <li data-tab="#innovative" class="tab-btn active-btn">Innovativel</li>
-                                    <li data-tab="#talent" class="tab-btn">Talent</li>
-                                    <li data-tab="#enabling" class="tab-btn">Enabling</li>
-                                    <li data-tab="#commercially-responsible" class="tab-btn">Commercially Responsible
-                                    </li>
+                                    <li data-tab="#professionalism" class="tab-btn active-btn">Professionalism</li>
+                                    <li data-tab="#integrity" class="tab-btn">Integrity</li>
+                                    <li data-tab="#confidentiality" class="tab-btn">Confidentiality</li>
+                                    <li data-tab="#customer-service" class="tab-btn">Customer Service</li>
                                 </ul><!-- /.tab-buttons -->
                                 <div class="tabs-content">
-                                    <div class="tab active-tab fadeInUp animated" data-wow-delay="200ms" id="innovative"
+                                    <div class="tab active-tab fadeInUp animated" data-wow-delay="200ms" id="professionalism"
                                         style="display: block;">
-                                        <p class="tabs-content__text">Lorem ipsum dolor sit amet, consectetur
-                                            adipisicing elit, sed do eiusmod tempor
-                                            incididunt ut labore et dolore Lorem ipsum dolor sit amet, consectetur
-                                            adipiscing
-                                            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    </div><!-- /.innovative-tab -->
-                                    <div class="tab fadeInUp animated" data-wow-delay="200ms" id="talent">
-                                        <p class="tabs-content__text">We are trusted by many clients from all over the
-                                            country. Cras non dui id ex mattis
-                                            vehicula. Nullam posuere ligula non libero mollis, non ornare sapien rutrum.
-                                            Quisque
-                                            vitae risus venenatis, dignissim felis id</p>
-                                    </div><!-- /.talent-tab -->
-                                    <div class="tab fadeInUp animated" data-wow-delay="200ms" id="enabling">
-                                        <p class="tabs-content__text">We are trusted by many clients from all over the
-                                            country. Cras non dui id ex mattis
-                                            vehicula. Nullam posuere ligula non libero mollis, non ornare sapien rutrum.
-                                            Quisque
-                                            vitae risus venenatis.</p>
-                                    </div><!-- /.enabling-tab -->
-                                    <div class="tab fadeInUp animated" data-wow-delay="200ms"
-                                        id="commercially-responsible">
-                                        <p class="tabs-content__text">There are many variations of passages of Lorem
-                                            Ipsum available, but the majority have
-                                            suffered alteration in some form, by injected humour, or randomised words
-                                            which
-                                            don't look even slightly believable. If you are going to use a passag</p>
-                                    </div><!-- /.commercially-responsible-tab -->
+                                        <p class="tabs-content__text">We maintain the highest standards of professionalism, ensuring our services are delivered with expertise and efficiency at every step.</p>
+                                    </div><!-- /.professionalism-tab -->
+                                    <div class="tab fadeInUp animated" data-wow-delay="200ms" id="integrity">
+                                        <p class="tabs-content__text">Integrity is at the heart of everything we do. We are committed to honesty and transparency, building trust with our clients and partners.</p>
+                                    </div><!-- /.integrity-tab -->
+                                    <div class="tab fadeInUp animated" data-wow-delay="200ms" id="confidentiality">
+                                        <p class="tabs-content__text">We prioritize confidentiality, ensuring that all client information is handled with the utmost discretion and security.</p>
+                                    </div><!-- /.confidentiality-tab -->
+                                    <div class="tab fadeInUp animated" data-wow-delay="200ms" id="customer-service">
+                                        <p class="tabs-content__text">Our customer service is focused on delivering a seamless and personalized experience, addressing your needs with care and dedication.</p>
+                                    </div><!-- /.customer-service-tab -->
                                 </div><!-- /.tab-content -->
                             </div><!-- /.company-transparency-one__main-tab-box -->
                             <div class="company-transparency-one__call wow fadeInUp" data-wow-duration="1500ms">
@@ -908,7 +887,8 @@
             </div><!-- /.container -->
             <img src="assets/images/shapes/company-transparency-shape-1-1.png" alt="shape"
                 class="company-transparency-one__shape">
-        </section><!-- /.company-transparency-one section-space -->
+        </section>
+        <!-- /.company-transparency-one section-space -->
 
 
 
@@ -926,7 +906,7 @@
                     </div><!-- /.col-lg-6 -->
                     <div class="col-lg-6">
                         <div class="faq-one__content">
-                            <div class="sec-title @@extraClassName">
+                            <div class="sec-title">
                                 <div class="sec-title__top">
                                     <div class="sec-title__shape">
                                         <div class="sec-title__shape__one"></div><!-- /.sec-title__shape__one -->
@@ -934,66 +914,73 @@
                                     </div><!-- /.sec-title__shape -->
                                     <h6 class="sec-title__tagline">FAQ</h6><!-- /.sec-title__tagline -->
                                 </div><!-- /.sec-title__top -->
-                                <h3 class="sec-title__title">frequently Asked <br> Questions ?</h3>
+                                <h3 class="sec-title__title">Frequently Asked <br> Questions</h3>
                                 <!-- /.sec-title__title -->
                             </div><!-- /.sec-title -->
                             <div class="faq-one__accordion">
                                 <div class="faq-accordion easilon-accordion" data-grp-name="easilon-accordion">
-                                    <div class="accordion active wow fadeInUp" data-wow-duration="1500ms"
-                                        data-wow-delay="00ms">
-                                        <div class="accordion-title">
-                                            <h4>
-                                                What types of loans are available?
-                                                <span
-                                                    class="accordion-title__icon"></span><!-- /.accordion-title__icon -->
-                                            </h4>
-                                        </div><!-- /.accordion-title -->
-                                        <div class="accordion-content">
-                                            <div class="inner">
-                                                <p>Common types include personal loans, home loans mortgages, auto
-                                                    loans, student loans, and business loans.</p>
-                                            </div><!-- /.inner -->
-                                        </div><!-- /.accordion-content -->
-                                    </div><!-- /.accordion-item -->
-                                    <div class="accordion wow fadeInUp" data-wow-duration="1500ms"
-                                        data-wow-delay="50ms">
+                                    <div class="accordion wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="50ms">
                                         <div class="accordion-title">
                                             <h4>
                                                 How does the loan application process work?
-                                                <span
-                                                    class="accordion-title__icon"></span><!-- /.accordion-title__icon -->
+                                                <span class="accordion-title__icon"></span><!-- /.accordion-title__icon -->
                                             </h4>
                                         </div><!-- /.accordion-title -->
                                         <div class="accordion-content">
                                             <div class="inner">
-                                                <p>If you are going to use a passage of Lorem Ipsum, you need to be sure
-                                                    there
-                                                    isn't anything embarrassing hidden in the middle of text. All the
-                                                    Lorem
-                                                    Ipsum generators on the Internet tend to repeat predefined chunks as
-                                                    necessary.</p>
+                                                <p>To apply for a loan, simply fill out our online application form or visit our nearest branch. You will need to provide personal information, identification, and proof of income. Once submitted, our team will review your application and notify you of the next steps.</p>
                                             </div><!-- /.inner -->
                                         </div><!-- /.accordion-content -->
                                     </div><!-- /.accordion-item -->
-                                    <div class="accordion wow fadeInUp" data-wow-duration="1500ms"
-                                        data-wow-delay="100ms">
+                                    <div class="accordion wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="150ms">
                                         <div class="accordion-title">
                                             <h4>
-                                                What is the interest rate on a loan?
-                                                <span
-                                                    class="accordion-title__icon"></span><!-- /.accordion-title__icon -->
+                                                How long does it take to get approved for a loan?
+                                                <span class="accordion-title__icon"></span><!-- /.accordion-title__icon -->
                                             </h4>
                                         </div><!-- /.accordion-title -->
                                         <div class="accordion-content">
                                             <div class="inner">
-                                                <p>Bring to the table win-win survival strategies to ensure proactive
-                                                    domination. At
-                                                    the
-                                                    end of the day, going forward, a new normal that has evolved from
-                                                    generation
-                                                    X
-                                                    is on
-                                                    the</p>
+                                                <p>Loan approval times can vary, but typically, you can expect a decision within 24 to 48 hours after submitting all required documents.</p>
+                                            </div><!-- /.inner -->
+                                        </div><!-- /.accordion-content -->
+                                    </div><!-- /.accordion-item -->
+                                    <div class="accordion wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
+                                        <div class="accordion-title">
+                                            <h4>
+                                                What are the eligibility requirements for a loan?
+                                                <span class="accordion-title__icon"></span><!-- /.accordion-title__icon -->
+                                            </h4>
+                                        </div><!-- /.accordion-title -->
+                                        <div class="accordion-content">
+                                            <div class="inner">
+                                                <p>To qualify for a loan, you must be at least 18 years old, have a stable source of income, and possess valid identification. Specific requirements may vary based on the loan type.</p>
+                                            </div><!-- /.inner -->
+                                        </div><!-- /.accordion-content -->
+                                    </div><!-- /.accordion-item -->
+                                    <div class="accordion wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="250ms">
+                                        <div class="accordion-title">
+                                            <h4>
+                                                Can I apply for a loan if I have a low credit score?
+                                                <span class="accordion-title__icon"></span><!-- /.accordion-title__icon -->
+                                            </h4>
+                                        </div><!-- /.accordion-title -->
+                                        <div class="accordion-content">
+                                            <div class="inner">
+                                                <p>Yes, we consider applications from individuals with varying credit scores. However, the terms and conditions may differ based on your credit history.</p>
+                                            </div><!-- /.inner -->
+                                        </div><!-- /.accordion-content -->
+                                    </div><!-- /.accordion-item -->
+                                    <div class="accordion wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="350ms">
+                                        <div class="accordion-title">
+                                            <h4>
+                                                Are there penalties for early repayment?
+                                                <span class="accordion-title__icon"></span><!-- /.accordion-title__icon -->
+                                            </h4>
+                                        </div><!-- /.accordion-title -->
+                                        <div class="accordion-content">
+                                            <div class="inner">
+                                                <p>We do not charge penalties for early repayment. In fact, repaying your loan early could save you money on interest.</p>
                                             </div><!-- /.inner -->
                                         </div><!-- /.accordion-content -->
                                     </div><!-- /.accordion-item -->
@@ -1254,9 +1241,9 @@
                                         <div class="funfact-one__item testimonials-one__funfact__single wow fadeInUp"
                                             data-wow-duration="1500m">
                                             <h3 class="funfact-one__item__number count-box">
-                                                <span>$</span>
-                                                <span class="count-text" data-stop="95" data-speed="1500"></span>
-                                                <span>k</span>
+                                                <span>₦</span>
+                                                <span class="count-text" data-stop="95" data-speed="95"></span>
+                                                <span>M</span>
                                             </h3>
                                             <h4 class="funfact-one__item__title">Daily Payments</h4>
                                             <!-- /.funfact-one__item__title -->
@@ -1387,7 +1374,7 @@
                 }
             }
             }'>
-                   
+
                 </div><!-- /.thm-owl__slider -->
             </div><!-- /.container -->
         </div><!-- /.client-carousel -->
@@ -1435,8 +1422,8 @@
                                 <a href="index.html" class="footer-widget__logo">
                                     <img src="assets/images/rfl-logo-2.png" width="150" alt="Easilon HTML Template">
                                 </a>
-                                <p class="footer-widget__about-text">There are many variations of passages of Lorem
-                                    Ipsum available, but the majority have suffered alteration in some form</p>
+                                <!-- <p class="footer-widget__about-text">There are many variations of passages of Lorem
+                                    Ipsum available, but the majority have suffered alteration in some form</p> -->
                                 <!-- /.footer-widget__about-text -->
                                 <form action="#" data-url="MAILCHIMP_FORM_URL"
                                     class="footer-widget__newsletter mc-form">
@@ -1467,11 +1454,11 @@
                             <div class="footer-widget footer-widget--links footer-widget--links-two">
                                 <h2 class="footer-widget__title">Loan Services</h2><!-- /.footer-widget__title -->
                                 <ul class="list-unstyled footer-widget__links">
-                                    <li><a href="#">bike loan</a></li>
-                                    <li><a href="#">home loan</a></li>
-                                    <li><a href="#">abroad study loan</a></li>
+                                    <li><a href="#">Personal loan</a></li>
                                     <li><a href="#">business loan</a></li>
-                                    <li><a href="#">personal loan</a></li>
+                                    <li><a href="#">Salary loan/a></li>
+                                    <li><a href="#">Cooperative loan</a></li>
+                                    <li><a href="#">Asset Financing</a></li>
                                 </ul><!-- /.list-unstyled footer-widget__links -->
                             </div><!-- /.footer-widget -->
                         </div><!-- /.col-xl-3 col-lg-3 col-md-4 col-sm-6 -->
@@ -1480,7 +1467,7 @@
                             <div class="footer-widget footer-widget--contact">
                                 <h2 class="footer-widget__title">Get inTouch</h2><!-- /.footer-widget__title -->
                                 <ul class="list-unstyled footer-widget__info">
-                                    <li><a href="https://www.google.com/maps">85 Ketch Harbour Road Bensal PA 19020</a>
+                                    <li><a href="https://www.google.com/maps">8th Floor, New Africa House, 31 Marina, Lagos.</a>
                                     </li>
                                     <li>
                                         <span class="footer-widget__info__icon"><i class="icon-paper-plane"></i></span>
@@ -1531,7 +1518,7 @@
                             <div class="col-md-7 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
                                 <div class="main-footer__bottom__copyright">
                                     <p class="main-footer__copyright">
-                                        &copy; Copyright <span class="dynamic-year"></span> by Easilon HTML Template.
+                                        &copy; Copyright <span class="dynamic-year"></span>
                                     </p>
                                 </div><!-- /.main-footer__bottom__copyright -->
                             </div><!-- /.col-md-7 -->

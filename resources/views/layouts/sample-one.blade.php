@@ -82,7 +82,7 @@
                                 <li class="dropdown">
                                     <a href="#">Loan Calculator</a>
                                 </li>
-                                
+
                                 <li>
                                     <a href="#">Contact Us</a>
                                 </li>
@@ -173,58 +173,47 @@
                                             <div class="main-slider-two__sub-title-shape">
                                                 <div class="main-slider-two__sub-title-shape__one"></div>
                                                 <div class="main-slider-two__sub-title-shape__two"></div>
-                                            </div><!-- /.main-slider-two__sub-title-shape -->
-                                            <h5 class="main-slider-two__sub-title">Smart Loans for <span>Bright
-                                                    Futures</span></h5><!-- /.slider-sub-title -->
-                                        </div><!-- /.main-slider-two__top -->
-                                        <h2 class="main-slider-two__title">we provide you a <br> financial power</h2>
-                                        <!-- /.slider-title -->
+                                            </div>
+                                            <h5 class="main-slider-two__sub-title">Fast Loans for <span>Brighter Tomorrows</span></h5>
+                                        </div>
+                                        <h2 class="main-slider-two__title">Empowering Your <br> Financial Freedom</h2>
                                         <div class="main-slider-two__text-box">
-                                            <p class="main-slider-two__text">Herding cats let's see if we can dovetail
-                                                these two projects don't over think it good optics, at the end of the
-                                                day, but through the lens of. Streamline. Spinning our wheels
-                                                window-licker</p><!-- /.main-slider-two__text -->
-                                        </div><!-- /.main-slider-two__text-box -->
+                                            <p class="main-slider-two__text">Secure loans with ease and fair interest rates tailored for your needs.</p>
+                                        </div>
                                         <div class="main-slider-two__button">
                                             <a href="#" class="easilon-btn">
-                                                <span>apply for loan</span>
+                                                <span>Apply Now</span>
                                                 <span class="easilon-btn__icon">
                                                     <i class="icon-double-right-arrow"></i>
                                                 </span>
-                                            </a><!-- /.easilon-btn -->
+                                            </a>
                                             <div class="main-slider-two__video">
-                                                <a href="https://www.youtube.com/watch?v=h9MbznbxlLc"
-                                                    class="main-slider-two__video__btn video-popup">
+                                                <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="main-slider-two__video__btn video-popup">
                                                     <i class="icon-play"></i>
-                                                </a><!-- /.video-btn -->
-                                                <span class="main-slider-two__video__text">Award Winning</span>
-                                            </div><!-- /.main-slider-two__video -->
-                                        </div><!-- /.main-slider-two__button -->
+                                                </a>
+                                                <span class="main-slider-two__video__text">Trusted by Thousands</span>
+                                            </div>
+                                        </div>
                                         <div class="main-slider-two__content__shape-box">
                                             <div class="main-slider-two__content__shape-circle"></div>
                                             <div class="main-slider-two__content__shape-close"></div>
-                                        </div><!-- /.main-slider-two__content__shape-box -->
-                                    </div><!-- /.main-slider-two__content -->
-                                </div><!-- /.col-xxl-6 col-xl-7 -->
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="col-xxl-6 col-xl-5">
                                     <div class="main-slider-two__image">
                                         <div class="main-slider-two__image__inner">
-                                            <img src="assets/images/resources/main-slider-image-2-1.jpg"
-                                                alt="slider image">
-                                        </div><!-- /.main-slider-two__image__inner -->
+                                            <img src="assets/images/resources/main-slider-image-2-1.jpg" alt="slider image">
+                                        </div>
                                         <div class="main-slider-two__image__shape-box">
-                                            <img src="assets/images/shapes/main-slider-shape-2-1.png" alt="shape"
-                                                class="main-slider-two__image__shape-one">
-                                            <img src="assets/images/shapes/main-slider-shape-2-2.png" alt="shape"
-                                                class="main-slider-two__image__shape-two">
-                                            <img src="assets/images/shapes/main-slider-shape-2-3.png" alt="shape"
-                                                class="main-slider-two__image__shape-three">
-                                            <img src="assets/images/shapes/main-slider-shape-2-4.png" alt="shape"
-                                                class="main-slider-two__image__shape-four">
-                                        </div><!-- /.main-slider-two__image__shape-box -->
-                                    </div><!-- /.main-slider-two__image -->
-                                </div><!-- /.col-xxl-6 col-xl-5 -->
-                            </div><!-- /.row gutter-y-60 -->
+                                            <img src="assets/images/shapes/main-slider-shape-2-1.png" alt="shape" class="main-slider-two__image__shape-one">
+                                            <img src="assets/images/shapes/main-slider-shape-2-2.png" alt="shape" class="main-slider-two__image__shape-two">
+                                            <img src="assets/images/shapes/main-slider-shape-2-3.png" alt="shape" class="main-slider-two__image__shape-three">
+                                            <img src="assets/images/shapes/main-slider-shape-2-4.png" alt="shape" class="main-slider-two__image__shape-four">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div><!-- /.container -->
                     </div><!-- /.main-slider-two__item -->
                 </div><!-- /.item -->
@@ -267,152 +256,47 @@
                                             <div class="main-slider-two__sub-title-shape">
                                                 <div class="main-slider-two__sub-title-shape__one"></div>
                                                 <div class="main-slider-two__sub-title-shape__two"></div>
-                                            </div><!-- /.main-slider-two__sub-title-shape -->
-                                            <h5 class="main-slider-two__sub-title">Smart Loans for <span>Bright
-                                                    Futures</span></h5><!-- /.slider-sub-title -->
-                                        </div><!-- /.main-slider-two__top -->
-                                        <h2 class="main-slider-two__title">Personal loans to <br> fulfill your dreams
-                                        </h2><!-- /.slider-title -->
+                                            </div>
+                                            <h5 class="main-slider-two__sub-title">Flexible Loans for <span>Your Goals</span></h5>
+                                        </div>
+                                        <h2 class="main-slider-two__title">Personal Loans <br> for Every Dream</h2>
                                         <div class="main-slider-two__text-box">
-                                            <p class="main-slider-two__text">We need more paper time vampire. Workflow
-                                                ecosystem this is not the hill i want to die on products need full
-                                                resourcing and support from a cross-functional team in order to be built
-                                            </p><!-- /.main-slider-two__text -->
-                                        </div><!-- /.main-slider-two__text-box -->
+                                            <p class="main-slider-two__text">Quick and easy access to funds with competitive rates. Make your dreams a reality.</p>
+                                        </div>
                                         <div class="main-slider-two__button">
                                             <a href="#" class="easilon-btn">
-                                                <span>apply for loan</span>
+                                                <span>Get Started</span>
                                                 <span class="easilon-btn__icon">
                                                     <i class="icon-double-right-arrow"></i>
                                                 </span>
-                                            </a><!-- /.easilon-btn -->
+                                            </a>
                                             <div class="main-slider-two__video">
-                                                <a href="https://www.youtube.com/watch?v=h9MbznbxlLc"
-                                                    class="main-slider-two__video__btn video-popup">
+                                                <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="main-slider-two__video__btn video-popup">
                                                     <i class="icon-play"></i>
-                                                </a><!-- /.video-btn -->
-                                                <span class="main-slider-two__video__text">Award Winning</span>
-                                            </div><!-- /.main-slider-two__video -->
-                                        </div><!-- /.main-slider-two__button -->
+                                                </a>
+                                                <span class="main-slider-two__video__text">Award Winning Service</span>
+                                            </div>
+                                        </div>
                                         <div class="main-slider-two__content__shape-box">
                                             <div class="main-slider-two__content__shape-circle"></div>
                                             <div class="main-slider-two__content__shape-close"></div>
-                                        </div><!-- /.main-slider-two__content__shape-box -->
-                                    </div><!-- /.main-slider-two__content -->
-                                </div><!-- /.col-xxl-6 col-xl-7 -->
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="col-xxl-6 col-xl-5">
                                     <div class="main-slider-two__image">
                                         <div class="main-slider-two__image__inner">
-                                            <img src="assets/images/resources/main-slider-image-2-2.jpg"
-                                                alt="slider image">
-                                        </div><!-- /.main-slider-two__image__inner -->
+                                            <img src="assets/images/resources/main-slider-image-2-2.jpg" alt="slider image">
+                                        </div>
                                         <div class="main-slider-two__image__shape-box">
-                                            <img src="assets/images/shapes/main-slider-shape-2-1.png" alt="shape"
-                                                class="main-slider-two__image__shape-one">
-                                            <img src="assets/images/shapes/main-slider-shape-2-2.png" alt="shape"
-                                                class="main-slider-two__image__shape-two">
-                                            <img src="assets/images/shapes/main-slider-shape-2-3.png" alt="shape"
-                                                class="main-slider-two__image__shape-three">
-                                            <img src="assets/images/shapes/main-slider-shape-2-4.png" alt="shape"
-                                                class="main-slider-two__image__shape-four">
-                                        </div><!-- /.main-slider-two__image__shape-box -->
-                                    </div><!-- /.main-slider-two__image -->
-                                </div><!-- /.col-xxl-6 col-xl-5 -->
-                            </div><!-- /.row gutter-y-60 -->
-                        </div><!-- /.container -->
-                    </div><!-- /.main-slider-two__item -->
-                </div><!-- /.item -->
-                <div class="item">
-                    <div class="main-slider-two__item">
-                        <div class="main-slider-two__bg"
-                            style="background-image: url(assets/images/shapes/main-slider-shape-bg-2-1.png);">
-                        </div><!-- /.main-slider-two__bg -->
-                        <div class="main-slider-two__social social-links-two">
-                            <a href="https://facebook.com">
-                                <span class="social-links-two__icon">
-                                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                </span><!-- /.social-links-two__icon -->
-                                <span class="sr-only">Facebook</span>
-                            </a>
-                            <a href="https://twitter.com">
-                                <span class="social-links-two__icon">
-                                    <i class="fab fa-twitter" aria-hidden="true"></i>
-                                </span><!-- /.social-links-two__icon -->
-                                <span class="sr-only">Twitter</span>
-                            </a>
-                            <a href="https://instagram.com">
-                                <span class="social-links-two__icon">
-                                    <i class="fab fa-instagram" aria-hidden="true"></i>
-                                </span><!-- /.social-links-two__icon -->
-                                <span class="sr-only">Instagram</span>
-                            </a>
-                            <a href="https://youtube.com">
-                                <span class="social-links-two__icon">
-                                    <i class="fab fa-youtube" aria-hidden="true"></i>
-                                </span><!-- /.social-links-two__icon -->
-                                <span class="sr-only">Youtube</span>
-                            </a>
-                        </div><!-- /.main-slider-two__social -->
-                        <div class="main-slider-two__container container">
-                            <div class="row gutter-y-60 align-items-center">
-                                <div class="col-xxl-6 col-xl-7">
-                                    <div class="main-slider-two__content">
-                                        <div class="main-slider-two__top">
-                                            <div class="main-slider-two__sub-title-shape">
-                                                <div class="main-slider-two__sub-title-shape__one"></div>
-                                                <div class="main-slider-two__sub-title-shape__two"></div>
-                                            </div><!-- /.main-slider-two__sub-title-shape -->
-                                            <h5 class="main-slider-two__sub-title">Smart Loans for <span>Bright
-                                                    Futures</span></h5><!-- /.slider-sub-title -->
-                                        </div><!-- /.main-slider-two__top -->
-                                        <h2 class="main-slider-two__title">We provide best services <br> for your loan
-                                        </h2><!-- /.slider-title -->
-                                        <div class="main-slider-two__text-box">
-                                            <p class="main-slider-two__text">Lorem ipsum dolor sit amet, consectetur
-                                                adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                            </p><!-- /.main-slider-two__text -->
-                                        </div><!-- /.main-slider-two__text-box -->
-                                        <div class="main-slider-two__button">
-                                            <a href="#" class="easilon-btn">
-                                                <span>apply for loan</span>
-                                                <span class="easilon-btn__icon">
-                                                    <i class="icon-double-right-arrow"></i>
-                                                </span>
-                                            </a><!-- /.easilon-btn -->
-                                            <div class="main-slider-two__video">
-                                                <a href="https://www.youtube.com/watch?v=h9MbznbxlLc"
-                                                    class="main-slider-two__video__btn video-popup">
-                                                    <i class="icon-play"></i>
-                                                </a><!-- /.video-btn -->
-                                                <span class="main-slider-two__video__text">Award Winning</span>
-                                            </div><!-- /.main-slider-two__video -->
-                                        </div><!-- /.main-slider-two__button -->
-                                        <div class="main-slider-two__content__shape-box">
-                                            <div class="main-slider-two__content__shape-circle"></div>
-                                            <div class="main-slider-two__content__shape-close"></div>
-                                        </div><!-- /.main-slider-two__content__shape-box -->
-                                    </div><!-- /.main-slider-two__content -->
-                                </div><!-- /.col-xxl-6 col-xl-7 -->
-                                <div class="col-xxl-6 col-xl-5">
-                                    <div class="main-slider-two__image">
-                                        <div class="main-slider-two__image__inner">
-                                            <img src="assets/images/resources/main-slider-image-2-3.jpg"
-                                                alt="slider image">
-                                        </div><!-- /.main-slider-two__image__inner -->
-                                        <div class="main-slider-two__image__shape-box">
-                                            <img src="assets/images/shapes/main-slider-shape-2-1.png" alt="shape"
-                                                class="main-slider-two__image__shape-one">
-                                            <img src="assets/images/shapes/main-slider-shape-2-2.png" alt="shape"
-                                                class="main-slider-two__image__shape-two">
-                                            <img src="assets/images/shapes/main-slider-shape-2-3.png" alt="shape"
-                                                class="main-slider-two__image__shape-three">
-                                            <img src="assets/images/shapes/main-slider-shape-2-4.png" alt="shape"
-                                                class="main-slider-two__image__shape-four">
-                                        </div><!-- /.main-slider-two__image__shape-box -->
-                                    </div><!-- /.main-slider-two__image -->
-                                </div><!-- /.col-xxl-6 col-xl-5 -->
-                            </div><!-- /.row gutter-y-60 -->
+                                            <img src="assets/images/shapes/main-slider-shape-2-1.png" alt="shape" class="main-slider-two__image__shape-one">
+                                            <img src="assets/images/shapes/main-slider-shape-2-2.png" alt="shape" class="main-slider-two__image__shape-two">
+                                            <img src="assets/images/shapes/main-slider-shape-2-3.png" alt="shape" class="main-slider-two__image__shape-three">
+                                            <img src="assets/images/shapes/main-slider-shape-2-4.png" alt="shape" class="main-slider-two__image__shape-four">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div><!-- /.container -->
                     </div><!-- /.main-slider-two__item -->
                 </div><!-- /.item -->
@@ -493,7 +377,7 @@
                                         <div class="sec-title__shape__one"></div><!-- /.sec-title__shape__one -->
                                         <div class="sec-title__shape__two"></div><!-- /.sec-title__shape__one -->
                                     </div><!-- /.sec-title__shape -->
-                                    <h6 class="sec-title__tagline">welcome to easilon</h6><!-- /.sec-title__tagline -->
+                                    <h5 class="sec-title__tagline">welcome to <span>Resolution Finance</span></h5><!-- /.sec-title__tagline -->
                                 </div><!-- /.sec-title__top -->
                                 <h3 class="sec-title__title">Personal loans to fulfill your dreams</h3>
                                 <!-- /.sec-title__title -->
@@ -506,11 +390,9 @@
                                     the best services.</p><!-- /.about-two__info__text -->
                             </div><!-- /.about-two__info -->
                             <div class="about-two__text-box wow fadeInUp" data-wow-duration="1500ms">
-                                <p class="about-two__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                                    do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                    nostrud
-                                    exercitation ullamco</p><!-- /.about-two__text -->
+                                <p class="about-two__text">Empowering individuals and SMEs with sustainable financial
+                                    solutions, fostering growth, and driving economic success. Your trusted partner in
+                                    achieving financial stability and prosperity.</p><!-- /.about-two__text -->
                             </div><!-- /.about-two__text-box -->
                             <ul class="about-two__list list-unstyled wow fadeInUp" data-wow-duration="1500ms">
                                 <li>
@@ -630,7 +512,7 @@
                     "margin": 30
                 }
 			}
-		}'>
+		    }'>
                     <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
                         <div class="service-card">
                             <a href="service-d-personal-loan.html" class="service-card__image">
@@ -651,7 +533,7 @@
                                 <img src="assets/images/services/service-2-2.jpg" alt="auto loan">
                             </a><!-- /.service-card__image -->
                             <div class="service-card__content">
-                                <h3 class="service-card__title"><a href="service-d-auto-loan.html">auto loan</a></h3>
+                                <h3 class="service-card__title"><a href="service-d-auto-loan.html">Business loan</a></h3>
                                 <!-- /.service-card__title -->
                                 <a href="service-d-auto-loan.html" class="service-card__btn easilon-btn">
                                     <span class="easilon-btn__icon"><i class="icon-right-arrow"></i></span>
@@ -665,7 +547,7 @@
                                 <img src="assets/images/services/service-2-3.jpg" alt="home loan">
                             </a><!-- /.service-card__image -->
                             <div class="service-card__content">
-                                <h3 class="service-card__title"><a href="service-d-home-loan.html">home loan</a></h3>
+                                <h3 class="service-card__title"><a href="service-d-home-loan.html">Salary loan</a></h3>
                                 <!-- /.service-card__title -->
                                 <a href="service-d-home-loan.html" class="service-card__btn easilon-btn">
                                     <span class="easilon-btn__icon"><i class="icon-right-arrow"></i></span>
@@ -679,7 +561,7 @@
                                 <img src="assets/images/services/service-2-4.jpg" alt="study loan">
                             </a><!-- /.service-card__image -->
                             <div class="service-card__content">
-                                <h3 class="service-card__title"><a href="service-d-study-loan.html">study loan</a></h3>
+                                <h3 class="service-card__title"><a href="service-d-study-loan.html">Cooperative loan</a></h3>
                                 <!-- /.service-card__title -->
                                 <a href="service-d-study-loan.html" class="service-card__btn easilon-btn">
                                     <span class="easilon-btn__icon"><i class="icon-right-arrow"></i></span>
@@ -693,7 +575,7 @@
                                 <img src="assets/images/services/service-2-5.jpg" alt="business loan">
                             </a><!-- /.service-card__image -->
                             <div class="service-card__content">
-                                <h3 class="service-card__title"><a href="service-d-business-loan.html">business loan</a>
+                                <h3 class="service-card__title"><a href="service-d-business-loan.html">Emergency loan</a>
                                 </h3><!-- /.service-card__title -->
                                 <a href="service-d-business-loan.html" class="service-card__btn easilon-btn">
                                     <span class="easilon-btn__icon"><i class="icon-right-arrow"></i></span>
@@ -707,7 +589,7 @@
                                 <img src="assets/images/services/service-2-6.jpg" alt="bike loan">
                             </a><!-- /.service-card__image -->
                             <div class="service-card__content">
-                                <h3 class="service-card__title"><a href="service-d-bike-loan.html">bike loan</a></h3>
+                                <h3 class="service-card__title"><a href="service-d-bike-loan.html">Asset financing</a></h3>
                                 <!-- /.service-card__title -->
                                 <a href="service-d-bike-loan.html" class="service-card__btn easilon-btn">
                                     <span class="easilon-btn__icon"><i class="icon-right-arrow"></i></span>
@@ -717,6 +599,7 @@
                     </div><!-- /.item -->
                 </div><!-- /.services-two__carousel -->
             </div><!-- /.container-fluid -->
+
             <section class="loan-two loan-two--services section-space-top">
                 <div class="container">
                     <div class="loan-two__inner"
@@ -731,8 +614,8 @@
                                 <h3 class="loan-calculator-form__title">How Much Do You Need?</h3>
                                 <div class="loan-calculator-form__content">
                                     <div class="input-box__top">
-                                        <span>$1000</span>
-                                        <span>$50000</span>
+                                        <span>₦1000</span>
+                                        <span>₦50000</span>
                                     </div><!-- /.input-box__top -->
                                     <div class="input-box">
                                         <div class="range-slider-count" id="loan-calculator-01-count"></div>
@@ -754,7 +637,7 @@
                                     </div><!-- /.input-box -->
                                     <p>
                                         <span>Pay Monthly</span>
-                                        <b>$<i class="loan-monthly-pay"></i></b>
+                                        <b>₦<i class="loan-monthly-pay"></i></b>
                                     </p>
                                     <p>
                                         <span>Term of Use</span>
@@ -762,7 +645,7 @@
                                     </p>
                                     <p>
                                         <span>Total Pay Back amount</span>
-                                        <b>$<i class="loan-total"></i></b>
+                                        <b>₦<i class="loan-total"></i></b>
                                     </p>
                                     <button type="submit" class="easilon-btn loan-calculator-form__btn">
                                         <span>Apply for loan</span>
@@ -787,7 +670,7 @@
             <!-- /.why-choose-one__bg -->
             <div class="container">
                 <div class="row gutter-y-50 align-items-center">
-                    <div class="col-lg-6">
+                <div class="col-lg-6">
                         <div class="why-choose-one__content">
                             <div class="sec-title @@extraClassName">
                                 <div class="sec-title__top">
@@ -800,12 +683,7 @@
                                 <h3 class="sec-title__title">why choose us</h3><!-- /.sec-title__title -->
                             </div><!-- /.sec-title -->
                             <div class="why-choose-one__text-box wow fadeInUp" data-wow-duration="1500ms">
-                                <p class="why-choose-one__text">There are many variations of passages of Lorem Ipsum
-                                    available,
-                                    but the majority have suffered alteration in some form, by injected humour, or
-                                    randomised
-                                    words which don't look even slightly believable. If you are going to use a passag
-                                </p>
+                                <p class="why-choose-one__text">We combine expertise, convenience, and competitive rates to deliver financial solutions that truly benefit you. Our commitment is to provide accessible, efficient, and tailored services that empower your financial journey.</p>
                                 <!-- /.why-choose-one__text -->
                             </div><!-- /.why-choose-one__text-box -->
                             <div class="why-choose-one__list">
@@ -814,14 +692,14 @@
                                     <span class="why-choose-one__list__icon">
                                         <i class="icon-low-price"></i>
                                     </span><!-- /.why-choose-one__list__icon -->
-                                    lower rates
+                                    Competitive rates
                                 </div>
                                 <div class="why-choose-one__list__item wow fadeInUp" data-wow-duration="1500ms"
                                     data-wow-delay="100ms">
                                     <span class="why-choose-one__list__icon">
                                         <i class="icon-loan-1"></i>
                                     </span><!-- /.why-choose-one__list__icon -->
-                                    quick and easy
+                                    Quick and hassle-free process
                                 </div>
                             </div><!-- /.why-choose-one__list -->
                             <div class="why-choose-one__progress wow fadeInUp" data-wow-duration="1500ms">
@@ -842,7 +720,7 @@
                                     </div>
                                 </div><!-- /.skills-item -->
                                 <div class="why-choose-one__progress__box progress-box">
-                                    <h4 class="progress-box__title">payments benefits</h4>
+                                    <h4 class="progress-box__title">payment flexibility</h4>
                                     <div class="progress-box__bar">
                                         <div class="progress-box__bar__inner count-bar" data-percent="90%">
                                             <div class="progress-box__number count-text">90%</div>
@@ -1018,9 +896,9 @@
                         data-wow-delay="100ms">
                         <div class="funfact-one__item">
                             <h3 class="funfact-one__item__number count-box">
-                                <span>$</span>
-                                <span class="count-text" data-stop="95" data-speed="1500"></span>
-                                <span>k</span>
+                                <span>₦</span>
+                                <span class="count-text" data-stop="95" data-speed="4500"></span>
+                                <span>M</span>
                             </h3>
                             <h4 class="funfact-one__item__title">Daily Payments</h4><!-- /.funfact-one__item__title -->
                         </div><!-- /.funfact-one__item -->
