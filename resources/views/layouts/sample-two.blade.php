@@ -101,7 +101,7 @@
                 <div class="main-header__inner">
                     <div class="main-header__logo logo-retina">
                         <a href="index.html">
-                            <img src="assets/images/rfl-logo-2.png" alt="Easilon HTML" width="150">
+                            <img src="assets/images/rfl-logo-6.png" alt="Easilon HTML" width="210">
                         </a>
                     </div><!-- /.main-header__logo -->
                     <div class="main-header__right">
@@ -1420,7 +1420,7 @@
                         <div class="col-xl-4 col-lg-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
                             <div class="footer-widget footer-widget--about">
                                 <a href="index.html" class="footer-widget__logo">
-                                    <img src="assets/images/rfl-logo-2.png" width="150" alt="Easilon HTML Template">
+                                    <img src="assets/images/rfl-logo-7.png" width="210" alt="Easilon HTML Template">
                                 </a>
                                 <!-- <p class="footer-widget__about-text">There are many variations of passages of Lorem
                                     Ipsum available, but the majority have suffered alteration in some form</p> -->
@@ -1536,7 +1536,7 @@
         <div class="mobile-nav__content">
             <span class="mobile-nav__close mobile-nav__toggler"><i class="icon-close"></i></span>
             <div class="logo-box logo-retina">
-                <a href="index.html" aria-label="logo image"><img src="assets/images/rfl-logo-2.png" width="155"
+                <a href="index.html" aria-label="logo image"><img src="assets/images/rfl-logo-6.png" width="155"
                         alt="" /></a>
             </div>
             <!-- /.logo-box -->

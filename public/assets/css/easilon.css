@@ -2308,7 +2308,7 @@ h6 {
 }
 .main-header--two .container-fluid::before, .main-header--two .container-fluid::after {
   content: "";
-  width: 226px;
+  width: 300px;
   height: 100%;
   position: absolute;
   top: 0px;
