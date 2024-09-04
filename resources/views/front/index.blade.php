@@ -64,18 +64,18 @@
                                         <p class="main-slider-two__text">Secure loans with ease and fair interest rates tailored for your needs.</p>
                                     </div>
                                     <div class="main-slider-two__button">
-                                        <a href="#" class="easilon-btn">
+                                        <a href="{{route('apply')}}" class="easilon-btn">
                                             <span>Apply Now</span>
                                             <span class="easilon-btn__icon">
                                                     <i class="icon-double-right-arrow"></i>
                                                 </span>
                                         </a>
-                                        <div class="main-slider-two__video">
-                                            <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="main-slider-two__video__btn video-popup">
-                                                <i class="icon-play"></i>
-                                            </a>
-                                            <span class="main-slider-two__video__text">Trusted by Thousands</span>
-                                        </div>
+{{--                                        <div class="main-slider-two__video">--}}
+{{--                                            <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="main-slider-two__video__btn video-popup">--}}
+{{--                                                <i class="icon-play"></i>--}}
+{{--                                            </a>--}}
+{{--                                            <span class="main-slider-two__video__text">Trusted by Thousands</span>--}}
+{{--                                        </div>--}}
                                     </div>
                                     <div class="main-slider-two__content__shape-box">
                                         <div class="main-slider-two__content__shape-circle"></div>
@@ -147,18 +147,18 @@
                                         <p class="main-slider-two__text">Quick and easy access to funds with competitive rates. Make your dreams a reality.</p>
                                     </div>
                                     <div class="main-slider-two__button">
-                                        <a href="#" class="easilon-btn">
+                                        <a href="{{route('apply')}}" class="easilon-btn">
                                             <span>Get Started</span>
                                             <span class="easilon-btn__icon">
                                                     <i class="icon-double-right-arrow"></i>
                                                 </span>
                                         </a>
-                                        <div class="main-slider-two__video">
-                                            <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="main-slider-two__video__btn video-popup">
-                                                <i class="icon-play"></i>
-                                            </a>
-                                            <span class="main-slider-two__video__text">Award Winning Service</span>
-                                        </div>
+{{--                                        <div class="main-slider-two__video">--}}
+{{--                                            <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="main-slider-two__video__btn video-popup">--}}
+{{--                                                <i class="icon-play"></i>--}}
+{{--                                            </a>--}}
+{{--                                            <span class="main-slider-two__video__text">Award Winning Service</span>--}}
+{{--                                        </div>--}}
                                     </div>
                                     <div class="main-slider-two__content__shape-box">
                                         <div class="main-slider-two__content__shape-circle"></div>
@@ -240,8 +240,8 @@
                 <div class="col-lg-6 wow fadeInLeft" data-wow-duration="1500ms">
                     <div class="about-two__image">
                         <div class="about-two__image__inner">
-                            <img src="assets/images/about/about-2-1.jpg" alt="about image">
-                            <img src="assets/images/about/about-2-2.jpg" alt="about image"
+                            <img src="{{ asset('assets/images/about/about-2-1.jpg')}}" alt="about image">
+                            <img src="{{ asset('assets/images/about/about-2-2.jpg')}}" alt="about image"
                                  class="about-two__image__two">
                             <div class="about-two__experience">
                                 <h3 class="about-two__experience__year">15+</h3>
@@ -292,7 +292,7 @@
                             </li>
                         </ul><!-- /.about-two__list list-unstyled -->
                         <div class="about-two__button wow fadeInUp" data-wow-duration="1500ms">
-                            <a href="#" class="easilon-btn">
+                            <a href="{{route('about')}}" class="easilon-btn">
                                 <span>know about us</span>
                                 <span class="easilon-btn__icon">
                                         <i class="icon-double-right-arrow"></i>
@@ -303,7 +303,7 @@
                 </div><!-- /.col-lg-6 -->
             </div><!-- /.row gutter-y-50 -->
         </div><!-- /.container -->
-        <img src="assets/images/shapes/about-shape-2-1.png" alt="shape" class="about-two__shape">
+        <img src="{{ asset('assets/images/shapes/about-shape-2-1.png')}}" alt="shape" class="about-two__shape">
     </section><!-- /.about-two section-space -->
 
     <section class="services-two section-space" id="services">
@@ -398,11 +398,11 @@
 		    }'>
                 <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
                     <div class="service-card">
-                        <a href="service-d-personal-loan.html" class="service-card__image">
+                        <a href="{{route('loan-details')}}" class="service-card__image">
                             <img src="assets/images/services/service-2-1.jpg" alt="personal loan">
                         </a><!-- /.service-card__image -->
                         <div class="service-card__content">
-                            <h3 class="service-card__title"><a href="service-d-personal-loan.html">personal loan</a>
+                            <h3 class="service-card__title"><a href="{{route('loan-details')}}">personal loan</a>
                             </h3><!-- /.service-card__title -->
                             <a href="#" class="service-card__btn easilon-btn">
                                 <span class="easilon-btn__icon"><i class="icon-right-arrow"></i></span>
@@ -416,9 +416,9 @@
                             <img src="assets/images/services/service-2-2.jpg" alt="auto loan">
                         </a><!-- /.service-card__image -->
                         <div class="service-card__content">
-                            <h3 class="service-card__title"><a href="service-d-auto-loan.html">Business loan</a></h3>
+                            <h3 class="service-card__title"><a href="{{route('loan-details')}}">Business loan</a></h3>
                             <!-- /.service-card__title -->
-                            <a href="service-d-auto-loan.html" class="service-card__btn easilon-btn">
+                            <a href="{{route('loan-details')}}" class="service-card__btn easilon-btn">
                                 <span class="easilon-btn__icon"><i class="icon-right-arrow"></i></span>
                             </a><!-- /.service-card__btn -->
                         </div><!-- /.service-card__content -->
@@ -430,9 +430,9 @@
                             <img src="assets/images/services/service-2-3.jpg" alt="home loan">
                         </a><!-- /.service-card__image -->
                         <div class="service-card__content">
-                            <h3 class="service-card__title"><a href="service-d-home-loan.html">Salary loan</a></h3>
+                            <h3 class="service-card__title"><a href="{{route('loan-details')}}">Salary loan</a></h3>
                             <!-- /.service-card__title -->
-                            <a href="service-d-home-loan.html" class="service-card__btn easilon-btn">
+                            <a href="{{route('loan-details')}}" class="service-card__btn easilon-btn">
                                 <span class="easilon-btn__icon"><i class="icon-right-arrow"></i></span>
                             </a><!-- /.service-card__btn -->
                         </div><!-- /.service-card__content -->
@@ -444,9 +444,9 @@
                             <img src="assets/images/services/service-2-4.jpg" alt="study loan">
                         </a><!-- /.service-card__image -->
                         <div class="service-card__content">
-                            <h3 class="service-card__title"><a href="service-d-study-loan.html">Cooperative loan</a></h3>
+                            <h3 class="service-card__title"><a href="{{route('loan-details')}}">Cooperative loan</a></h3>
                             <!-- /.service-card__title -->
-                            <a href="service-d-study-loan.html" class="service-card__btn easilon-btn">
+                            <a href="{{route('loan-details')}}" class="service-card__btn easilon-btn">
                                 <span class="easilon-btn__icon"><i class="icon-right-arrow"></i></span>
                             </a><!-- /.service-card__btn -->
                         </div><!-- /.service-card__content -->
@@ -458,9 +458,9 @@
                             <img src="assets/images/services/service-2-5.jpg" alt="business loan">
                         </a><!-- /.service-card__image -->
                         <div class="service-card__content">
-                            <h3 class="service-card__title"><a href="service-d-business-loan.html">Emergency loan</a>
+                            <h3 class="service-card__title"><a href="{{route('loan-details')}}">Emergency loan</a>
                             </h3><!-- /.service-card__title -->
-                            <a href="service-d-business-loan.html" class="service-card__btn easilon-btn">
+                            <a href="{{route('loan-details')}}" class="service-card__btn easilon-btn">
                                 <span class="easilon-btn__icon"><i class="icon-right-arrow"></i></span>
                             </a><!-- /.service-card__btn -->
                         </div><!-- /.service-card__content -->
@@ -472,9 +472,9 @@
                             <img src="assets/images/services/service-2-6.jpg" alt="bike loan">
                         </a><!-- /.service-card__image -->
                         <div class="service-card__content">
-                            <h3 class="service-card__title"><a href="service-d-bike-loan.html">Asset financing</a></h3>
+                            <h3 class="service-card__title"><a href="{{route('loan-details')}}">Asset financing</a></h3>
                             <!-- /.service-card__title -->
-                            <a href="service-d-bike-loan.html" class="service-card__btn easilon-btn">
+                            <a href="{{route('loan-details')}}" class="service-card__btn easilon-btn">
                                 <span class="easilon-btn__icon"><i class="icon-right-arrow"></i></span>
                             </a><!-- /.service-card__btn -->
                         </div><!-- /.service-card__content -->

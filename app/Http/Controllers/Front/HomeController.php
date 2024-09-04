@@ -41,4 +41,8 @@ class HomeController extends Controller
         return view('front.form');
     }
 
+    public function details(){
+        return view('front.loan-details');
+    }
+
 }

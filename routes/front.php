@@ -17,6 +17,7 @@ Route::get('/about-us', [HomeController::class, 'about'])->name('about');
 Route::get('/calculator', [HomeController::class, 'calculator'])->name('calculator');
 Route::get('/apply', [HomeController::class, 'apply'])->name('apply');
 Route::get('/upload-loan-form', [HomeController::class, 'form'])->name('upload-loan-form');
+Route::get('/loan-details', [HomeController::class, 'details'])->name('loan-details');
 
 Route::post('/post/comment/{post}', [CommentController::class,'makeComment'])->name('post.comment');
 Route::resource('/comment', CommentController::class, ['only' => ['destroy']]);
