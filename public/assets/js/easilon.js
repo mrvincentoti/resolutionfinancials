@@ -58,7 +58,7 @@
         tooltips: [
           wNumb({
             decimals: 0,
-            prefix: "$",
+            prefix: "₦",
           }),
         ],
         behaviour: "snap",

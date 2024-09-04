@@ -399,7 +399,7 @@
                 <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
                     <div class="service-card">
                         <a href="{{route('loan-details')}}" class="service-card__image">
-                            <img src="assets/images/services/service-2-1.jpg" alt="personal loan">
+                            <img src="{{ asset('assets/images/services/service-2-1.jpg')}}" alt="personal loan">
                         </a><!-- /.service-card__image -->
                         <div class="service-card__content">
                             <h3 class="service-card__title"><a href="{{route('loan-details')}}">personal loan</a>
@@ -413,7 +413,7 @@
                 <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
                     <div class="service-card">
                         <a href="#" class="service-card__image">
-                            <img src="assets/images/services/service-2-2.jpg" alt="auto loan">
+                            <img src="{{ asset('assets/images/services/service-2-2.jpg')}}" alt="auto loan">
                         </a><!-- /.service-card__image -->
                         <div class="service-card__content">
                             <h3 class="service-card__title"><a href="{{route('loan-details')}}">Business loan</a></h3>
@@ -427,7 +427,7 @@
                 <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
                     <div class="service-card">
                         <a href="#" class="service-card__image">
-                            <img src="assets/images/services/service-2-3.jpg" alt="home loan">
+                            <img src="{{ asset('assets/images/services/service-2-3.jpg')}}" alt="home loan">
                         </a><!-- /.service-card__image -->
                         <div class="service-card__content">
                             <h3 class="service-card__title"><a href="{{route('loan-details')}}">Salary loan</a></h3>
@@ -441,7 +441,7 @@
                 <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
                     <div class="service-card">
                         <a href="#" class="service-card__image">
-                            <img src="assets/images/services/service-2-4.jpg" alt="study loan">
+                            <img src="{{ asset('assets/images/services/service-2-4.jpg')}}" alt="study loan">
                         </a><!-- /.service-card__image -->
                         <div class="service-card__content">
                             <h3 class="service-card__title"><a href="{{route('loan-details')}}">Cooperative loan</a></h3>
@@ -455,7 +455,7 @@
                 <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
                     <div class="service-card">
                         <a href="#" class="service-card__image">
-                            <img src="assets/images/services/service-2-5.jpg" alt="business loan">
+                            <img src="{{ asset('assets/images/services/service-2-5.jpg')}}" alt="business loan">
                         </a><!-- /.service-card__image -->
                         <div class="service-card__content">
                             <h3 class="service-card__title"><a href="{{route('loan-details')}}">Emergency loan</a>
@@ -469,7 +469,7 @@
                 <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
                     <div class="service-card">
                         <a href="#" class="service-card__image">
-                            <img src="assets/images/services/service-2-6.jpg" alt="bike loan">
+                            <img src="{{ asset('assets/images/services/service-2-6.jpg')}}" alt="bike loan">
                         </a><!-- /.service-card__image -->
                         <div class="service-card__content">
                             <h3 class="service-card__title"><a href="{{route('loan-details')}}">Asset financing</a></h3>
@@ -543,7 +543,7 @@
                     </a><!-- /.loan-two__video -->
                 </div><!-- /.loan-two__inner -->
             </div><!-- /.container -->
-            <img src="assets/images/shapes/loan-money-1-1.png" alt="money" class="loan-two__money">
+            <img src="{{ asset('assets/images/shapes/loan-money-1-1.png')}}" alt="money" class="loan-two__money">
         </section><!-- /.loan-two section-space-top -->
     </section><!-- /.services-two section-space -->
 
