@@ -1,79 +1,110 @@
 @extends('layouts.main')
 @section('content')
 
-<!-- Contact Start -->
-<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container py-5">
-        <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-            <h5 class="fw-bold text-primary text-uppercase">Contact Us</h5>
-            <h1 class="mb-0">If You Have Any enqiries, Feel Free To Contact Us</h1>
-        </div>
-        <div class="row g-5 mb-5">
-            <div class="col-lg-4">
-                <div class="d-flex align-items-center wow fadeIn" data-wow-delay="0.1s">
-                    <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
-                        <i class="fa fa-phone-alt text-white"></i>
-                    </div>
-                    <div class="ps-4">
-                        <h5 class="mb-2">Call to ask any question</h5>
-                        <h4 class="text-primary mb-0">{{ $settings->url_linkedin }}</h4>
-                    </div>
-                </div>
+    <section class="page-header">
+        <div class="page-header__bg" style="background-image: url(assets/images/backgrounds/page-header-bg-1-1.jpg);"></div>
+        <!-- /.page-header__bg -->
+        <div class="container" style="margin-top: 120px;">
+            <div class="page-header__content">
+                <h2 class="page-header__title">Contact Us</h2>
+                <ul class="easilon-breadcrumb list-unstyled">
+                    <li><a href="{{route('webhome')}}">Home</a></li>
+                    <li><span>Contact Us</span></li>
+                </ul><!-- /.thm-breadcrumb list-unstyled -->
+            </div><!-- /.page-header__content -->
+        </div><!-- /.container -->
+        <div class="page-header__border-box">
+            <div class="page-header__border page-header__border--1"></div><!-- /.page-header__border -->
+            <div class="page-header__border page-header__border--2"></div><!-- /.page-header__border -->
+            <div class="page-header__border page-header__border--3"></div><!-- /.page-header__border -->
+            <div class="page-header__border page-header__border--4"></div><!-- /.page-header__border -->
+            <div class="page-header__border page-header__border--5"></div><!-- /.page-header__border -->
+        </div><!-- /.page-header__border-box -->
+    </section><!-- /.page-header -->
+
+    <section class="contact-one section-space">
+        <div class="container">
+            <div class="row gutter-y-50 align-items-center">
+                <div class="col-lg-6">
+                    <div class="contact-one__image wow fadeInLeft" data-wow-duration="1500ms" style="background-image: url(assets/images/resources/contact-1-1.jpg);">
+                        <div class="contact-one__info list-unstyled">
+                            <div class="contact-one__info__shape"></div><!-- /.contact-one__info__shape -->
+                            <div class="contact-one__info__inner">
+                                <div class="contact-one__info__item">
+                                        <span class="contact-one__info__icon">
+                                            <i class="icon-location"></i>
+                                        </span><!-- /.contact-one__info__icon -->
+                                    <div class="contact-one__info__content">
+                                        <h4 class="contact-one__info__title">Mailing Address</h4><!-- /.contact-one__info__title -->
+                                        <a href="https://maps.app.goo.gl/wpr8sgirX4NK6VsU7" class="contact-one__info__text">901 N Pitt Str., Suite <br> 170 Alexandria, USA</a><!-- /.contact-one__info__text -->
+                                    </div><!-- /.contact-one__info__content -->
+                                </div><!-- /.contact-one__info__item -->
+                                <div class="contact-one__info__item">
+                                        <span class="contact-one__info__icon">
+                                            <i class="icon-telephone"></i>
+                                        </span><!-- /.contact-one__info__icon -->
+                                    <div class="contact-one__info__content">
+                                        <h4 class="contact-one__info__title">Quick Contact</h4><!-- /.contact-one__info__title -->
+                                        <a href="tel:(406)555-0120" class="contact-one__info__text">(406) 555-0120</a><!-- /.contact-one__info__text -->
+                                    </div><!-- /.contact-one__info__content -->
+                                </div><!-- /.contact-one__info__item -->
+                                <div class="contact-one__info__item">
+                                        <span class="contact-one__info__icon">
+                                            <i class="icon-mail"></i>
+                                        </span><!-- /.contact-one__info__icon -->
+                                    <div class="contact-one__info__content">
+                                        <h4 class="contact-one__info__title">support email</h4><!-- /.contact-one__info__title -->
+                                        <a href="mailto:info@easilon.com" class="contact-one__info__text">info@easilon.com</a><!-- /.contact-one__info__text -->
+                                    </div><!-- /.contact-one__info__content -->
+                                </div><!-- /.contact-one__info__item -->
+                            </div><!-- /.contact-one__info__inner -->
+                        </div><!-- /.contact-one__info -->
+                    </div><!-- /.contact-one__image -->
+                </div><!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                    <form class="contact-one__form contact-form-validated form-one wow fadeInRight" data-wow-duration="1500ms" action="inc/sendemail.php">
+                        <h2 class="contact-one__form__title">Leave us a message</h2><!-- /.contact-one__form__title -->
+                        <div class="form-one__group">
+                            <div class="form-one__control">
+                                <input type="text" name="name" placeholder="Your Name">
+                            </div><!-- /.form-one__control -->
+                            <div class="form-one__control">
+                                <input type="email" name="email" placeholder="Your Email">
+                            </div><!-- /.form-one__control -->
+                            <div class="form-one__control form-one__control--full">
+                                <div class="form-one__control__select">
+                                    <label class="sr-only" for="select-subject">Select Subject</label>
+                                    <select class="selectpicker" id="select-subject" aria-label="Subject line">
+                                        <option selected>Select Subject</option>
+                                        <option value="1">home loan</option>
+                                        <option value="2">personal loan</option>
+                                        <option value="3">business loan</option>
+                                        <option value="4">study loan</option>
+                                        <option value="5">bike loan</option>
+                                        <option value="6">property loan</option>
+                                    </select>
+                                </div><!-- /.form-one__control__select -->
+                            </div><!-- /.form-one__control form-one__control--full -->
+                            <div class="form-one__control form-one__control--full">
+                                <textarea name="message" placeholder="Write Message"></textarea>
+                            </div><!-- /.form-one__control -->
+                            <div class="form-one__control form-one__control--full">
+                                <button type="submit" class="contact-one__form__btn easilon-btn"><span>send message</span></button>
+                            </div><!-- /.form-one__control -->
+                        </div><!-- /.form-one__group -->
+                    </form>
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row gutter-y-50 -->
+        </div><!-- /.container -->
+    </section><!-- /.contact-one section-space -->
+
+    <section class="contact-map">
+        <div class="container-fluid">
+            <div class="google-map google-map__contact">
+                <iframe title="template google map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd" class="map__contact" allowfullscreen></iframe>
             </div>
-            <div class="col-lg-4">
-                <div class="d-flex align-items-center wow fadeIn" data-wow-delay="0.4s">
-                    <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
-                        <i class="fa fa-envelope-open text-white"></i>
-                    </div>
-                    <div class="ps-4">
-                        <h5 class="mb-2">Email to get free quote</h5>
-                        <h4 class="text-primary mb-0">{{ $settings->contact_email }}</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="d-flex align-items-center wow fadeIn" data-wow-delay="0.8s">
-                    <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
-                        <i class="fa fa-map-marker-alt text-white"></i>
-                    </div>
-                    <div class="ps-4">
-                        <h5 class="mb-2">Visit our office</h5>
-                        <h4 class="text-primary mb-0">{{ $settings->description }}</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row g-5">
-            <div class="col-lg-6 wow slideInUp" data-wow-delay="0.3s">
-                <form>
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                            <input type="text" class="form-control border-0 bg-light px-4" placeholder="Your Name" style="height: 55px;">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="email" class="form-control border-0 bg-light px-4" placeholder="Your Email" style="height: 55px;">
-                        </div>
-                        <div class="col-12">
-                            <input type="text" class="form-control border-0 bg-light px-4" placeholder="Subject" style="height: 55px;">
-                        </div>
-                        <div class="col-12">
-                            <textarea class="form-control border-0 bg-light px-4 py-3" rows="4" placeholder="Message"></textarea>
-                        </div>
-                        <div class="col-12">
-                            <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-lg-6 wow slideInUp" data-wow-delay="0.6s">
-                <iframe class="position-relative rounded w-100 h-100"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-                    frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false"
-                    tabindex="0"></iframe>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Contact End -->
+            <!-- /.google-map -->
+        </div><!-- /.container-fluid -->
+    </section><!-- /.contact-map -->
 
 @endsection

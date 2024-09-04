@@ -9,7 +9,7 @@
     <meta name="description" content="">
 
     <!-- Tailwind -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/tailwind.min.css') }}" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
 
@@ -53,7 +53,7 @@
         }
     </style>
     <style>
-        @import url(https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css);
+        @import url('/assets/css/materialdesignicons.min.css');
 
         .active\:bg-gray-50:active {
             --tw-bg-opacity: 1;
@@ -191,7 +191,7 @@
                 </div>
             </div>
         @endcan
-            <!-- @can('admin-only')
+            @can('admin-only')
                 <a href="{{ route('admin.banner.index') }}"
                     class="{{ request()->routeIs('*.banner.*') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white py-4 pl-6 nav-item">
                     <i class="far fa-file mr-3"></i>
@@ -202,8 +202,8 @@
                 class="{{ request()->routeIs('*.post.*') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white  py-4 pl-6 nav-item">
                 <i class="fas fa-newspaper mr-3"></i>
                 Posts
-            </a> -->
-            <!-- @can('admin-only')
+            </a>
+            @can('admin-only')
                 <a href="{{ route('admin.category.index') }}"
                     class="{{ request()->routeIs('*.category.*') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white py-4 pl-6 nav-item">
                     <i class="fas fa-sticky-note mr-3"></i>
@@ -214,13 +214,13 @@
                 class="{{ request()->routeIs('*.tag.*') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white  py-4 pl-6 nav-item">
                 <i class="fas fa-tag mr-3"></i>
                 Tags
-            </a> -->
+            </a>
             @can('admin-only')
-                <!-- <a href="{{ route('admin.page.index') }}"
+                <a href="{{ route('admin.page.index') }}"
                     class="{{ request()->routeIs('*.page.*') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white  py-4 pl-6 nav-item">
                     <i class="far fa-file mr-3"></i>
                     Pages
-                </a> -->
+                </a>
                 <a href="{{ route('admin.role.index') }}"
                     class="{{ request()->routeIs('*.role.*') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white  py-4 pl-6 nav-item">
                     <i class="fas fa-user-shield mr-3"></i>
@@ -403,8 +403,7 @@
     <!-- AlpineJS -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <!-- Font Awesome -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
-        integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+    <script src="{{ asset('assets/js/all.min.js') }}"></script>
 
     @if (request()->routeIs('*.post.create') || request()->routeIs('*.post.edit'))
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
