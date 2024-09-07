@@ -26,8 +26,10 @@ class BannerRequest extends FormRequest
     {
         return [
             'title' => ['required', 'min:12'],
+            // 'top_tag' => ['required', 'min:12'],
             'short_description' => ['required', 'min:20'],
             'long_description' => ['required', 'min:20'],
+            'url' => ['required'],
             'slug' => ['required', Rule::unique('banners')->ignore($this?->banner?->id)],
             'image' => ['image', 'mimes:jpeg,png,jpg', 'max:2048', Rule::requiredIf(!$this?->banner?->id)],
         ];

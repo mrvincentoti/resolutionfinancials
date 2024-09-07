@@ -3,8 +3,8 @@
     <section class="main-slider-two" id="home">
         <div class="main-slider-two__inner">
             <div class="main-slider-two__inner__bg"
-                 style="background-image: url(assets/images/shapes/main-slider-shape-bg-2-2.png);"></div>
-        </div><!-- /.main-slider-two__inner -->
+                style="background-image: url(assets/images/shapes/main-slider-shape-bg-2-2.png);"></div>
+        </div>
         <div class="main-slider-two__carousel easilon-owl__carousel owl-carousel" data-owl-options='{
         "margin": 0,
         "loop": true,
@@ -17,11 +17,12 @@
         "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
         "dots": false
         }'>
+            @foreach($banners as $banner)
             <div class="item">
                 <div class="main-slider-two__item">
                     <div class="main-slider-two__bg"
-                         style="background-image: url(assets/images/shapes/main-slider-shape-bg-2-1.png);">
-                    </div><!-- /.main-slider-two__bg -->
+                        style="background-image: url(assets/images/shapes/main-slider-shape-bg-2-1.png);">
+                    </div>
                     <div class="main-slider-two__social social-links-two">
                         <a href="https://facebook.com">
                                 <span class="social-links-two__icon">
@@ -47,7 +48,7 @@
                                 </span><!-- /.social-links-two__icon -->
                             <span class="sr-only">Youtube</span>
                         </a>
-                    </div><!-- /.main-slider-two__social -->
+                    </div>
                     <div class="main-slider-two__container container">
                         <div class="row gutter-y-60 align-items-center">
                             <div class="col-xxl-6 col-xl-7">
@@ -57,25 +58,19 @@
                                             <div class="main-slider-two__sub-title-shape__one"></div>
                                             <div class="main-slider-two__sub-title-shape__two"></div>
                                         </div>
-                                        <h5 class="main-slider-two__sub-title">Fast Loans for <span>Brighter Tomorrows</span></h5>
+                                        <h5 class="main-slider-two__sub-title">{{ $banner->title }}</h5>
                                     </div>
-                                    <h2 class="main-slider-two__title">Empowering Your <br> Financial Freedom</h2>
+                                    <h2 class="main-slider-two__title">{{ $banner->short_description }}</h2>
                                     <div class="main-slider-two__text-box">
-                                        <p class="main-slider-two__text">Secure loans with ease and fair interest rates tailored for your needs.</p>
+                                        <p class="main-slider-two__text">{{ $banner->long_description }}</p>
                                     </div>
                                     <div class="main-slider-two__button">
-                                        <a href="{{route('apply')}}" class="easilon-btn">
+                                        <a href="{{ $banner->url }}" class="easilon-btn">
                                             <span>Apply Now</span>
                                             <span class="easilon-btn__icon">
-                                                    <i class="icon-double-right-arrow"></i>
-                                                </span>
+                                                <i class="icon-double-right-arrow"></i>
+                                            </span>
                                         </a>
-{{--                                        <div class="main-slider-two__video">--}}
-{{--                                            <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="main-slider-two__video__btn video-popup">--}}
-{{--                                                <i class="icon-play"></i>--}}
-{{--                                            </a>--}}
-{{--                                            <span class="main-slider-two__video__text">Trusted by Thousands</span>--}}
-{{--                                        </div>--}}
                                     </div>
                                     <div class="main-slider-two__content__shape-box">
                                         <div class="main-slider-two__content__shape-circle"></div>
@@ -86,105 +81,17 @@
                             <div class="col-xxl-6 col-xl-5">
                                 <div class="main-slider-two__image">
                                     <div class="main-slider-two__image__inner">
-                                        <img src="assets/images/resources/main-slider-image-2-1.jpg" alt="slider image">
-                                    </div>
-                                    <div class="main-slider-two__image__shape-box">
-                                        <img src="assets/images/shapes/main-slider-shape-2-1.png" alt="shape" class="main-slider-two__image__shape-one">
-                                        <img src="assets/images/shapes/main-slider-shape-2-2.png" alt="shape" class="main-slider-two__image__shape-two">
-                                        <img src="assets/images/shapes/main-slider-shape-2-3.png" alt="shape" class="main-slider-two__image__shape-three">
-                                        <img src="assets/images/shapes/main-slider-shape-2-4.png" alt="shape" class="main-slider-two__image__shape-four">
+                                        <img src="{{ asset( $banner->image) }}" alt="slider image">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div><!-- /.container -->
-                </div><!-- /.main-slider-two__item -->
-            </div><!-- /.item -->
-            <div class="item">
-                <div class="main-slider-two__item">
-                    <div class="main-slider-two__bg"
-                         style="background-image: url(assets/images/shapes/main-slider-shape-bg-2-1.png);">
-                    </div><!-- /.main-slider-two__bg -->
-                    <div class="main-slider-two__social social-links-two">
-                        <a href="https://facebook.com">
-                                <span class="social-links-two__icon">
-                                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                </span><!-- /.social-links-two__icon -->
-                            <span class="sr-only">Facebook</span>
-                        </a>
-                        <a href="https://twitter.com">
-                                <span class="social-links-two__icon">
-                                    <i class="fab fa-twitter" aria-hidden="true"></i>
-                                </span><!-- /.social-links-two__icon -->
-                            <span class="sr-only">Twitter</span>
-                        </a>
-                        <a href="https://instagram.com">
-                                <span class="social-links-two__icon">
-                                    <i class="fab fa-instagram" aria-hidden="true"></i>
-                                </span><!-- /.social-links-two__icon -->
-                            <span class="sr-only">Instagram</span>
-                        </a>
-                        <a href="https://youtube.com">
-                                <span class="social-links-two__icon">
-                                    <i class="fab fa-youtube" aria-hidden="true"></i>
-                                </span><!-- /.social-links-two__icon -->
-                            <span class="sr-only">Youtube</span>
-                        </a>
-                    </div><!-- /.main-slider-two__social -->
-                    <div class="main-slider-two__container container">
-                        <div class="row gutter-y-60 align-items-center">
-                            <div class="col-xxl-6 col-xl-7">
-                                <div class="main-slider-two__content">
-                                    <div class="main-slider-two__top">
-                                        <div class="main-slider-two__sub-title-shape">
-                                            <div class="main-slider-two__sub-title-shape__one"></div>
-                                            <div class="main-slider-two__sub-title-shape__two"></div>
-                                        </div>
-                                        <h5 class="main-slider-two__sub-title">Flexible Loans for <span>Your Goals</span></h5>
-                                    </div>
-                                    <h2 class="main-slider-two__title">Personal Loans <br> for Every Dream</h2>
-                                    <div class="main-slider-two__text-box">
-                                        <p class="main-slider-two__text">Quick and easy access to funds with competitive rates. Make your dreams a reality.</p>
-                                    </div>
-                                    <div class="main-slider-two__button">
-                                        <a href="{{route('apply')}}" class="easilon-btn">
-                                            <span>Get Started</span>
-                                            <span class="easilon-btn__icon">
-                                                    <i class="icon-double-right-arrow"></i>
-                                                </span>
-                                        </a>
-{{--                                        <div class="main-slider-two__video">--}}
-{{--                                            <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="main-slider-two__video__btn video-popup">--}}
-{{--                                                <i class="icon-play"></i>--}}
-{{--                                            </a>--}}
-{{--                                            <span class="main-slider-two__video__text">Award Winning Service</span>--}}
-{{--                                        </div>--}}
-                                    </div>
-                                    <div class="main-slider-two__content__shape-box">
-                                        <div class="main-slider-two__content__shape-circle"></div>
-                                        <div class="main-slider-two__content__shape-close"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xxl-6 col-xl-5">
-                                <div class="main-slider-two__image">
-                                    <div class="main-slider-two__image__inner">
-                                        <img src="assets/images/resources/main-slider-image-2-2.jpg" alt="slider image">
-                                    </div>
-                                    <div class="main-slider-two__image__shape-box">
-                                        <img src="assets/images/shapes/main-slider-shape-2-1.png" alt="shape" class="main-slider-two__image__shape-one">
-                                        <img src="assets/images/shapes/main-slider-shape-2-2.png" alt="shape" class="main-slider-two__image__shape-two">
-                                        <img src="assets/images/shapes/main-slider-shape-2-3.png" alt="shape" class="main-slider-two__image__shape-three">
-                                        <img src="assets/images/shapes/main-slider-shape-2-4.png" alt="shape" class="main-slider-two__image__shape-four">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- /.container -->
-                </div><!-- /.main-slider-two__item -->
-            </div><!-- /.item -->
-        </div><!-- /.main-slider-two__carousel -->
-    </section><!-- /.main-slider-two -->
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </section>
 
     <section class="company-info-one section-space">
         <div class="container">
@@ -207,7 +114,7 @@
                             <div class="company-info-one__item__icon">
                                 <span class="icon-customer"></span>
                             </div><!-- /.company-info-one__item__icon -->
-                            <h4 class="company-info-one__item__title">50k+ customers</h4>
+                            <h4 class="company-info-one__item__title">Happy customers</h4>
                             <!-- /.company-info-one__item__title -->
                         </div><!-- /.company-info-one__item -->
                     </div><!-- /.col-lg-3 col-sm-6 -->

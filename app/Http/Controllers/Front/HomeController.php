@@ -9,6 +9,7 @@ use App\Models\Sector;
 use App\Models\Phase;
 use App\Models\Lga;
 use App\Models\Setting;
+use App\Models\Banner;
 
 
 class HomeController extends Controller
@@ -16,7 +17,13 @@ class HomeController extends Controller
     // Home Page
     public function index()
     {
-        return view('front.index');
+        $banners = Banner::all();
+        $banners->transform(function($banner) {
+            $banner->short_description = strip_tags($banner->short_description);
+            $banner->long_description = strip_tags($banner->long_description);
+            return $banner;
+        });
+        return view('front.index', compact('banners'));
     }
 
     public function contact()

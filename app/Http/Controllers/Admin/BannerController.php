@@ -60,7 +60,7 @@ class BannerController extends Controller
             // Generate a unique filename with extension
             $filename = time() . '-' . $file->getClientOriginalName();
             // Define the path to store the file
-            $destinationPath = public_path('images/announcement');
+            $destinationPath = public_path('images/banner');
             // Move the file to the public/images/announcement directory
             $file->move($destinationPath, $filename);
             // Store the filename in the announcement data
