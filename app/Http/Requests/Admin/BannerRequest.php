@@ -24,14 +24,19 @@ class BannerRequest extends FormRequest
      */
     public function rules()
     {
+        // Determine if the request is for updating or creating a new banner
+        $isUpdate = $this->isMethod('PATCH') || $this->isMethod('PUT');
+
         return [
             'title' => ['required', 'min:12'],
-            // 'top_tag' => ['required', 'min:12'],
-            'short_description' => ['required', 'min:20'],
-            'long_description' => ['required', 'min:20'],
+            // If updating, allow optional description, otherwise keep required for creation
+            'short_description' => [$isUpdate ? 'sometimes' : 'required', 'min:20'],
+            'long_description' => [$isUpdate ? 'sometimes' : 'required', 'min:20'],
             'url' => ['required'],
             'slug' => ['required', Rule::unique('banners')->ignore($this?->banner?->id)],
-            'image' => ['image', 'mimes:jpeg,png,jpg', 'max:2048', Rule::requiredIf(!$this?->banner?->id)],
+
+            // Make 'image' required only during creation, optional during update
+            'image' => ['image', 'mimes:jpeg,png,jpg', 'max:2048', Rule::requiredIf(!$isUpdate)],
         ];
     }
 
