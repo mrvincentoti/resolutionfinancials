@@ -2,11 +2,11 @@
 
     <div class="w-full h-screen overflow-x-hidden border-t flex flex-col">
         <main class="w-full flex-grow p-6">
-            <h1 class="w-full text-3xl text-black pb-6">Sponsoring Agency</h1>
+            <h1 class="w-full text-3xl text-black pb-6">About Section</h1>
 
             <div class="w-full mt-12">
                 <p class="text-xl pb-3 flex items-center">
-                    <i class="fas fa-list mr-3"></i> Sponsoring Agency Records
+                    <i class="fas fa-list mr-3"></i> About Section Records
                 </p>
                 <!-- @can('create', 'App\Models\SponsoringAgency')
                     <button class="px-4 py-1 text-white font-light tracking-wider bg-blue-600 rounded mb-2"
@@ -43,7 +43,7 @@
                             @foreach ($agencies as $agency)
                                 <tr class="hover:bg-grey-lighter">
                                     <td class="py-4 px-6 border-b border-grey-light">{{ $agency->id }}</td>
-                                    <td class="py-4 px-6 border-b border-grey-light">{{ $agency->title }}</td>       
+                                    <td class="py-4 px-6 border-b border-grey-light">{{ $agency->title }}</td>
                                     <td class="py-4 px-6 border-b border-grey-light">
                                         @can('update', $agency)
                                             <button
