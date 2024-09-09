@@ -156,7 +156,7 @@
                     <a href="{{ route('admin.agency.index') }}"
                         class="{{ request()->routeIs('*.agency.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
                         <i class="far fa-file mr-3"></i>
-                        Agency
+                        About Section
                     </a>
                     <a href="{{ route('admin.announcement.index') }}"
                         class="{{ request()->routeIs('*.announcement.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">

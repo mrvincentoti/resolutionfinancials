@@ -111,7 +111,7 @@
                     <div>
                         <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
                             <div class="px-10 py-6">
-                                <div class="font-bold text-xl mb-2">Sponsoring Agency</div>
+                                <div class="font-bold text-xl mb-2">About Section</div>
                                 <hr>
                                 <!-- Start of Rows -->
                                 <div class="mt-4">
@@ -119,10 +119,26 @@
                                         @csrf
                                         <div class="grid gap-6 mb-6 md:grid-cols-1">
                                             <div class="mb-1">
+                                                <label for="top_tag" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Top Title</label>
+                                                <input type="text" id="top_tag" value="{{ old('top_tag') }}" name="top_tag"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    placeholder="Top title of the post" required>
+                                            </div>
+                                            <div class="mb-1">
                                                 <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Title</label>
                                                 <input type="text" id="title" value="{{ old('title') }}" name="title"
                                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                                     placeholder="Title of the post" required>
+                                            </div>
+                                            <div class="mb-1">
+                                                <label for="short_description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Short description</label>
+                                                <input type="text" id="short_description" value="{{ old('short_description') }}" name="short_description"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    placeholder="Short description of the post" required>
+                                            </div>
+                                            <div class="mb-1">
+                                                <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label>
+                                                <textarea class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="description" name="description">{{ old('description') }}</textarea>
                                             </div>
                                             <!-- <div class="mb-1">
                                                 <label class="block text-sm text-gray-600" for="message">Image</label>
@@ -137,10 +153,34 @@
                                                 <input type="file" id="myimage" name="image" required>
                                                 <input type="hidden" name="project_id" value="{{ $project->id}}">
                                             </div>
+                                            <div class="mb-1">
+                                                <label for="point_one" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Bullet Point one</label>
+                                                <input type="text" id="point_one" value="{{ old('point_one') }}" name="point_one"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    placeholder="First bullet point of the post" required>
+                                            </div>
+                                            <div class="mb-1">
+                                                <label for="point_two" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Bullet Point Two</label>
+                                                <input type="text" id="point_two" value="{{ old('point_two') }}" name="point_two"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    placeholder="Second bullet point of the post" required>
+                                            </div>
+                                            <div class="mb-1">
+                                                <label for="point_three" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Bullet Point Three</label>
+                                                <input type="text" id="point_three" value="{{ old('point_three') }}" name="point_three"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    placeholder="Third bullet point of the post" required>
+                                            </div>
+                                            <div class="mb-1">
+                                                <label for="point_four" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Bullet Point Four</label>
+                                                <input type="text" id="point_four" value="{{ old('point_four') }}" name="point_four"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    placeholder="Fourth bullet point of the post" required>
+                                            </div>
                                         </div>
                                         <!-- <button type="submit" class="px-4 py-1 text-white font-light tracking-wider bg-blue-600 rounded">Add</button> -->
                                         <button type="submit" id="add-row" class="mt-4 bg-blue-500 text-white font-bold py-2 px-4 rounded add-row-button w-full">
-                                            Add Sponsor
+                                            Add About Section
                                         </button>
                                     </form>
                                 </div>

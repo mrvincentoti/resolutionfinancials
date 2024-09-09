@@ -35,8 +35,18 @@ class SponsoringAgencyController extends Controller
         $agency_data = $request->safe()->except('image');
 
         if ($request->hasfile('image')) {
-            $get_file = $request->file('image')->store('images/agency');
-            $agency_data['image'] = $get_file;
+            // $get_file = $request->file('image')->store('images/agency');
+            // $agency_data['image'] = $get_file;
+
+            $file = $request->file('image');
+            // Generate a unique filename with extension
+            $filename = time() . '-' . $file->getClientOriginalName();
+            // Define the path to store the file
+            $destinationPath = public_path('images/agency');
+            // Move the file to the public/images/announcement directory
+            $file->move($destinationPath, $filename);
+            // Store the filename in the announcement data
+            $agency_data['image'] = 'images/agency/' . $filename;
         }
         $agency = SponsoringAgency::create($agency_data);
 
@@ -84,8 +94,13 @@ class SponsoringAgencyController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(SponsoringAgency $sponsoringAgency)
+    public function destroy(SponsoringAgency $agency)
     {
-        //
+        if ($agency->image != null) {
+            Storage::delete($agency->image);
+        }
+        $agency->delete();
+
+        return back()->with('message', trans('admin.agency_deleted'));
     }
 }

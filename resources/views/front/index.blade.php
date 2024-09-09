@@ -141,77 +141,7 @@
         </div><!-- /.container -->
     </section><!-- /.company-info-one section-space -->
 
-    <section class="about-two section-space" id="about">
-        <div class="container">
-            <div class="row gutter-y-60 align-items-center">
-                <div class="col-lg-6 wow fadeInLeft" data-wow-duration="1500ms">
-                    <div class="about-two__image">
-                        <div class="about-two__image__inner">
-                            <img src="{{ asset('assets/images/about/about-2-1.jpg')}}" alt="about image">
-                            <img src="{{ asset('assets/images/about/about-2-2.jpg')}}" alt="about image"
-                                 class="about-two__image__two">
-                            <div class="about-two__experience">
-                                <h3 class="about-two__experience__year">15+</h3>
-                                <!-- /.about-two__experience__year -->
-                                <h3 class="about-two__experience__title">year of experience</h3>
-                                <!-- /.about-two__experience__title -->
-                            </div><!-- /.about-two__experience -->
-                        </div><!-- /.about-two__image__inner -->
-                    </div><!-- /.about-two__image -->
-                </div><!-- /.col-lg-6 -->
-                <div class="col-lg-6">
-                    <div class="about-two__content">
-                        <div class="sec-title @@extraClassName">
-                            <div class="sec-title__top">
-                                <div class="sec-title__shape">
-                                    <div class="sec-title__shape__one"></div><!-- /.sec-title__shape__one -->
-                                    <div class="sec-title__shape__two"></div><!-- /.sec-title__shape__one -->
-                                </div><!-- /.sec-title__shape -->
-                                <h5 class="sec-title__tagline">welcome to <span>Resolution Finance</span></h5><!-- /.sec-title__tagline -->
-                            </div><!-- /.sec-title__top -->
-                            <h3 class="sec-title__title">Personal loans to fulfill your dreams</h3>
-                            <!-- /.sec-title__title -->
-                        </div><!-- /.sec-title -->
-                        <div class="about-two__info wow fadeInUp" data-wow-duration="1500ms">
-                            <div class="about-two__info__icon">
-                                <span class="icon-loan"></span>
-                            </div><!-- /.about-two__info__icon -->
-                            <p class="about-two__info__text">We’re in this business since 1987 and we provide
-                                the best services.</p><!-- /.about-two__info__text -->
-                        </div><!-- /.about-two__info -->
-                        <div class="about-two__text-box wow fadeInUp" data-wow-duration="1500ms">
-                            <p class="about-two__text">Empowering individuals and SMEs with sustainable financial
-                                solutions, fostering growth, and driving economic success. Your trusted partner in
-                                achieving financial stability and prosperity.</p><!-- /.about-two__text -->
-                        </div><!-- /.about-two__text-box -->
-                        <ul class="about-two__list list-unstyled wow fadeInUp" data-wow-duration="1500ms">
-                            <li>
-                                    <span class="about-two__list__icon">
-                                        <i class="icon-check-mark"></i>
-                                    </span><!-- /.about-two__list__icon -->
-                                small business loan
-                            </li>
-                            <li>
-                                    <span class="about-two__list__icon">
-                                        <i class="icon-check-mark"></i>
-                                    </span><!-- /.about-two__list__icon -->
-                                studying abroad loan
-                            </li>
-                        </ul><!-- /.about-two__list list-unstyled -->
-                        <div class="about-two__button wow fadeInUp" data-wow-duration="1500ms">
-                            <a href="{{route('about')}}" class="easilon-btn">
-                                <span>know about us</span>
-                                <span class="easilon-btn__icon">
-                                        <i class="icon-double-right-arrow"></i>
-                                    </span>
-                            </a><!-- /.easilon-btn -->
-                        </div><!-- /.about-two__button -->
-                    </div><!-- /.about-two__content -->
-                </div><!-- /.col-lg-6 -->
-            </div><!-- /.row gutter-y-50 -->
-        </div><!-- /.container -->
-        <img src="{{ asset('assets/images/shapes/about-shape-2-1.png')}}" alt="shape" class="about-two__shape">
-    </section><!-- /.about-two section-space -->
+    @include('front.partials.about-section')
 
     <section class="services-two section-space" id="services">
         <div class="services-two__bg" style="background-image: url(assets/images/shapes/services-bg-2-1.png);">

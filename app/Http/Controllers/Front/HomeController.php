@@ -10,7 +10,7 @@ use App\Models\Phase;
 use App\Models\Lga;
 use App\Models\Setting;
 use App\Models\Banner;
-
+use App\Models\SponsoringAgency;
 
 class HomeController extends Controller
 {
@@ -23,7 +23,8 @@ class HomeController extends Controller
             $banner->long_description = strip_tags($banner->long_description);
             return $banner;
         });
-        return view('front.index', compact('banners'));
+        $about = SponsoringAgency::first();
+        return view('front.index', compact('banners', 'about'));
     }
 
     public function contact()
@@ -33,7 +34,8 @@ class HomeController extends Controller
     }
 
     public function about(){
-        return view('front.about');
+        $about = SponsoringAgency::first();
+        return view('front.about', compact('about'));
     }
 
     public function calculator(){

@@ -7157,7 +7157,7 @@ li:hover .sidebar__comments__icon {
   display: table;
 }
 .about-one__image__inner img {
-  max-width: 100%;
+  max-width: 370px;
   height: auto;
 }
 .about-one__image__with-border {
