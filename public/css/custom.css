@@ -148,3 +148,20 @@ ul, ol {
     border: 1px solid #dddddd; /* Light border for header cells */
 }
 
+/* Basic styling to make the dropdowns hidden */
+.hidden {
+    display: none;
+}
+
+.relative {
+    position: relative;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.z-10 {
+    z-index: 10;
+}
+

@@ -32,6 +32,9 @@ class ProcurementDocumentRequest extends FormRequest
 
         $rules = [
             'project_id' => [],
+            'image1' => [],
+            'image2' => [],
+            'title' => [],
             'document_name' => ['required'],
         ];
 
@@ -40,7 +43,8 @@ class ProcurementDocumentRequest extends FormRequest
             $rules['image'] = ['image', 'mimes:jpeg,png,jpg', 'max:2048', Rule::requiredIf(!$this?->agency?->id)];
         } else {
             // Document is optional on update (PUT/PATCH)
-            $rules['image'] = ['sometimes', 'image', 'mimes:jpeg,png,jpg', 'max:2048'];
+            $rules['image1'] = ['sometimes', 'image', 'mimes:jpeg,png,jpg', 'max:2048'];
+            $rules['image2'] = ['sometimes', 'image', 'mimes:jpeg,png,jpg', 'max:2048'];
         }
 
         return $rules;

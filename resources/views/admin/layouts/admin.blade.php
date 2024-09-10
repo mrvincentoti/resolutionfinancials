@@ -138,59 +138,90 @@
                     Project Announcement
                 </a>
             @endcan -->
-        @can('admin-only')
-            <div class="relative">
-                <a id="dropdown-button"
-                    class="flex items-center text-white py-4 pl-6 rounded-lg">
-                    <i class="far fa-file mr-3"></i>
-                    Manage Project
-                    <i class="ml-2 fas fa-chevron-down"></i>
-                </a>
-                <div id="dropdown-menu"
-                    class="hidden mt-2 w-full bg-white border border-gray-50 rounded-lg shadow-lg z-10 transition duration-300 ease-in-out">
-                    <a href="{{ route('admin.project.index') }}"
-                        class="{{ request()->routeIs('*.project.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
+
+            @can('admin-only')
+                <div class="relative">
+                    <a id="dropdown-button-1"
+                        class="flex items-center text-white py-4 pl-6 rounded-lg">
                         <i class="far fa-file mr-3"></i>
-                        Project
+                        Manage Project
+                        <i class="ml-2 fas fa-chevron-down"></i>
                     </a>
-                    <a href="{{ route('admin.agency.index') }}"
-                        class="{{ request()->routeIs('*.agency.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
-                        <i class="far fa-file mr-3"></i>
-                        About Section
-                    </a>
-                    <a href="{{ route('admin.announcement.index') }}"
-                        class="{{ request()->routeIs('*.announcement.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
-                        <i class="far fa-file mr-3"></i>
-                        Announcement
-                    </a>
-                    <a href="{{ route('admin.milestone.index') }}"
-                        class="{{ request()->routeIs('*.milestone.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
-                        <i class="far fa-file mr-3"></i>
-                        Milestone
-                    </a>
-                    <a href="{{ route('admin.contract.index') }}"
-                        class="{{ request()->routeIs('*.contract.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
-                        <i class="far fa-file mr-3"></i>
-                        Contract Information
-                    </a>
-                    <a href="{{ route('admin.summary.index') }}"
-                        class="{{ request()->routeIs('*.summary.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
-                        <i class="far fa-file mr-3"></i>
-                        Summary Document
-                    </a>
-                    <a href="{{ route('admin.procurement.index') }}"
-                        class="{{ request()->routeIs('*.procurement.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
-                        <i class="far fa-file mr-3"></i>
-                        Procurement Document
-                    </a>
-                    <a href="{{ route('admin.performance.index') }}"
-                        class="{{ request()->routeIs('*.performance.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
-                        <i class="far fa-file mr-3"></i>
-                        Performance Information
-                    </a>
+                    <div id="dropdown-menu-1"
+                        class="hidden mt-2 w-full bg-white border border-gray-50 rounded-lg shadow-lg z-10 transition duration-300 ease-in-out">
+                        <a href="{{ route('admin.project.index') }}"
+                            class="{{ request()->routeIs('*.project.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
+                            <i class="far fa-file mr-3"></i>
+                            Project
+                        </a>
+                        <a href="{{ route('admin.agency.index') }}"
+                            class="{{ request()->routeIs('*.agency.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
+                            <i class="far fa-file mr-3"></i>
+                            Agency
+                        </a>
+                        <a href="{{ route('admin.announcement.index') }}"
+                            class="{{ request()->routeIs('*.announcement.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
+                            <i class="far fa-file mr-3"></i>
+                            Announcement
+                        </a>
+                        <a href="{{ route('admin.milestone.index') }}"
+                            class="{{ request()->routeIs('*.milestone.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
+                            <i class="far fa-file mr-3"></i>
+                            Milestone
+                        </a>
+                        <a href="{{ route('admin.contract.index') }}"
+                            class="{{ request()->routeIs('*.contract.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
+                            <i class="far fa-file mr-3"></i>
+                            Contract Information
+                        </a>
+                        <a href="{{ route('admin.summary.index') }}"
+                            class="{{ request()->routeIs('*.summary.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
+                            <i class="far fa-file mr-3"></i>
+                            Summary Document
+                        </a>
+                        <a href="{{ route('admin.procurement.index') }}"
+                            class="{{ request()->routeIs('*.procurement.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
+                            <i class="far fa-file mr-3"></i>
+                            Procurement Document
+                        </a>
+                        <a href="{{ route('admin.performance.index') }}"
+                            class="{{ request()->routeIs('*.performance.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
+                            <i class="far fa-file mr-3"></i>
+                            Performance Information
+                        </a>
+                    </div>
                 </div>
-            </div>
-        @endcan
+            @endcan
+
+            @can('admin-only')
+                <div class="relative">
+                    <a id="dropdown-button-2"
+                       class="flex items-center text-white py-4 pl-6 rounded-lg">
+                        <i class="far fa-file mr-3"></i>
+                        About RFL
+                        <i class="ml-2 fas fa-chevron-down"></i>
+                    </a>
+                    <div id="dropdown-menu-2"
+                         class="hidden mt-2 w-full bg-white border border-gray-50 rounded-lg shadow-lg z-10 transition duration-300 ease-in-out">
+                        <a href="{{ route('admin.agency.index') }}"
+                           class="{{ request()->routeIs('*.project.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
+                            <i class="far fa-file mr-3"></i>
+                            About Us
+                        </a>
+                        <a href="{{ route('admin.agency.index') }}"
+                           class="{{ request()->routeIs('*.agency.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
+                            <i class="far fa-file mr-3"></i>
+                            Why Choose Us
+                        </a>
+                        <a href="{{ route('admin.announcement.index') }}"
+                           class="{{ request()->routeIs('*.announcement.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
+                            <i class="far fa-file mr-3"></i>
+                            Reasons to Loan
+                        </a>
+                    </div>
+                </div>
+            @endcan
+
             @can('admin-only')
                 <a href="{{ route('admin.banner.index') }}"
                     class="{{ request()->routeIs('*.banner.*') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white py-4 pl-6 nav-item">
@@ -494,14 +525,78 @@
         </script>
     @endif
 
-    @if (request()->routeIs('*.banner.create') || request()->routeIs('*.banner.edit'))
+    @if (request()->routeIs('*.banner.create') || request()->routeIs('*.banner.edit') || request()->routeIs('*.agency.index'))
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
             integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
         <script>
-            $('#summernote1').summernote({
+            $('#content').summernote({
+                placeholder: 'Hello ..!',
+                tabsize: 2,
+                height: 120,
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'video']],
+                    ['view', ['codeview', 'help']]
+                ]
+            });
+        </script>
+        <script>
+            $('#document_name').summernote({
+                placeholder: 'Hello ..!',
+                tabsize: 2,
+                height: 120,
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'video']],
+                    ['view', ['codeview', 'help']]
+                ]
+            });
+        </script>
+        <script>
+            $('#description1').summernote({
+                placeholder: 'Hello ..!',
+                tabsize: 2,
+                height: 120,
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'video']],
+                    ['view', ['codeview', 'help']]
+                ]
+            });
+        </script>
+        <script>
+            $('#description2').summernote({
+                placeholder: 'Hello ..!',
+                tabsize: 2,
+                height: 120,
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'video']],
+                    ['view', ['codeview', 'help']]
+                ]
+            });
+        </script>
+        <script>
+            $('#description3').summernote({
                 placeholder: 'Hello ..!',
                 tabsize: 2,
                 height: 120,
@@ -792,6 +887,44 @@
       });
     });
   </script>
+
+<script>
+    // Toggle function for dropdown menus
+    document.addEventListener('DOMContentLoaded', function () {
+        const dropdown1Button = document.getElementById('dropdown-button-1');
+        const dropdown1Menu = document.getElementById('dropdown-menu-1');
+        const dropdown2Button = document.getElementById('dropdown-button-2');
+        const dropdown2Menu = document.getElementById('dropdown-menu-2');
+
+        // Toggle for dropdown 1
+        dropdown1Button.addEventListener('click', function () {
+            dropdown1Menu.classList.toggle('hidden');
+            // Close the other dropdown if open
+            if (!dropdown2Menu.classList.contains('hidden')) {
+                dropdown2Menu.classList.add('hidden');
+            }
+        });
+
+        // Toggle for dropdown 2
+        dropdown2Button.addEventListener('click', function () {
+            dropdown2Menu.classList.toggle('hidden');
+            // Close the other dropdown if open
+            if (!dropdown1Menu.classList.contains('hidden')) {
+                dropdown1Menu.classList.add('hidden');
+            }
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function (e) {
+            if (!dropdown1Button.contains(e.target) && !dropdown1Menu.contains(e.target)) {
+                dropdown1Menu.classList.add('hidden');
+            }
+            if (!dropdown2Button.contains(e.target) && !dropdown2Menu.contains(e.target)) {
+                dropdown2Menu.classList.add('hidden');
+            }
+        });
+    });
+</script>
 
 </body>
 

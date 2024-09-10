@@ -37,10 +37,12 @@ class SummaryDocumentRequest extends FormRequest
 
         if ($this->isMethod('post')) {
             // Only require document on create (POST)
-            $rules['image'] = ['image', 'mimes:jpeg,png,jpg', 'max:2048', Rule::requiredIf(!$this?->agency?->id)];
+            $rules['simage'] = ['image', 'mimes:jpeg,png,jpg', 'max:2048', Rule::requiredIf(!$this?->agency?->id)];
+            $rules['limage'] = ['image', 'mimes:jpeg,png,jpg', 'max:2048', Rule::requiredIf(!$this?->agency?->id)];
         } else {
             // Document is optional on update (PUT/PATCH)
-            $rules['image'] = ['sometimes', 'image', 'mimes:jpeg,png,jpg', 'max:2048'];
+            $rules['simage'] = ['sometimes', 'image', 'mimes:jpeg,png,jpg', 'max:2048'];
+            $rules['limage'] = ['sometimes', 'image', 'mimes:jpeg,png,jpg', 'max:2048'];
         }
 
         return $rules;

@@ -4,9 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\SponsoringAgencyRequest;
+use App\Models\ContractInformation;
 use App\Models\SponsoringAgency;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
+use App\Models\ProcurementDocument;
+use App\Models\ProjectMilestone;
 
 class SponsoringAgencyController extends Controller
 {
@@ -15,8 +16,11 @@ class SponsoringAgencyController extends Controller
      */
     public function index()
     {
-        $agencies = SponsoringAgency::with([])->latest()->paginate(15);
-        return view("admin.agency.index", compact("agencies"));
+        // Get the most recent single record
+        $about = SponsoringAgency::with([])->latest()->first();
+        $choose = ProcurementDocument::with([])->latest()->first();
+        $reason = ProjectMilestone::with([])->latest()->first();
+        return view("admin.agency.index", compact(["about","choose","reason"]));
     }
 
     /**
@@ -32,23 +36,30 @@ class SponsoringAgencyController extends Controller
      */
     public function store(SponsoringAgencyRequest $request)
     {
-        $agency_data = $request->safe()->except('image');
+        $contract_data = $request->safe()->except([
+            'simage',
+            'limage'
+        ]);
 
-        if ($request->hasfile('image')) {
-            // $get_file = $request->file('image')->store('images/agency');
-            // $agency_data['image'] = $get_file;
+        // List of file fields to check and store
+        $fileFields = [
+            'title',
+            'simage',
+            'limage',
+            'content',
+            'project_id'
+        ];
 
-            $file = $request->file('image');
-            // Generate a unique filename with extension
-            $filename = time() . '-' . $file->getClientOriginalName();
-            // Define the path to store the file
-            $destinationPath = public_path('images/agency');
-            // Move the file to the public/images/announcement directory
-            $file->move($destinationPath, $filename);
-            // Store the filename in the announcement data
-            $agency_data['image'] = 'images/agency/' . $filename;
+        // Loop through each file field, check for file, store and save path
+        foreach ($fileFields as $field) {
+            if ($request->hasFile($field)) {
+                $file = $request->file($field)->store('images/about');
+                $contract_data[$field] = $file;
+            }
         }
-        $agency = SponsoringAgency::create($agency_data);
+
+        // Create the announcement with the collected data
+        $contract = ContractInformation::create($contract_data);
 
         return back()->with('success', 'Your data has been saved successfully!');
     }
@@ -74,33 +85,38 @@ class SponsoringAgencyController extends Controller
      */
     public function update(SponsoringAgencyRequest $request, SponsoringAgency $agency)
     {
-        $agency_data = $request->safe()->except('image');
+        // Get the safe request data excluding image fields
+        $agency_data = $request->safe()->except(['simage', 'limage']);
 
-        if ($request->hasfile('image')) {
-            // Delete the old image if exists
-            if ($agency->image) {
-                Storage::delete($agency->image);
+        // Define an array of image fields
+        $images = ['simage', 'limage'];
+
+        foreach ($images as $image) {
+            if ($request->hasFile($image)) {
+                // Delete the old image if exists
+                if ($agency->$image) {
+                    if (file_exists(public_path($agency->$image))) {
+                        unlink(public_path($agency->$image));
+                    }
+                }
+                // Store the new image in the public folder
+                $imagePath = $request->file($image)->move(public_path('images/about'), $request->file($image)->getClientOriginalName());
+                // Save the relative path to the database
+                $agency_data[$image] = 'images/about/' . $request->file($image)->getClientOriginalName();
             }
-            // Store the new image and save the path
-            $get_file = $request->file('image')->store('images/agency');
-            $agency_data['image'] = $get_file;
         }
 
+        // Update the agency with the modified data
         $agency->update($agency_data);
 
-        return redirect()->route('admin.agency.index')->with('message', 'Supporting Agency Document updated successfully!');
+        return redirect()->route('admin.agency.index')->with('message', 'Updated successfully!');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(SponsoringAgency $agency)
+    public function destroy(SponsoringAgency $sponsoringAgency)
     {
-        if ($agency->image != null) {
-            Storage::delete($agency->image);
-        }
-        $agency->delete();
-
-        return back()->with('message', trans('admin.agency_deleted'));
+        //
     }
 }

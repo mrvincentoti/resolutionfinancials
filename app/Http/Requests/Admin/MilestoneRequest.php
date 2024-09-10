@@ -27,8 +27,11 @@ class MilestoneRequest extends FormRequest
         return [
             'project_id' => [],
             'title' => ['required'],
-            'description' => ['required'],
-            'milestone_date' => ['required'],
+            'description1' => ['required'],
+            'description2' => [],
+            'description3' => [],
+            'image' => [],
+            'milestone_date' => [],
         ];
     }
 

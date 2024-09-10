@@ -53,11 +53,28 @@ class ProjectMilestoneController extends Controller
      */
     public function update(MilestoneRequest $request, ProjectMilestone $milestone)
     {
-        $milestone_data = $request->safe()->except('image');
+        $reason_data = $request->safe()->except(['image']);
 
-        $milestone->update($milestone_data);
+        // Define an array of image fields
+        $images = ['image'];
 
-        return redirect()->route('admin.milestone.index')->with('message', 'Project Milestione Document updated successfully!');
+        foreach ($images as $image) {
+            if ($request->hasFile($image)) {
+                // Delete the old image if exists
+                if ($milestone->$image) {
+                    if (file_exists(public_path($milestone->$image))) {
+                        unlink(public_path($milestone->$image));
+                    }
+                }
+
+                $imagePath = $request->file($image)->move(public_path('images/choose'), $request->file($image)->getClientOriginalName());
+                $reason_data[$image] = 'images/choose/' . $request->file($image)->getClientOriginalName();
+            }
+        }
+
+        $milestone->update($reason_data);
+
+        return redirect()->route('admin.agency.index')->with('message', 'Updated successfully!');
     }
 
     /**

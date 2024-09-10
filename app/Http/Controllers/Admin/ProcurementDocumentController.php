@@ -64,21 +64,28 @@ class ProcurementDocumentController extends Controller
      */
     public function update(ProcurementDocumentRequest $request, ProcurementDocument $procurement)
     {
-        $procurement_data = $request->safe()->except('image');
+        $choose_data = $request->safe()->except(['image1', 'image2']);
 
-        if ($request->hasfile('image')) {
-            // Delete the old image if exists
-            if ($procurement->image) {
-                Storage::delete($procurement->image);
+        // Define an array of image fields
+        $images = ['image1', 'image2'];
+
+        foreach ($images as $image) {
+            if ($request->hasFile($image)) {
+                // Delete the old image if exists
+                if ($procurement->$image) {
+                    if (file_exists(public_path($procurement->$image))) {
+                        unlink(public_path($procurement->$image));
+                    }
+                }
+
+                $imagePath = $request->file($image)->move(public_path('images/choose'), $request->file($image)->getClientOriginalName());
+                $choose_data[$image] = 'images/choose/' . $request->file($image)->getClientOriginalName();
             }
-            // Store the new image and save the path
-            $get_file = $request->file('image')->store('images/procurement');
-            $procurement_data['image'] = $get_file;
         }
 
-        $procurement->update($procurement_data);
+        $procurement->update($choose_data);
 
-        return redirect()->route('admin.procurement.index')->with('message', 'Procurement Document updated successfully!');
+        return redirect()->route('admin.agency.index')->with('message', 'Updated successfully!');
     }
 
     /**
