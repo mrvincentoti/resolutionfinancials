@@ -141,7 +141,7 @@
         </div><!-- /.container -->
     </section><!-- /.company-info-one section-space -->
 
-    @include('front.partials.about-section')
+    @include('front.partials.about-section', ['about', $about])
 
     <section class="services-two section-space" id="services">
         <div class="services-two__bg" style="background-image: url(assets/images/shapes/services-bg-2-1.png);">
@@ -317,6 +317,7 @@
                         </div><!-- /.service-card__content -->
                     </div><!-- /.service-card -->
                 </div><!-- /.item -->
+
             </div><!-- /.services-two__carousel -->
         </div><!-- /.container-fluid -->
 
@@ -403,7 +404,7 @@
                             <h3 class="sec-title__title">why choose us</h3><!-- /.sec-title__title -->
                         </div><!-- /.sec-title -->
                         <div class="why-choose-one__text-box wow fadeInUp" data-wow-duration="1500ms">
-                            <p class="why-choose-one__text">We combine expertise, convenience, and competitive rates to deliver financial solutions that truly benefit you. Our commitment is to provide accessible, efficient, and tailored services that empower your financial journey.</p>
+                            <p class="why-choose-one__text">{{$choose->document_name}}</p>
                             <!-- /.why-choose-one__text -->
                         </div><!-- /.why-choose-one__text-box -->
                         <div class="why-choose-one__list">
@@ -429,12 +430,12 @@
                     <div class="why-choose-one__image">
                         <div class="why-choose-one__image__inner">
                             <div class="why-choose-one__image__one">
-                                <img src="assets/images/resources/why-choose-1-1.jpg" alt="why choose image">
+                                <img src="{{ asset( $choose->image1) }}" alt="why choose image">
                                 <img src="assets/images/shapes/why-choose-shape-1-1.png" alt="shape"
                                      class="why-choose-one__image__one__shape">
                             </div><!-- /.why-choose-one__image__one -->
                             <div class="why-choose-one__image__two">
-                                <img src="assets/images/resources/why-choose-1-2.jpg" alt="why choose image">
+                                <img src="{{ asset( $choose->image2) }}" alt="why choose image">
                             </div><!-- /.why-choose-one__image__two -->
                         </div><!-- /.why-choose-one__image__inner -->
                     </div><!-- /.why-choose-one__image -->
@@ -627,7 +628,7 @@
             <div class="loan-reasons-one__row row gutter-y-30">
                 <div class="col-xl-8 col-lg-7 col-md-6 wow fadeInLeft" data-wow-duration="1500ms">
                     <div class="loan-reasons-one__image"
-                         style="background-image: url(assets/images/resources/loan-reasons-1-1.jpg);"></div>
+                         style="background-image: url({{ $reason->image }});"></div>
                     <!-- /.loan-reasons-one__image -->
                 </div><!-- /.col-xl-8 col-lg-7 col-md-6 -->
                 <div class="col-xl-4 col-lg-5 col-md-6 wow fadeInRight" data-wow-duration="1500ms">
@@ -645,9 +646,9 @@
                                     </div><!-- /.sec-title__shape -->
                                     <h6 class="sec-title__tagline">loan reasons</h6><!-- /.sec-title__tagline -->
                                 </div><!-- /.sec-title__top -->
-                                <h3 class="sec-title__title">Popular Reasons to Loan</h3><!-- /.sec-title__title -->
+                                <h3 class="sec-title__title">{{$reason->title}}</h3><!-- /.sec-title__title -->
                             </div><!-- /.sec-title -->
-                            <a href="apply-loan.html" class="loan-reasons-one__content__btn">
+                            <a href="" class="loan-reasons-one__content__btn">
                                 <span class="loan-reasons-one__content__btn__icon"><i class="icon-next"></i></span>
                             </a><!-- /.loan-reasons-one__content__btn -->
                         </div><!-- /.loan-reasons-one__content__inner -->
@@ -666,9 +667,7 @@
                         <div class="loan-reasons-one__card__content">
                             <h3 class="loan-reasons-one__card__title">Need a new car?</h3>
                             <!-- /.loan-reasons-one__card__title -->
-                            <p class="loan-reasons-one__card__text">In a free hour, when our power of choice is
-                                untrammelled
-                                and when nothing prevents dolor sit</p><!-- /.loan-reasons-one__card__text -->
+                            <p class="loan-reasons-one__card__text">{{$reason->description1}}</p><!-- /.loan-reasons-one__card__text -->
                         </div><!-- /.loan-reasons-one__card__content -->
                     </div><!-- /.loan-reasons-one__card -->
                 </div><!-- /.col-lg-4 col-md-6 -->
@@ -680,9 +679,7 @@
                         <div class="loan-reasons-one__card__content">
                             <h3 class="loan-reasons-one__card__title">Consolidate your debt</h3>
                             <!-- /.loan-reasons-one__card__title -->
-                            <p class="loan-reasons-one__card__text">There are many variations of passages of Lorem
-                                Ipsum
-                                available, but the majority have</p><!-- /.loan-reasons-one__card__text -->
+                            <p class="loan-reasons-one__card__text">{{$reason->description2}}</p><!-- /.loan-reasons-one__card__text -->
                         </div><!-- /.loan-reasons-one__card__content -->
                     </div><!-- /.loan-reasons-one__card -->
                 </div><!-- /.col-lg-4 col-md-6 -->
@@ -694,9 +691,7 @@
                         <div class="loan-reasons-one__card__content">
                             <h3 class="loan-reasons-one__card__title">Home improvement</h3>
                             <!-- /.loan-reasons-one__card__title -->
-                            <p class="loan-reasons-one__card__text">Consectetur Adipisicing Elit, Sed Do Eiusmod
-                                Tempor
-                                Incididunt Ut Labore Et Dolore Magna</p><!-- /.loan-reasons-one__card__text -->
+                            <p class="loan-reasons-one__card__text">{{$reason->description3}}</p><!-- /.loan-reasons-one__card__text -->
                         </div><!-- /.loan-reasons-one__card__content -->
                     </div><!-- /.loan-reasons-one__card -->
                 </div><!-- /.col-lg-4 col-md-6 -->
@@ -724,7 +719,7 @@
                                     <div class="sec-title__shape__one"></div><!-- /.sec-title__shape__one -->
                                     <div class="sec-title__shape__two"></div><!-- /.sec-title__shape__one -->
                                 </div><!-- /.sec-title__shape -->
-                                <h6 class="sec-title__tagline">download our app</h6><!-- /.sec-title__tagline -->
+                                <h6 class="sec-title__tagline">Resolution Finance Limited</h6><!-- /.sec-title__tagline -->
                             </div><!-- /.sec-title__top -->
                             <h3 class="sec-title__title">start your loan <br> application with smartly</h3>
                             <!-- /.sec-title__title -->
@@ -748,31 +743,14 @@
                                 very low rates
                             </li>
                         </ul><!-- /.download-app-one__list list-unstyled -->
+
                         <div class="download-app-one__button">
-                            <a href="https://www.apple.com/app-store/" class="download-app-one__btn wow fadeInUp"
-                               data-wow-duration="1500ms" data-wow-delay="00ms">
-                                <div class="download-app-one__btn__icon">
-                                    <img src="assets/images/shapes/appstore.png" alt="appstore">
-                                </div><!-- /.download-app-one__btn__icon -->
-                                <div class="download-app-one__btn__content">
-                                        <span class="download-app-one__btn__title">download
-                                            app</span><!-- /.download-app-one__btn__title -->
-                                    <span class="download-app-one__btn__text">from the
-                                            appstore</span><!-- /.download-app-one__btn__text -->
-                                </div><!-- /.download-app-one__btn__content -->
-                            </a><!-- /.download-app-one__btn -->
-                            <a href="https://play.google.com/" class="download-app-one__btn wow fadeInUp"
-                               data-wow-duration="1500ms" data-wow-delay="100ms">
-                                <div class="download-app-one__btn__icon">
-                                    <img src="assets/images/shapes/playstore.png" alt="playstore">
-                                </div><!-- /.download-app-one__btn__icon -->
-                                <div class="download-app-one__btn__content">
-                                        <span class="download-app-one__btn__title">download
-                                            app</span><!-- /.download-app-one__btn__title -->
-                                    <span class="download-app-one__btn__text">from the
-                                            playstore</span><!-- /.download-app-one__btn__text -->
-                                </div><!-- /.download-app-one__btn__content -->
-                            </a><!-- /.download-app-one__btn -->
+                            <a href="{{ route('apply')  }}" class="easilon-btn">
+                                <span>Apply Now</span>
+                                <span class="easilon-btn__icon">
+                                                <i class="icon-double-right-arrow"></i>
+                                            </span>
+                            </a>
                         </div>
                     </div><!-- /.download-app-one__content -->
                 </div><!-- /.col-lg-6 -->
@@ -1010,8 +988,6 @@
             </div><!-- /.row gutter-y-50 -->
         </div><!-- /.container -->
     </section><!-- /.testimonials-two -->
-
-
 
     <section class="quick-loan-one">
         <div class="container">

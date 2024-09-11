@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use App\Models\Announcement;
+use App\Models\ProcurementDocument;
 use App\Models\Project;
+use App\Models\ProjectMilestone;
 use App\Models\Sector;
 use App\Models\Phase;
 use App\Models\Lga;
@@ -24,7 +26,9 @@ class HomeController extends Controller
             return $banner;
         });
         $about = SponsoringAgency::first();
-        return view('front.index', compact('banners', 'about'));
+        $choose = ProcurementDocument::first();
+        $reason = ProjectMilestone::first();
+        return view('front.index', compact('banners', 'about', 'choose', 'reason'));
     }
 
     public function contact()
