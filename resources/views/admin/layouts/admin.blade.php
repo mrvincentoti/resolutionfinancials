@@ -121,6 +121,17 @@
                 <i class="fas fa-tachometer-alt mr-3"></i>
                 Dashboard
             </a>
+            @can('admin-only')
+                <div class="relative">
+                    <a id="dropdown-button-2"
+                       href="{{ route('admin.contract.index') }}"
+                       class="flex items-center text-white py-4 pl-6 rounded-lg">
+                        <i class="far fa-file mr-3"></i>
+                        Loan Request
+                        <i class="ml-2 fas"></i>
+                    </a>
+                </div>
+            @endcan
             <!-- @can('admin-only')
                 <a href="{{ route('admin.project.index') }}"
                     class="{{ request()->routeIs('*.project.*') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white py-4 pl-6 nav-item">
@@ -139,86 +150,81 @@
                 </a>
             @endcan -->
 
+{{--            @can('admin-only')--}}
+{{--                <div class="relative">--}}
+{{--                    <a id="dropdown-button-1"--}}
+{{--                        class="flex items-center text-white py-4 pl-6 rounded-lg">--}}
+{{--                        <i class="far fa-file mr-3"></i>--}}
+{{--                        Manage Project--}}
+{{--                        <i class="ml-2 fas fa-chevron-down"></i>--}}
+{{--                    </a>--}}
+{{--                    <div id="dropdown-menu-1"--}}
+{{--                        class="hidden mt-2 w-full bg-white border border-gray-50 rounded-lg shadow-lg z-10 transition duration-300 ease-in-out">--}}
+{{--                        <a href="{{ route('admin.project.index') }}"--}}
+{{--                            class="{{ request()->routeIs('*.project.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">--}}
+{{--                            <i class="far fa-file mr-3"></i>--}}
+{{--                            Project--}}
+{{--                        </a>--}}
+{{--                        <a href="{{ route('admin.agency.index') }}"--}}
+{{--                            class="{{ request()->routeIs('*.agency.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">--}}
+{{--                            <i class="far fa-file mr-3"></i>--}}
+{{--                            Agency--}}
+{{--                        </a>--}}
+{{--                        <a href="{{ route('admin.announcement.index') }}"--}}
+{{--                            class="{{ request()->routeIs('*.announcement.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">--}}
+{{--                            <i class="far fa-file mr-3"></i>--}}
+{{--                            Announcement--}}
+{{--                        </a>--}}
+{{--                        <a href="{{ route('admin.milestone.index') }}"--}}
+{{--                            class="{{ request()->routeIs('*.milestone.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">--}}
+{{--                            <i class="far fa-file mr-3"></i>--}}
+{{--                            Milestone--}}
+{{--                        </a>--}}
+{{--                        <a href="{{ route('admin.contract.index') }}"--}}
+{{--                            class="{{ request()->routeIs('*.contract.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">--}}
+{{--                            <i class="far fa-file mr-3"></i>--}}
+{{--                            Contract Information--}}
+{{--                        </a>--}}
+{{--                        <a href="{{ route('admin.summary.index') }}"--}}
+{{--                            class="{{ request()->routeIs('*.summary.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">--}}
+{{--                            <i class="far fa-file mr-3"></i>--}}
+{{--                            Summary Document--}}
+{{--                        </a>--}}
+{{--                        <a href="{{ route('admin.procurement.index') }}"--}}
+{{--                            class="{{ request()->routeIs('*.procurement.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">--}}
+{{--                            <i class="far fa-file mr-3"></i>--}}
+{{--                            Procurement Document--}}
+{{--                        </a>--}}
+{{--                        <a href="{{ route('admin.performance.index') }}"--}}
+{{--                            class="{{ request()->routeIs('*.performance.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">--}}
+{{--                            <i class="far fa-file mr-3"></i>--}}
+{{--                            Performance Information--}}
+{{--                        </a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            @endcan--}}
+
             @can('admin-only')
                 <div class="relative">
-                    <a id="dropdown-button-1"
-                        class="flex items-center text-white py-4 pl-6 rounded-lg">
+                    <a id="dropdown-button-2"
+                       href="{{ route('admin.agency.index') }}"
+                       class="flex items-center text-white py-4 pl-6 rounded-lg">
                         <i class="far fa-file mr-3"></i>
-                        Manage Project
-                        <i class="ml-2 fas fa-chevron-down"></i>
+                        About RFL
+                        <i class="ml-2 fas"></i>
                     </a>
-                    <div id="dropdown-menu-1"
-                        class="hidden mt-2 w-full bg-white border border-gray-50 rounded-lg shadow-lg z-10 transition duration-300 ease-in-out">
-                        <a href="{{ route('admin.project.index') }}"
-                            class="{{ request()->routeIs('*.project.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
-                            <i class="far fa-file mr-3"></i>
-                            Project
-                        </a>
-                        <a href="{{ route('admin.agency.index') }}"
-                            class="{{ request()->routeIs('*.agency.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
-                            <i class="far fa-file mr-3"></i>
-                            Agency
-                        </a>
-                        <a href="{{ route('admin.announcement.index') }}"
-                            class="{{ request()->routeIs('*.announcement.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
-                            <i class="far fa-file mr-3"></i>
-                            Announcement
-                        </a>
-                        <a href="{{ route('admin.milestone.index') }}"
-                            class="{{ request()->routeIs('*.milestone.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
-                            <i class="far fa-file mr-3"></i>
-                            Milestone
-                        </a>
-                        <a href="{{ route('admin.contract.index') }}"
-                            class="{{ request()->routeIs('*.contract.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
-                            <i class="far fa-file mr-3"></i>
-                            Contract Information
-                        </a>
-                        <a href="{{ route('admin.summary.index') }}"
-                            class="{{ request()->routeIs('*.summary.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
-                            <i class="far fa-file mr-3"></i>
-                            Summary Document
-                        </a>
-                        <a href="{{ route('admin.procurement.index') }}"
-                            class="{{ request()->routeIs('*.procurement.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
-                            <i class="far fa-file mr-3"></i>
-                            Procurement Document
-                        </a>
-                        <a href="{{ route('admin.performance.index') }}"
-                            class="{{ request()->routeIs('*.performance.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
-                            <i class="far fa-file mr-3"></i>
-                            Performance Information
-                        </a>
-                    </div>
                 </div>
             @endcan
 
             @can('admin-only')
                 <div class="relative">
                     <a id="dropdown-button-2"
+                       href="{{ route('admin.project.index') }}"
                        class="flex items-center text-white py-4 pl-6 rounded-lg">
                         <i class="far fa-file mr-3"></i>
-                        About RFL
-                        <i class="ml-2 fas fa-chevron-down"></i>
+                        Services
+                        <i class="ml-2 fas"></i>
                     </a>
-                    <div id="dropdown-menu-2"
-                         class="hidden mt-2 w-full bg-white border border-gray-50 rounded-lg shadow-lg z-10 transition duration-300 ease-in-out">
-                        <a href="{{ route('admin.agency.index') }}"
-                           class="{{ request()->routeIs('*.project.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
-                            <i class="far fa-file mr-3"></i>
-                            About Us
-                        </a>
-                        <a href="{{ route('admin.agency.index') }}"
-                           class="{{ request()->routeIs('*.agency.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
-                            <i class="far fa-file mr-3"></i>
-                            Why Choose Us
-                        </a>
-                        <a href="{{ route('admin.announcement.index') }}"
-                           class="{{ request()->routeIs('*.announcement.*') ? 'bg-gray-100 text-gray-900' : 'text-gray-700' }} flex items-center py-2 px-4 hover:bg-gray-100 hover:text-gray-900">
-                            <i class="far fa-file mr-3"></i>
-                            Reasons to Loan
-                        </a>
-                    </div>
                 </div>
             @endcan
 
@@ -229,10 +235,17 @@
                     Banner
                 </a>
             @endcan
+            @can('admin-only')
+                <a href="{{ route('admin.announcement.index') }}"
+                   class="{{ request()->routeIs('*.announcement.*') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white py-4 pl-6 nav-item">
+                    <i class="far fa-file mr-3"></i>
+                    Testimonials
+                </a>
+            @endcan
             <a href="{{ route('admin.post.index') }}"
                 class="{{ request()->routeIs('*.post.*') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white  py-4 pl-6 nav-item">
                 <i class="fas fa-newspaper mr-3"></i>
-                Posts
+                FAQs
             </a>
             @can('admin-only')
                 <a href="{{ route('admin.category.index') }}"
@@ -241,17 +254,17 @@
                     Categories
                 </a>
             @endcan
-            <a href="{{ route('admin.tag.index') }}"
-                class="{{ request()->routeIs('*.tag.*') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white  py-4 pl-6 nav-item">
-                <i class="fas fa-tag mr-3"></i>
-                Tags
-            </a>
+{{--            <a href="{{ route('admin.tag.index') }}"--}}
+{{--                class="{{ request()->routeIs('*.tag.*') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white  py-4 pl-6 nav-item">--}}
+{{--                <i class="fas fa-tag mr-3"></i>--}}
+{{--                Tags--}}
+{{--            </a>--}}
             @can('admin-only')
-                <a href="{{ route('admin.page.index') }}"
-                    class="{{ request()->routeIs('*.page.*') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white  py-4 pl-6 nav-item">
-                    <i class="far fa-file mr-3"></i>
-                    Pages
-                </a>
+{{--                <a href="{{ route('admin.page.index') }}"--}}
+{{--                    class="{{ request()->routeIs('*.page.*') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white  py-4 pl-6 nav-item">--}}
+{{--                    <i class="far fa-file mr-3"></i>--}}
+{{--                    Pages--}}
+{{--                </a>--}}
                 <a href="{{ route('admin.role.index') }}"
                     class="{{ request()->routeIs('*.role.*') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white  py-4 pl-6 nav-item">
                     <i class="fas fa-user-shield mr-3"></i>

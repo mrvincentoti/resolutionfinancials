@@ -36,6 +36,8 @@
 
     <!-- template styles -->
     <link rel="stylesheet" href="{{ asset('assets/css/easilon.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}" />
+    <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
 </head>
 
 
@@ -76,11 +78,11 @@
                                 <a href="#">Loan</a>
                                 <ul>
                                     <li><a href="{{ route('apply')  }}">Apply for a Loan</a></li>
-                                    <li><a href="{{ route('upload-loan-form')  }}">Upload completed Application form</a></li>
+{{--                                    <li><a href="{{ route('upload-loan-form')  }}">Upload completed Application form</a></li>--}}
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="{{ route('calculator')  }}">Loan Eligibility</a>
+                                <a href="{{ route('calculator')  }}">Loan Calculator</a>
                             </li>
 
                             <li>
@@ -94,16 +96,12 @@
                             <span></span>
                             <span></span>
                         </div><!-- /.mobile-nav__toggler -->
-                        <a href="#" class="search-toggler main-header__search">
-                            <i class="icon-search" aria-hidden="true"></i>
-                            <span class="sr-only">Search</span>
-                        </a><!-- /.search-toggler -->
                         <div class="main-header__call">
                                 <span class="main-header__call__icon">
                                     <i class="icon-telephone"></i>
                                 </span><!-- /.main-header__call__icon -->
                             <h3 class="main-header__call__number">
-                                <a href="tel:+91526420009">+234 906 420 009</a>
+                                <a href="tel:+91526420009">+234 805 6798 502</a>
                             </h3><!-- /.main-header__call__number -->
                         </div><!-- /.main-header__call -->
                         <div class="main-header__sidebar-btn sidebar-btn__toggler">
@@ -127,20 +125,11 @@
                 <div class="row gutter-y-40">
                     <div class="col-xl-4 col-lg-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
                         <div class="footer-widget footer-widget--about">
-                            <a href="index.html" class="footer-widget__logo">
-                                <img src="assets/images/rfl-logo-7.png" width="200" alt="ResolutionFinance Template">
+                            <a href="" class="footer-widget__logo">
+                                <img src="{{ asset('assets/images/rfl-logo-7.png')}}" width="200" alt="ResolutionFinance Template">
                             </a>
-                            <p class="footer-widget__about-text">There are many variations of passages of Lorem
-                                Ipsum available, but the majority have suffered alteration in some form</p>
+                            <p class="footer-widget__about-text">Resolution Finance Limited is a financial service provider incorporated in Nigeria and licensed by the Central Bank of Nigeria (CBN) to offer and provide world- class financial services.</p>
                             <!-- /.footer-widget__about-text -->
-                            <form action="#" data-url="MAILCHIMP_FORM_URL"
-                                  class="footer-widget__newsletter mc-form">
-                                <input type="text" name="EMAIL" placeholder="Enter Email">
-                                <button type="submit">
-                                    <span class="sr-only">submit</span><!-- /.sr-only -->
-                                    <i class="icon-right-arrow"></i>
-                                </button>
-                            </form><!-- /.footer-widget__newsletter mc-form -->
                             <div class="mc-form__response"></div><!-- /.mc-form__response -->
                         </div><!-- /.footer-widget -->
                     </div><!-- /.col-xl-4 col-lg-6 -->
@@ -149,11 +138,10 @@
                         <div class="footer-widget footer-widget--links footer-widget--links-one">
                             <h2 class="footer-widget__title">Explore</h2><!-- /.footer-widget__title -->
                             <ul class="list-unstyled footer-widget__links">
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="services.html">Our Services</a></li>
-                                <li><a href="team.html">Meet the Team</a></li>
-                                <li><a href="blog-grid-right.html">Recent News</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="{{route('about')}}">About Us</a></li>
+                                <li><a href="">Our Services</a></li>
+                                <li><a href="{{route('contact')}}">Contact</a></li>
+                                <li><a href="{{route('faq')}}">FAQ</a></li>
                             </ul><!-- /.list-unstyled footer-widget__links -->
                         </div><!-- /.footer-widget -->
                     </div><!-- /.col-xl-2 col-lg-3 col-md-3 col-sm-6 -->
@@ -162,11 +150,11 @@
                         <div class="footer-widget footer-widget--links footer-widget--links-two">
                             <h2 class="footer-widget__title">Loan Services</h2><!-- /.footer-widget__title -->
                             <ul class="list-unstyled footer-widget__links">
-                                <li><a href="#">bike loan</a></li>
-                                <li><a href="#">home loan</a></li>
-                                <li><a href="#">abroad study loan</a></li>
-                                <li><a href="#">business loan</a></li>
-                                <li><a href="#">personal loan</a></li>
+                                <li><a href="#">Business loan</a></li>
+                                <li><a href="#">Salary/Cash Advances</a></li>
+                                <li><a href="#">Asset Financing</a></li>
+                                <li><a href="#">Emergency loan</a></li>
+                                <li><a href="#">Personal loan</a></li>
                             </ul><!-- /.list-unstyled footer-widget__links -->
                         </div><!-- /.footer-widget -->
                     </div><!-- /.col-xl-3 col-lg-3 col-md-4 col-sm-6 -->
@@ -175,15 +163,15 @@
                         <div class="footer-widget footer-widget--contact">
                             <h2 class="footer-widget__title">Get inTouch</h2><!-- /.footer-widget__title -->
                             <ul class="list-unstyled footer-widget__info">
-                                <li><a href="https://www.google.com/maps">85 Ketch Harbour Road Bensal PA 19020</a>
+                                <li><a href="https://www.google.com/maps">8th Floor, New Africa House, 31 Marina, Lagos.</a>
                                 </li>
                                 <li>
                                     <span class="footer-widget__info__icon"><i class="icon-paper-plane"></i></span>
-                                    <a href="mailto:needhelp@company.com">needhelp@company.com</a>
+                                    <a href="mailto:needhelp@company.com">contact@resolutionfinancelimted.com</a>
                                 </li>
                                 <li>
                                     <span class="footer-widget__info__icon"><i class="icon-telephone"></i></span>
-                                    <a href="tel:+9156980036420">+91 5698 0036 420</a>
+                                    <a href="tel:+9156980036420">+234 805 6798 502, +234 909 9840 180, +234 909 9840 147, +234 909 9840 098, +234 909 9840 188</a>
                                 </li>
                             </ul><!-- /.list-unstyled -->
                         </div><!-- /.footer-widget -->
@@ -226,7 +214,7 @@
                         <div class="col-md-7 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
                             <div class="main-footer__bottom__copyright">
                                 <p class="main-footer__copyright">
-                                    &copy; Copyright <span class="dynamic-year"></span> by ResolutionFinance Template.
+                                    &copy; Copyright <span class="dynamic-year"></span> by ResolutionFinance.
                                 </p>
                             </div><!-- /.main-footer__bottom__copyright -->
                         </div><!-- /.col-md-7 -->
@@ -253,11 +241,11 @@
         <ul class="mobile-nav__contact list-unstyled">
             <li>
                 <span class="mobile-nav__contact__icon"><i class="fa fa-envelope"></i></span>
-                <a href="mailto:needhelp@easilon.com">needhelp@easilon.com</a>
+                <a href="mailto:needhelp@easilon.com">contact@resolutionfinancelimted.com</a>
             </li>
             <li>
                 <span class="mobile-nav__contact__icon"><i class="fa fa-phone-alt"></i></span>
-                <a href="tel:+9156980036420">+91 5698 0036 420</a>
+                <a href="tel:+9156980036420">+234 805 6798 502</a>
             </li>
         </ul><!-- /.mobile-nav__contact -->
         <div class="mobile-nav__social">
@@ -305,8 +293,9 @@
                                                               alt="logo" /></a>
         </div><!-- /.sidebar-one__logo -->
         <div class="sidebar-one__about sidebar-one__item">
-            <p class="sidebar-one__about__text">There are many variations of passages of Lorem Ipsum available, but
-                the majority have suffered alteration in some form</p>
+            <p class="sidebar-one__about__text">
+                Resolution Finance Limited is a financial service provider incorporated in Nigeria and licensed by the Central Bank of Nigeria (CBN) to offer and provide world- class financial services.
+            </p>
         </div><!-- /.sidebar-one__about -->
         <div class="sidebar-one__info sidebar-one__item">
             <h4 class="sidebar-one__title">Contact Us</h4>
@@ -315,20 +304,21 @@
                         <span class="sidebar-one__info__icon">
                             <i class="icon-location"></i>
                         </span>
-                    <address>85 Ketch Harbour Road Bensal
-                        PA 19020</address>
+                    <address>
+                        8th Floor, New Africa House, 31 Marina, Lagos.
+                    </address>
                 </li>
                 <li>
                         <span class="sidebar-one__info__icon">
                             <i class="icon-paper-plane"></i>
                         </span>
-                    <a href="mailto:needhelp@company.com">needhelp@company.com</a>
+                    <a href="mailto:contact@resolutionfinancelimted.com">contact@resolutionfinancelimted.com</a>
                 </li>
                 <li>
                         <span class="sidebar-one__info__icon">
                             <i class="icon-telephone"></i>
                         </span>
-                    <a href="tel:+9156980036420">+9156980036420</a>
+                    <a href="tel:+9156980036420">+234 805 6798 502</a>
                 </li>
             </ul><!-- /.sidebar-one__info__list -->
         </div><!-- /.sidebar-one__info -->
@@ -358,16 +348,16 @@
                 <span class="sr-only">Youtube</span>
             </a>
         </div><!-- /sidebar-one__social -->
-        <div class="sidebar-one__newsletter sidebar-one__item">
-            <label class="sidebar-one__title" for="sidebar-email">Newsletter</label>
-            <form action="#" class="sidebar-one__newsletter__inner mc-form" data-url="MAILCHIMP_FORM_URL">
-                <input type="email" name="EMAIL" id="sidebar-email" class="sidebar-one__newsletter__input"
-                       placeholder="Email Address">
-                <button type="submit" class="sidebar-one__newsletter__btn"><span class="icon-mail-2"
-                                                                                 aria-hidden="true"></span></button>
-            </form>
-            <div class="mc-form__response"></div><!-- /.mc-form__response -->
-        </div><!-- /.sidebar-one__form -->
+{{--        <div class="sidebar-one__newsletter sidebar-one__item">--}}
+{{--            <label class="sidebar-one__title" for="sidebar-email">Newsletter</label>--}}
+{{--            <form action="#" class="sidebar-one__newsletter__inner mc-form" data-url="MAILCHIMP_FORM_URL">--}}
+{{--                <input type="email" name="EMAIL" id="sidebar-email" class="sidebar-one__newsletter__input"--}}
+{{--                       placeholder="Email Address">--}}
+{{--                <button type="submit" class="sidebar-one__newsletter__btn"><span class="icon-mail-2"--}}
+{{--                                                                                 aria-hidden="true"></span></button>--}}
+{{--            </form>--}}
+{{--            <div class="mc-form__response"></div>--}}
+{{--        </div>--}}
     </div><!-- /.sidebar__content -->
 </aside><!-- /.sidebar-one -->
 
@@ -398,6 +388,28 @@
 <script src="{{ asset('assets/vendors/jquery-lettering/jquery.lettering.min.js') }}"></script>
 <!-- template js -->
 <script src="{{ asset('assets/js/easilon.js') }}"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Select all file input wrappers
+        const fileInputWrappers = document.querySelectorAll('.file-input-wrapper');
+
+        // Add event listeners to each file input and button pair
+        fileInputWrappers.forEach(wrapper => {
+            const fileInput = wrapper.querySelector('input[type=file]');
+            const fileInputButton = wrapper.querySelector('button');
+
+            fileInputButton.addEventListener('click', function () {
+                fileInput.click();
+            });
+
+            fileInput.addEventListener('change', function () {
+                const fileName = fileInput.files.length > 0 ? fileInput.files[0].name : 'Choose a file';
+                fileInputButton.textContent = fileName;
+            });
+        });
+    });
+</script>
 
 </body>
 

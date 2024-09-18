@@ -233,217 +233,100 @@
                 }
 			}
 		    }'>
-                <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                    <div class="service-card">
-                        <a href="{{route('loan-details')}}" class="service-card__image">
-                            <img src="{{ asset('assets/images/services/service-2-1.jpg')}}" alt="personal loan">
-                        </a><!-- /.service-card__image -->
-                        <div class="service-card__content">
-                            <h3 class="service-card__title"><a href="{{route('loan-details')}}">personal loan</a>
-                            </h3><!-- /.service-card__title -->
-                            <a href="#" class="service-card__btn easilon-btn">
-                                <span class="easilon-btn__icon"><i class="icon-right-arrow"></i></span>
-                            </a><!-- /.service-card__btn -->
-                        </div><!-- /.service-card__content -->
-                    </div><!-- /.service-card -->
-                </div><!-- /.item -->
-                <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
-                    <div class="service-card">
-                        <a href="#" class="service-card__image">
-                            <img src="{{ asset('assets/images/services/service-2-2.jpg')}}" alt="auto loan">
-                        </a><!-- /.service-card__image -->
-                        <div class="service-card__content">
-                            <h3 class="service-card__title"><a href="{{route('loan-details')}}">Business loan</a></h3>
-                            <!-- /.service-card__title -->
-                            <a href="{{route('loan-details')}}" class="service-card__btn easilon-btn">
-                                <span class="easilon-btn__icon"><i class="icon-right-arrow"></i></span>
-                            </a><!-- /.service-card__btn -->
-                        </div><!-- /.service-card__content -->
-                    </div><!-- /.service-card -->
-                </div><!-- /.item -->
-                <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
-                    <div class="service-card">
-                        <a href="#" class="service-card__image">
-                            <img src="{{ asset('assets/images/services/service-2-3.jpg')}}" alt="home loan">
-                        </a><!-- /.service-card__image -->
-                        <div class="service-card__content">
-                            <h3 class="service-card__title"><a href="{{route('loan-details')}}">Salary loan</a></h3>
-                            <!-- /.service-card__title -->
-                            <a href="{{route('loan-details')}}" class="service-card__btn easilon-btn">
-                                <span class="easilon-btn__icon"><i class="icon-right-arrow"></i></span>
-                            </a><!-- /.service-card__btn -->
-                        </div><!-- /.service-card__content -->
-                    </div><!-- /.service-card -->
-                </div><!-- /.item -->
-                <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                    <div class="service-card">
-                        <a href="#" class="service-card__image">
-                            <img src="{{ asset('assets/images/services/service-2-4.jpg')}}" alt="study loan">
-                        </a><!-- /.service-card__image -->
-                        <div class="service-card__content">
-                            <h3 class="service-card__title"><a href="{{route('loan-details')}}">Cooperative loan</a></h3>
-                            <!-- /.service-card__title -->
-                            <a href="{{route('loan-details')}}" class="service-card__btn easilon-btn">
-                                <span class="easilon-btn__icon"><i class="icon-right-arrow"></i></span>
-                            </a><!-- /.service-card__btn -->
-                        </div><!-- /.service-card__content -->
-                    </div><!-- /.service-card -->
-                </div><!-- /.item -->
-                <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
-                    <div class="service-card">
-                        <a href="#" class="service-card__image">
-                            <img src="{{ asset('assets/images/services/service-2-5.jpg')}}" alt="business loan">
-                        </a><!-- /.service-card__image -->
-                        <div class="service-card__content">
-                            <h3 class="service-card__title"><a href="{{route('loan-details')}}">Emergency loan</a>
-                            </h3><!-- /.service-card__title -->
-                            <a href="{{route('loan-details')}}" class="service-card__btn easilon-btn">
-                                <span class="easilon-btn__icon"><i class="icon-right-arrow"></i></span>
-                            </a><!-- /.service-card__btn -->
-                        </div><!-- /.service-card__content -->
-                    </div><!-- /.service-card -->
-                </div><!-- /.item -->
-                <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
-                    <div class="service-card">
-                        <a href="#" class="service-card__image">
-                            <img src="{{ asset('assets/images/services/service-2-6.jpg')}}" alt="bike loan">
-                        </a><!-- /.service-card__image -->
-                        <div class="service-card__content">
-                            <h3 class="service-card__title"><a href="{{route('loan-details')}}">Asset financing</a></h3>
-                            <!-- /.service-card__title -->
-                            <a href="{{route('loan-details')}}" class="service-card__btn easilon-btn">
-                                <span class="easilon-btn__icon"><i class="icon-right-arrow"></i></span>
-                            </a><!-- /.service-card__btn -->
-                        </div><!-- /.service-card__content -->
-                    </div><!-- /.service-card -->
-                </div><!-- /.item -->
+{{--                <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">--}}
+{{--                    <div class="service-card">--}}
+{{--                        <a href="{{route('loan-details')}}" class="service-card__image">--}}
+{{--                            <img src="{{ asset('assets/images/services/service-2-1.jpg')}}" alt="personal loan">--}}
+{{--                        </a><!-- /.service-card__image -->--}}
+{{--                        <div class="service-card__content">--}}
+{{--                            <h3 class="service-card__title"><a href="{{route('loan-details')}}">personal loan</a>--}}
+{{--                            </h3><!-- /.service-card__title -->--}}
+{{--                            <a href="#" class="service-card__btn easilon-btn">--}}
+{{--                                <span class="easilon-btn__icon"><i class="icon-right-arrow"></i></span>--}}
+{{--                            </a><!-- /.service-card__btn -->--}}
+{{--                        </div><!-- /.service-card__content -->--}}
+{{--                    </div><!-- /.service-card -->--}}
+{{--                </div>--}}
+{{--                <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">--}}
+{{--                    <div class="service-card">--}}
+{{--                        <a href="#" class="service-card__image">--}}
+{{--                            <img src="{{ asset('assets/images/services/service-2-2.jpg')}}" alt="auto loan">--}}
+{{--                        </a><!-- /.service-card__image -->--}}
+{{--                        <div class="service-card__content">--}}
+{{--                            <h3 class="service-card__title"><a href="{{route('loan-details')}}">Business loan</a></h3>--}}
+{{--                            <!-- /.service-card__title -->--}}
+{{--                            <a href="{{route('loan-details')}}" class="service-card__btn easilon-btn">--}}
+{{--                                <span class="easilon-btn__icon"><i class="icon-right-arrow"></i></span>--}}
+{{--                            </a><!-- /.service-card__btn -->--}}
+{{--                        </div><!-- /.service-card__content -->--}}
+{{--                    </div><!-- /.service-card -->--}}
+{{--                </div>--}}
+{{--                <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">--}}
+{{--                    <div class="service-card">--}}
+{{--                        <a href="#" class="service-card__image">--}}
+{{--                            <img src="{{ asset('assets/images/services/service-2-3.jpg')}}" alt="home loan">--}}
+{{--                        </a><!-- /.service-card__image -->--}}
+{{--                        <div class="service-card__content">--}}
+{{--                            <h3 class="service-card__title"><a href="{{route('loan-details')}}">Salary loan</a></h3>--}}
+{{--                            <!-- /.service-card__title -->--}}
+{{--                            <a href="{{route('loan-details')}}" class="service-card__btn easilon-btn">--}}
+{{--                                <span class="easilon-btn__icon"><i class="icon-right-arrow"></i></span>--}}
+{{--                            </a><!-- /.service-card__btn -->--}}
+{{--                        </div><!-- /.service-card__content -->--}}
+{{--                    </div><!-- /.service-card -->--}}
+{{--                </div>--}}
+{{--                <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">--}}
+{{--                    <div class="service-card">--}}
+{{--                        <a href="#" class="service-card__image">--}}
+{{--                            <img src="{{ asset('assets/images/services/service-2-4.jpg')}}" alt="study loan">--}}
+{{--                        </a><!-- /.service-card__image -->--}}
+{{--                        <div class="service-card__content">--}}
+{{--                            <h3 class="service-card__title"><a href="{{route('loan-details')}}">Cooperative loan</a></h3>--}}
+{{--                            <!-- /.service-card__title -->--}}
+{{--                            <a href="{{route('loan-details')}}" class="service-card__btn easilon-btn">--}}
+{{--                                <span class="easilon-btn__icon"><i class="icon-right-arrow"></i></span>--}}
+{{--                            </a><!-- /.service-card__btn -->--}}
+{{--                        </div><!-- /.service-card__content -->--}}
+{{--                    </div><!-- /.service-card -->--}}
+{{--                </div>--}}
+{{--                <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">--}}
+{{--                    <div class="service-card">--}}
+{{--                        <a href="#" class="service-card__image">--}}
+{{--                            <img src="{{ asset('assets/images/services/service-2-5.jpg')}}" alt="business loan">--}}
+{{--                        </a><!-- /.service-card__image -->--}}
+{{--                        <div class="service-card__content">--}}
+{{--                            <h3 class="service-card__title"><a href="{{route('loan-details')}}">Emergency loan</a>--}}
+{{--                            </h3><!-- /.service-card__title -->--}}
+{{--                            <a href="{{route('loan-details')}}" class="service-card__btn easilon-btn">--}}
+{{--                                <span class="easilon-btn__icon"><i class="icon-right-arrow"></i></span>--}}
+{{--                            </a><!-- /.service-card__btn -->--}}
+{{--                        </div><!-- /.service-card__content -->--}}
+{{--                    </div><!-- /.service-card -->--}}
+{{--                </div>--}}
+                @foreach($services as $service)
+                    <div class="item wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
+                        <div class="service-card">
+                            <a href="{{ route('loan', $service->slug)  }}" class="service-card__image">
+                                <img src="{{ asset( $service->project_image) }}" alt="slider image" style="height: 250px">
+                            </a><!-- /.service-card__image -->
+                            <div class="service-card__content">
+                                <h3 class="service-card__title"><a href="{{route('loan', $service->slug)}}">{{$service->project_title}}</a></h3>
+                                <!-- /.service-card__title -->
+                                <a href="{{route('loan', $service->slug)}}" class="service-card__btn easilon-btn">
+                                    <span class="easilon-btn__icon"><i class="icon-right-arrow"></i></span>
+                                </a><!-- /.service-card__btn -->
+                            </div><!-- /.service-card__content -->
+                        </div><!-- /.service-card -->
+                    </div>
+                @endforeach
 
             </div><!-- /.services-two__carousel -->
         </div><!-- /.container-fluid -->
 
-        <section class="loan-two loan-two--services section-space-top">
-            <div class="container">
-                <div class="loan-two__inner"
-                     style="background-image: url(assets/images/resources/loan-bg-1-1.jpg);">
-                    <div class="loan-two__form">
-                        <div class="loan-two__form__bg"
-                             style="background-image: url(assets/images/shapes/loan-calculator-form-bg-1-1.png);">
-                        </div>
-                        <!-- /.loan-two__form__bg -->
-                        <form action="#" id="loan-calculator-01" data-form-direction="ltr" data-interest-rate="15"
-                              class="loan-calculator-form wow fadeInUp" data-wow-duration="1500ms">
-                            <h3 class="loan-calculator-form__title">How Much Do You Need?</h3>
-                            <div class="loan-calculator-form__content">
-                                <div class="input-box__top">
-                                    <span>₦1000</span>
-                                    <span>₦50000</span>
-                                </div><!-- /.input-box__top -->
-                                <div class="input-box">
-                                    <div class="range-slider-count" id="loan-calculator-01-count"></div>
-                                    <input type="hidden" value="" class="min-count"
-                                           id="loan-calculator-01-min-count">
-                                    <input type="hidden" value="" class="max-count"
-                                           id="loan-calculator-01-max-count">
-                                </div><!-- /.input-box -->
-                                <div class="input-box__top input-box__top-border">
-                                    <span>1 Month</span>
-                                    <span>12 Months</span>
-                                </div><!-- /.input-box__top -->
-                                <div class="input-box">
-                                    <div class="range-slider-month" id="loan-calculator-01-month"></div>
-                                    <input type="hidden" value="" class="min-month"
-                                           id="loan-calculator-01-min-month">
-                                    <input type="hidden" value="" class="max-month"
-                                           id="loan-calculator-01-max-month">
-                                </div><!-- /.input-box -->
-                                <p>
-                                    <span>Pay Monthly</span>
-                                    <b>₦<i class="loan-monthly-pay"></i></b>
-                                </p>
-                                <p>
-                                    <span>Term of Use</span>
-                                    <b><i class="loan-month"></i> Months</b>
-                                </p>
-                                <p>
-                                    <span>Total Pay Back amount</span>
-                                    <b>₦<i class="loan-total"></i></b>
-                                </p>
-                                <button type="submit" class="easilon-btn loan-calculator-form__btn">
-                                    <span>Apply for loan</span>
-                                    <span class="easilon-btn__icon"><i class="icon-right-arrow"></i></span>
-                                </button><!-- /.easilon-btn -->
-                            </div><!-- /.loan-calculator-form__content -->
-                        </form><!-- /.loan-calculator-form -->
-                    </div><!-- /.loan-two__form -->
-                    <a href="https://www.youtube.com/watch?v=h9MbznbxlLc" class="loan-two__video video-popup">
-                        <span class="icon-play"></span>
-                        <i class="loan-two__video__ripple"></i>
-                    </a><!-- /.loan-two__video -->
-                </div><!-- /.loan-two__inner -->
-            </div><!-- /.container -->
-            <img src="{{ asset('assets/images/shapes/loan-money-1-1.png')}}" alt="money" class="loan-two__money">
-        </section><!-- /.loan-two section-space-top -->
+        @include('front.partials.calculator')
     </section><!-- /.services-two section-space -->
 
-    <section class="why-choose-one section-space">
-        <div class="why-choose-one__bg" style="background-image: url(assets/images/shapes/why-choose-bg-1-1.png);">
-        </div>
-        <!-- /.why-choose-one__bg -->
-        <div class="container">
-            <div class="row gutter-y-50 align-items-center">
-                <div class="col-lg-6">
-                    <div class="why-choose-one__content">
-                        <div class="sec-title @@extraClassName">
-                            <div class="sec-title__top">
-                                <div class="sec-title__shape">
-                                    <div class="sec-title__shape__one"></div><!-- /.sec-title__shape__one -->
-                                    <div class="sec-title__shape__two"></div><!-- /.sec-title__shape__one -->
-                                </div><!-- /.sec-title__shape -->
-                                <h6 class="sec-title__tagline">our benefits</h6><!-- /.sec-title__tagline -->
-                            </div><!-- /.sec-title__top -->
-                            <h3 class="sec-title__title">why choose us</h3><!-- /.sec-title__title -->
-                        </div><!-- /.sec-title -->
-                        <div class="why-choose-one__text-box wow fadeInUp" data-wow-duration="1500ms">
-                            <p class="why-choose-one__text">{{$choose->document_name}}</p>
-                            <!-- /.why-choose-one__text -->
-                        </div><!-- /.why-choose-one__text-box -->
-                        <div class="why-choose-one__list">
-                            <div class="why-choose-one__list__item wow fadeInUp" data-wow-duration="1500ms"
-                                 data-wow-delay="00ms">
-                                    <span class="why-choose-one__list__icon">
-                                        <i class="icon-low-price"></i>
-                                    </span><!-- /.why-choose-one__list__icon -->
-                                Competitive rates
-                            </div>
-                            <div class="why-choose-one__list__item wow fadeInUp" data-wow-duration="1500ms"
-                                 data-wow-delay="100ms">
-                                    <span class="why-choose-one__list__icon">
-                                        <i class="icon-loan-1"></i>
-                                    </span><!-- /.why-choose-one__list__icon -->
-                                Quick and hassle-free process
-                            </div>
-                        </div><!-- /.why-choose-one__list -->
-
-                    </div><!-- /.why-choose-one__content -->
-                </div><!-- /.col-lg-6 -->
-                <div class="col-lg-6 wow fadeInRight" data-wow-duration="1500ms">
-                    <div class="why-choose-one__image">
-                        <div class="why-choose-one__image__inner">
-                            <div class="why-choose-one__image__one">
-                                <img src="{{ asset( $choose->image1) }}" alt="why choose image">
-                                <img src="assets/images/shapes/why-choose-shape-1-1.png" alt="shape"
-                                     class="why-choose-one__image__one__shape">
-                            </div><!-- /.why-choose-one__image__one -->
-                            <div class="why-choose-one__image__two">
-                                <img src="{{ asset( $choose->image2) }}" alt="why choose image">
-                            </div><!-- /.why-choose-one__image__two -->
-                        </div><!-- /.why-choose-one__image__inner -->
-                    </div><!-- /.why-choose-one__image -->
-                </div><!-- /.col-lg-6 -->
-            </div><!-- /.row gutter-y-50 -->
-        </div><!-- /.container -->
-        <img src="assets/images/shapes/why-choose-shape-1-2.png" alt="shape" class="why-choose-one__shape">
-    </section><!-- /.why-choose-one section-space -->
+    @include('front.partials.choose', ['choose', $choose])
 
     <section class="work-process-one section-space">
         <div class="container">
@@ -623,81 +506,7 @@
         </div><!-- /.container -->
     </section><!-- /.funfact-one -->
 
-    <section class="loan-reasons-one section-space">
-        <div class="container">
-            <div class="loan-reasons-one__row row gutter-y-30">
-                <div class="col-xl-8 col-lg-7 col-md-6 wow fadeInLeft" data-wow-duration="1500ms">
-                    <div class="loan-reasons-one__image"
-                         style="background-image: url({{ $reason->image }});"></div>
-                    <!-- /.loan-reasons-one__image -->
-                </div><!-- /.col-xl-8 col-lg-7 col-md-6 -->
-                <div class="col-xl-4 col-lg-5 col-md-6 wow fadeInRight" data-wow-duration="1500ms">
-                    <div class="loan-reasons-one__content">
-                        <div class="loan-reasons-one__content__bg"
-                             style="background-image: url(assets/images/shapes/loan-reasons-title-bg-1-1.png);">
-                        </div>
-                        <!-- /.loan-reasons-one__content__bg -->
-                        <div class="loan-reasons-one__content__inner">
-                            <div class="sec-title @@extraClassName">
-                                <div class="sec-title__top">
-                                    <div class="sec-title__shape">
-                                        <div class="sec-title__shape__one"></div><!-- /.sec-title__shape__one -->
-                                        <div class="sec-title__shape__two"></div><!-- /.sec-title__shape__one -->
-                                    </div><!-- /.sec-title__shape -->
-                                    <h6 class="sec-title__tagline">loan reasons</h6><!-- /.sec-title__tagline -->
-                                </div><!-- /.sec-title__top -->
-                                <h3 class="sec-title__title">{{$reason->title}}</h3><!-- /.sec-title__title -->
-                            </div><!-- /.sec-title -->
-                            <a href="" class="loan-reasons-one__content__btn">
-                                <span class="loan-reasons-one__content__btn__icon"><i class="icon-next"></i></span>
-                            </a><!-- /.loan-reasons-one__content__btn -->
-                        </div><!-- /.loan-reasons-one__content__inner -->
-                        <div class="loan-reasons-one__content__box">
-                            <img src="assets/images/shapes/loan-reasons-money-1-1.png" alt="money">
-                        </div><!-- /.loan-reasons-one__content__box -->
-                    </div><!-- /.loan-reasons-one__content -->
-                </div><!-- /.col-xl-4 col-lg-5 col-md-6 -->
-            </div><!-- /.row gutter-y-30 -->
-            <div class="row gutter-y-30">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
-                    <div class="loan-reasons-one__card">
-                        <div class="loan-reasons-one__card__bg"
-                             style="background-image: url(assets/images/shapes/loan-reasons-card-bg-1-1.png);"></div>
-                        <!-- /.loan-reasons-one__card__bg -->
-                        <div class="loan-reasons-one__card__content">
-                            <h3 class="loan-reasons-one__card__title">Need a new car?</h3>
-                            <!-- /.loan-reasons-one__card__title -->
-                            <p class="loan-reasons-one__card__text">{{$reason->description1}}</p><!-- /.loan-reasons-one__card__text -->
-                        </div><!-- /.loan-reasons-one__card__content -->
-                    </div><!-- /.loan-reasons-one__card -->
-                </div><!-- /.col-lg-4 col-md-6 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
-                    <div class="loan-reasons-one__card">
-                        <div class="loan-reasons-one__card__bg"
-                             style="background-image: url(assets/images/shapes/loan-reasons-card-bg-1-1.png);"></div>
-                        <!-- /.loan-reasons-one__card__bg -->
-                        <div class="loan-reasons-one__card__content">
-                            <h3 class="loan-reasons-one__card__title">Consolidate your debt</h3>
-                            <!-- /.loan-reasons-one__card__title -->
-                            <p class="loan-reasons-one__card__text">{{$reason->description2}}</p><!-- /.loan-reasons-one__card__text -->
-                        </div><!-- /.loan-reasons-one__card__content -->
-                    </div><!-- /.loan-reasons-one__card -->
-                </div><!-- /.col-lg-4 col-md-6 -->
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
-                    <div class="loan-reasons-one__card">
-                        <div class="loan-reasons-one__card__bg"
-                             style="background-image: url(assets/images/shapes/loan-reasons-card-bg-1-1.png);"></div>
-                        <!-- /.loan-reasons-one__card__bg -->
-                        <div class="loan-reasons-one__card__content">
-                            <h3 class="loan-reasons-one__card__title">Home improvement</h3>
-                            <!-- /.loan-reasons-one__card__title -->
-                            <p class="loan-reasons-one__card__text">{{$reason->description3}}</p><!-- /.loan-reasons-one__card__text -->
-                        </div><!-- /.loan-reasons-one__card__content -->
-                    </div><!-- /.loan-reasons-one__card -->
-                </div><!-- /.col-lg-4 col-md-6 -->
-            </div><!-- /.row gutter-y-30 -->
-        </div><!-- /.container -->
-    </section><!-- /.loan-reasons-one section-space -->
+    @include('front.partials.reason', ['reason', $reason])
 
     <section class="download-app-one" id="download-app">
         <div class="download-app-one__bg"
@@ -760,264 +569,7 @@
         <div class="download-app-one__shape"></div><!-- /.download-app-one__shape -->
     </section><!-- /.download-app-one -->
 
-    <section class="testimonials-two @@extraClassName" id="testimonials">
-        <div class="container">
-            <div class="row gutter-y-50 align-items-center">
-                <div class="col-xl-6">
-                    <div class="testimonials-two__content">
-                        <div class="sec-title @@extraClassName">
-                            <div class="sec-title__top">
-                                <div class="sec-title__shape">
-                                    <div class="sec-title__shape__one"></div><!-- /.sec-title__shape__one -->
-                                    <div class="sec-title__shape__two"></div><!-- /.sec-title__shape__one -->
-                                </div><!-- /.sec-title__shape -->
-                                <h6 class="sec-title__tagline">our testimonials</h6><!-- /.sec-title__tagline -->
-                            </div><!-- /.sec-title__top -->
-                            <h3 class="sec-title__title">peoples talk about <br> easilon service</h3>
-                            <!-- /.sec-title__title -->
-                        </div><!-- /.sec-title -->
-                        <div class="testimonials-two__custome-navs"></div><!-- /.testimonials-two__custome-navs -->
-                    </div><!-- /.testimonials-two__content -->
-                </div><!-- /.col-xl-6 -->
-                <div class="col-xl-6">
-                    <div class="easilon-stretch-element-inside-column">
-                        <div class="testimonials-two__carousel easilon-owl__carousel owl-theme owl-carousel"
-                             data-owl-options='{
-                        "items": 1,
-                        "margin": 30,
-                        "smartSpeed": 700,
-                        "loop":true,
-                        "autoplay": 6000,
-                        "stagePadding": 186,
-                        "nav":true,
-                        "navContainer": ".testimonials-two__custome-navs",
-                        "dots":false,
-                        "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
-                        "responsive":{
-                            "0":{
-                                "items": 1,
-                                "stagePadding": 0
-                            },
-                            "768":{
-                                "items": 1,
-                                "stagePadding": 100
-                            },
-                            "992":{
-                                "items": 1,
-                                "stagePadding": 186
-                            },
-                            "1200":{
-                                "items": 1,
-                                "stagePadding": 40
-                            },
-                            "1350":{
-                                "items": 1,
-                                "stagePadding": 60
-                            },
-                            "1400":{
-                                "items": 1,
-                                "stagePadding": 90
-                            },
-                            "1600":{
-                                "items": 1,
-                                "stagePadding": 130
-                            },
-                            "1800":{
-                                "items": 1,
-                                "stagePadding": 168
-                            }
-                        }
-                        }'>
-                            <div class="item">
-                                <div class="testimonial-card-two @@extraClassName">
-                                    <div class="testimonial-card-two__inner">
-                                        <div class="testimonial-card-two__top">
-                                            <div class="testimonial-card-two__image">
-                                                <img src="assets/images/testimonials/testimonial-2-1.jpg"
-                                                     alt="Michael G. Ware">
-                                            </div><!-- /.testimonial-card-two__image -->
-                                            <svg class="testimonial-card-two__icon" viewBox="0 0 56 41" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M0 25.4448H11.1378L3.71254 40.2951H14.8503L22.2756 25.4448V3.16919H0V25.4448Z" />
-                                                <path
-                                                    d="M29.7004 3.16919V25.4448H40.8382L33.413 40.2951H44.5508L51.976 25.4448V3.16919H29.7004Z" />
-                                                <path
-                                                    d="M14.307 21.7756H3.66919V0.5H24.9448V22.1576L17.7105 36.6259H7.69075L14.7542 22.4992L15.116 21.7756H14.307Z" />
-                                                <path
-                                                    d="M44.0082 21.7756H33.3704V0.5H54.646V22.1576L47.4117 36.6259H37.3919L44.4554 22.4992L44.8172 21.7756H44.0082Z" />
-                                            </svg><!-- /.testimonial-card-two__icon -->
-                                        </div><!-- /.testimonial-card-two__top -->
-                                        <p class="testimonial-card-two__quote">I recently worked with
-                                            <span>easilon</span> for my home renovation project, and I couldn't be
-                                            happier with the results. From the moment I walked into</p>
-                                        <!-- /.testimonial-card-two__quote -->
-                                        <div class="testimonial-card-two__bottom">
-                                            <div class="testimonial-card-two__identity">
-                                                <h4 class="testimonial-card-two__name">Michael G. Ware</h4>
-                                                <!-- /.testimonial-card-two__name -->
-                                                <p class="testimonial-card-two__designation">managing director</p>
-                                                <!-- /.testimonial-card-two__designation -->
-                                            </div><!-- /.testimonial-card-two__identity -->
-                                            <div class="easilon-ratings">
-                                                    <span class="easilon-ratings__icon">
-                                                        <i class="fa fa-star"></i>
-                                                    </span><!-- /.easilon-ratings__icon -->
-                                                <span class="easilon-ratings__icon">
-                                                        <i class="fa fa-star"></i>
-                                                    </span><!-- /.easilon-ratings__icon -->
-                                                <span class="easilon-ratings__icon">
-                                                        <i class="fa fa-star"></i>
-                                                    </span><!-- /.easilon-ratings__icon -->
-                                                <span class="easilon-ratings__icon">
-                                                        <i class="fa fa-star"></i>
-                                                    </span><!-- /.easilon-ratings__icon -->
-                                                <span class="easilon-ratings__icon">
-                                                        <i class="fa fa-star"></i>
-                                                    </span><!-- /.easilon-ratings__icon -->
-                                            </div><!-- /.product-ratings -->
-                                        </div><!-- /.testimonial-card-two__bottom -->
-                                    </div><!-- /.testimonial-card-two__inner -->
-                                </div><!-- /.testimonial-card-two -->
-                            </div><!-- /.item -->
-                            <div class="item">
-                                <div class="testimonial-card-two @@extraClassName">
-                                    <div class="testimonial-card-two__inner">
-                                        <div class="testimonial-card-two__top">
-                                            <div class="testimonial-card-two__image">
-                                                <img src="assets/images/testimonials/testimonial-2-2.jpg"
-                                                     alt="Mike Hardson">
-                                            </div><!-- /.testimonial-card-two__image -->
-                                            <svg class="testimonial-card-two__icon" viewBox="0 0 56 41" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M0 25.4448H11.1378L3.71254 40.2951H14.8503L22.2756 25.4448V3.16919H0V25.4448Z" />
-                                                <path
-                                                    d="M29.7004 3.16919V25.4448H40.8382L33.413 40.2951H44.5508L51.976 25.4448V3.16919H29.7004Z" />
-                                                <path
-                                                    d="M14.307 21.7756H3.66919V0.5H24.9448V22.1576L17.7105 36.6259H7.69075L14.7542 22.4992L15.116 21.7756H14.307Z" />
-                                                <path
-                                                    d="M44.0082 21.7756H33.3704V0.5H54.646V22.1576L47.4117 36.6259H37.3919L44.4554 22.4992L44.8172 21.7756H44.0082Z" />
-                                            </svg><!-- /.testimonial-card-two__icon -->
-                                        </div><!-- /.testimonial-card-two__top -->
-                                        <p class="testimonial-card-two__quote">Deploy encourage & support business
-                                            growth. Everyone thinks the soup tastes better after pissed in it in an
-                                            ideal world, and we need</p><!-- /.testimonial-card-two__quote -->
-                                        <div class="testimonial-card-two__bottom">
-                                            <div class="testimonial-card-two__identity">
-                                                <h4 class="testimonial-card-two__name">Mike Hardson</h4>
-                                                <!-- /.testimonial-card-two__name -->
-                                                <p class="testimonial-card-two__designation">managing director</p>
-                                                <!-- /.testimonial-card-two__designation -->
-                                            </div><!-- /.testimonial-card-two__identity -->
-                                            <div class="easilon-ratings">
-                                                    <span class="easilon-ratings__icon">
-                                                        <i class="fa fa-star"></i>
-                                                    </span><!-- /.easilon-ratings__icon -->
-                                                <span class="easilon-ratings__icon">
-                                                        <i class="fa fa-star"></i>
-                                                    </span><!-- /.easilon-ratings__icon -->
-                                                <span class="easilon-ratings__icon">
-                                                        <i class="fa fa-star"></i>
-                                                    </span><!-- /.easilon-ratings__icon -->
-                                                <span class="easilon-ratings__icon">
-                                                        <i class="fa fa-star"></i>
-                                                    </span><!-- /.easilon-ratings__icon -->
-                                                <span class="easilon-ratings__icon">
-                                                        <i class="fa fa-star"></i>
-                                                    </span><!-- /.easilon-ratings__icon -->
-                                            </div><!-- /.product-ratings -->
-                                        </div><!-- /.testimonial-card-two__bottom -->
-                                    </div><!-- /.testimonial-card-two__inner -->
-                                </div><!-- /.testimonial-card-two -->
-                            </div><!-- /.item -->
-                            <div class="item">
-                                <div class="testimonial-card-two @@extraClassName">
-                                    <div class="testimonial-card-two__inner">
-                                        <div class="testimonial-card-two__top">
-                                            <div class="testimonial-card-two__image">
-                                                <img src="assets/images/testimonials/testimonial-2-3.jpg"
-                                                     alt="Judith White">
-                                            </div><!-- /.testimonial-card-two__image -->
-                                            <svg class="testimonial-card-two__icon" viewBox="0 0 56 41" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M0 25.4448H11.1378L3.71254 40.2951H14.8503L22.2756 25.4448V3.16919H0V25.4448Z" />
-                                                <path
-                                                    d="M29.7004 3.16919V25.4448H40.8382L33.413 40.2951H44.5508L51.976 25.4448V3.16919H29.7004Z" />
-                                                <path
-                                                    d="M14.307 21.7756H3.66919V0.5H24.9448V22.1576L17.7105 36.6259H7.69075L14.7542 22.4992L15.116 21.7756H14.307Z" />
-                                                <path
-                                                    d="M44.0082 21.7756H33.3704V0.5H54.646V22.1576L47.4117 36.6259H37.3919L44.4554 22.4992L44.8172 21.7756H44.0082Z" />
-                                            </svg><!-- /.testimonial-card-two__icon -->
-                                        </div><!-- /.testimonial-card-two__top -->
-                                        <p class="testimonial-card-two__quote">Churning anomalies we don't want to
-                                            boil the ocean hit the ground running, and corporate synergy, and can
-                                            you put it into a banner</p><!-- /.testimonial-card-two__quote -->
-                                        <div class="testimonial-card-two__bottom">
-                                            <div class="testimonial-card-two__identity">
-                                                <h4 class="testimonial-card-two__name">Judith White</h4>
-                                                <!-- /.testimonial-card-two__name -->
-                                                <p class="testimonial-card-two__designation">managing director</p>
-                                                <!-- /.testimonial-card-two__designation -->
-                                            </div><!-- /.testimonial-card-two__identity -->
-                                            <div class="easilon-ratings">
-                                                    <span class="easilon-ratings__icon">
-                                                        <i class="fa fa-star"></i>
-                                                    </span><!-- /.easilon-ratings__icon -->
-                                                <span class="easilon-ratings__icon">
-                                                        <i class="fa fa-star"></i>
-                                                    </span><!-- /.easilon-ratings__icon -->
-                                                <span class="easilon-ratings__icon">
-                                                        <i class="fa fa-star"></i>
-                                                    </span><!-- /.easilon-ratings__icon -->
-                                                <span class="easilon-ratings__icon">
-                                                        <i class="fa fa-star"></i>
-                                                    </span><!-- /.easilon-ratings__icon -->
-                                                <span class="easilon-ratings__icon">
-                                                        <i class="fa fa-star"></i>
-                                                    </span><!-- /.easilon-ratings__icon -->
-                                            </div><!-- /.product-ratings -->
-                                        </div><!-- /.testimonial-card-two__bottom -->
-                                    </div><!-- /.testimonial-card-two__inner -->
-                                </div><!-- /.testimonial-card-two -->
-                            </div><!-- /.item -->
-                        </div><!-- /.testimonials-two__carousel -->
-                    </div><!-- /.easilon-stretch-element-inside-column -->
-                </div><!-- /.col-xl-6 -->
-            </div><!-- /.row gutter-y-50 -->
-        </div><!-- /.container -->
-    </section><!-- /.testimonials-two -->
+    @include('front.partials.testimonial', ['testimonial',$testimonials])
 
-    <section class="quick-loan-one">
-        <div class="container">
-            <div class="quick-loan-one__inner wow fadeInUp" data-wow-duration="1500ms">
-                <div class="quick-loan-one__bg">
-                    <div class="quick-loan-one__bg__inner"
-                         style="background-image: url(assets/images/resources/quick-loan-1-1-.jpg);"></div>
-                    <!-- /.quick-loan-one__bg__inner -->
-                </div><!-- /.quick-loan-one__bg -->
-                <div class="quick-loan-one__content">
-                    <div class="sec-title @@extraClassName">
-                        <div class="sec-title__top">
-                            <div class="sec-title__shape">
-                                <div class="sec-title__shape__one"></div><!-- /.sec-title__shape__one -->
-                                <div class="sec-title__shape__two"></div><!-- /.sec-title__shape__one -->
-                            </div><!-- /.sec-title__shape -->
-                            <h6 class="sec-title__tagline">get a quick loan</h6><!-- /.sec-title__tagline -->
-                        </div><!-- /.sec-title__top -->
-                        <h3 class="sec-title__title">Get a Business Loans Quickly</h3><!-- /.sec-title__title -->
-                    </div><!-- /.sec-title -->
-                    <a href="#" class="easilon-btn easilon-btn--white">
-                        <span>Apply for loan</span>
-                        <span class="easilon-btn__icon">
-                                <i class="icon-double-right-arrow"></i>
-                            </span>
-                    </a><!-- /.easilon-btn -->
-                    <img src="assets/images/shapes/quick-loan-money-1-1.png" alt="money"
-                         class="quick-loan-one__money">
-                </div><!-- /.quick-loan-one__content -->
-            </div><!-- /.quick-loan-one__inner -->
-        </div><!-- /.container -->
-    </section><!-- /.quick-loan-one -->
+    @include('front.partials.quick-loan')
 @endsection

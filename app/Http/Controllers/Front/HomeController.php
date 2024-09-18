@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use App\Models\Announcement;
+use App\Models\Post;
 use App\Models\ProcurementDocument;
 use App\Models\Project;
 use App\Models\ProjectMilestone;
@@ -28,7 +29,9 @@ class HomeController extends Controller
         $about = SponsoringAgency::first();
         $choose = ProcurementDocument::first();
         $reason = ProjectMilestone::first();
-        return view('front.index', compact('banners', 'about', 'choose', 'reason'));
+        $services = Project::all();
+        $testimonials = Announcement::all();
+        return view('front.index', compact('banners', 'about', 'choose', 'reason', 'services', 'testimonials'));
     }
 
     public function contact()
@@ -39,7 +42,10 @@ class HomeController extends Controller
 
     public function about(){
         $about = SponsoringAgency::first();
-        return view('front.about', compact('about'));
+        $choose = ProcurementDocument::first();
+        $reason = ProjectMilestone::first();
+        $testimonials = Announcement::all();
+        return view('front.about', compact('about', 'choose', 'reason','testimonials'));
     }
 
     public function calculator(){
@@ -56,6 +62,11 @@ class HomeController extends Controller
 
     public function details(){
         return view('front.loan-details');
+    }
+
+    public function faq(){
+        $faqs = Post::all();
+        return view('front.faq', compact('faqs'));
     }
 
 }

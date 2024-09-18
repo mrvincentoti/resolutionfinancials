@@ -24,16 +24,37 @@ class ContractRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            'project_id' => [],
-            'redacted_ppp_agreement' => [],
-            'financial_structure' => [],
-            'risk' => [],
-            'government_support' => [],
-            'tariff' => [],
-            'termination_provisions' => [],
-            'renegotiations' => [],
+        $rules = [
+            'status_id' => [],
+            'fname' => ['required'],
+            'lname' => ['required'],
+            'mname' => [],
+            'house_number' => [],
+            'gender' => [],
+            'email' => [],
+            'mobile' => ['required'],
+            'street' => [],
+            'state' => [],
+            'lga' => [],
+            'account_statement' => [],
+            'work_id' => [],
+            'employment_letter' => [],
+            'utility_bill' => [],
+            'passport' => [],
+            'application_form' => [],
         ];
+
+        if ($this->isMethod('post')) {
+            // Only require document on create (POST)
+            $rules['account_statement'] = ['image', 'mimes:jpeg,png,jpg', 'max:2048'];
+            $rules['work_id'] = ['image', 'mimes:jpeg,png,jpg', 'max:2048'];
+           // $rules['employment_letter'] = ['image', 'mimes:jpeg,png,jpg', 'max:2048'];
+            $rules['utility_bill'] = ['image', 'mimes:jpeg,png,jpg', 'max:2048'];
+            $rules['passport'] = ['image', 'mimes:jpeg,png,jpg', 'max:2048'];
+            //$rules['application_form'] = ['image', 'mimes:jpeg,png,jpg', 'max:2048'];
+        }
+
+        return $rules;
     }
 
     public function prepareForValidation()

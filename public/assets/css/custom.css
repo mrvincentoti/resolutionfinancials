@@ -1,0 +1,43 @@
+/* Hide the original file input */
+.apply-loan__form__control input[type="file"] {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+    width: 0;
+    height: 0;
+}
+
+/* Styling the custom file upload button */
+.custom-file-upload {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-upload-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.custom-upload-button:hover {
+    background-color: #0056b3;
+}
+
+/* Styling the file name display */
+.file-name {
+    margin-left: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Optional: Adjust the label style */
+.apply-loan__form__control label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+    color: #333;
+}

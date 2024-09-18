@@ -22,220 +22,200 @@
     </section><!-- /.page-header -->
 
     <section class="apply-loan section-space">
-        <div class="container">
-            <form action="#" class="apply-loan__form">
-                <!-- Loan Details -->
-                <div class="apply-loan__details">
-                    <h2 class="apply-loan__details__title">Loan Details</h2>
-                    <div class="apply-loan__form__row row">
-                        <div class="col-md-6">
-                            <div class="apply-loan__form__control">
-                                <label for="loan-amount">Loan Amount*</label>
-                                <input type="text" id="loan-amount" placeholder="&#8358;25000.00" required="">
-                            </div><!-- /.pply-loan__form__control -->
-                        </div>
-                        <div class="col-md-6">
-                            <div class="apply-loan__form__control">
-                                <label for="monthly-income">Monthly Income*</label>
-                                <input type="text" id="monthly-income" placeholder="&#8358;1000.00" required="">
-                            </div><!-- /.pply-loan__form__control -->
-                        </div>
-                        <div class="col-md-6">
-                            <div class="apply-loan__form__control">
-                                <label>Purpose of Loan*</label>
-                                <select class="selectpicker" aria-label="Default select example">
-                                    <option selected="">Purpose of Loan</option>
-                                    <option value="1">home loan</option>
-                                    <option value="2">bike loan</option>
-                                    <option value="3">business loan</option>
-                                    <option value="4">education loan</option>
-                                    <option value="5">study loan</option>
-                                    <option value="6">property loan</option>
-                                </select>
-                            </div><!-- /.pply-loan__form__control -->
-                        </div>
-                        <div class="col-md-6">
-                            <div class="apply-loan__form__control">
-                                <label>Loan Years*</label>
-                                <select class="selectpicker" aria-label="Default select example">
-                                    <option selected="">Loan Years</option>
-                                    <option value="1">1 years</option>
-                                    <option value="2">2 years</option>
-                                    <option value="3">3 years</option>
-                                    <option value="4">4 years</option>
-                                    <option value="5">5 years</option>
-                                </select>
-                            </div><!-- /.pply-loan__form__control -->
-                        </div>
-                    </div><!-- /.pply-loan__form -->
-                </div><!-- /.apply-loan__details -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <!-- Loan Details -->
+                    <div class="apply-loan__details">
+                        <h2 class="apply-loan__details__title">How to apply for a Loan</h2>
+                        <div class="apply-loan__form__row row">
+                            <div class="wow fadeInUp animated" data-wow-duration="1500ms" data-wow-delay="00ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
+                                <ul class="list-unstyled service-details__list">
+                                    <li>
+                                        <span class="service-details__list__icon"><i class="icon-check"></i></span>
+                                        Click <a href="{{route('apply')  }}}">here</a> to download the application form.
+                                    </li>
+                                    <li>
+                                        <span class="service-details__list__icon"><i class="icon-check"></i></span>
+                                        Fill the application form you downloaded
+                                    </li>
+                                    <li>
+                                        <span class="service-details__list__icon"><i class="icon-check"></i></span>
+                                        Complete the online application form and upload all the necessary documents.
+                                    </li>
+                                    <li>
+                                        <span class="service-details__list__icon"><i class="icon-check"></i></span>
+                                        Click the submit button.
+                                    </li>
+                                </ul><!-- /.list-unstyled team-details__list -->
+                            </div>
+                        </div><!-- /.pply-loan__form -->
+                    </div><!-- /.apply-loan__details -->
+                </div>
+                <div class="col-md-8">
+                    <form method="POST" action="{{ route('apply.post') }}" enctype="multipart/form-data" class="apply-loan__form">
+                        @csrf
+                        <!-- Loan Details -->
+                        <!-- Personal Details -->
+                        <div class="apply-loan__details">
+                            <h2 class="apply-loan__details__title">Online application form</h2>
+                            @if ($errors->any())
+                                @foreach ($errors->all() as $error)
+                                    <div class="alert alert-danger text-center" role="alert">
+                                        {{$error}}
+                                    </div>
+                                @endforeach
+                            @endif
+                            @if(session()->has('message'))
+                                <div class="alert alert-success text-center">
+                                    {{ session()->get('message') }}
+                                </div>
+                            @endif
+                            <div class="apply-loan__form__row row">
+                                <div class="col-md-6">
+                                    <div class="apply-loan__form__control">
+                                        <label for="full-name">First Name*</label>
+                                        <input type="text" id="fname" name="fname" placeholder="First Name" required="">
+                                    </div><!-- /.pply-loan__form__control -->
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="apply-loan__form__control">
+                                        <label for="full-name">Last Name*</label>
+                                        <input type="text" id="lname" name="lname" placeholder="Last Name" required="">
+                                    </div><!-- /.pply-loan__form__control -->
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="apply-loan__form__control">
+                                        <label>Gender*</label>
+                                        <select name="gender" class="selectpicker" aria-label="Default select example">
+                                            <option selected="">Marital Status</option>
+                                            <option value="M">Male</option>
+                                            <option value="F">Female</option>
+                                        </select>
+                                    </div><!-- /.pply-loan__form__control -->
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="apply-loan__form__control">
+                                        <label for="enter-email">Email*</label>
+                                        <input type="email" id="enter-email" name="email" placeholder="Enter Email" required="">
+                                    </div><!-- /.pply-loan__form__control -->
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="apply-loan__form__control">
+                                        <label for="mobile-number">Mobile Number*</label>
+                                        <input type="tel" id="mobile-number" name="mobile" placeholder="Mobile Number" required="">
+                                    </div><!-- /.pply-loan__form__control -->
+                                </div>
+                            </div><!-- /.pply-loan__form -->
+                        </div><!-- /.apply-loan__details -->
 
-                <!-- Personal Details -->
-                <div class="apply-loan__details">
-                    <h2 class="apply-loan__details__title">Personal Details</h2>
-                    <div class="apply-loan__form__row row">
-                        <div class="col-md-6">
-                            <div class="apply-loan__form__control">
-                                <label for="full-name">Full Name*</label>
-                                <input type="text" id="full-name" placeholder="Full Name" required="">
-                            </div><!-- /.pply-loan__form__control -->
-                        </div>
-                        <div class="col-md-6">
-                            <div class="apply-loan__form__control">
-                                <label for="enter-email">Email*</label>
-                                <input type="email" id="enter-email" placeholder="Enter Email" required="">
-                            </div><!-- /.pply-loan__form__control -->
-                        </div>
-                        <div class="col-md-6">
-                            <div class="apply-loan__form__control">
-                                <label for="mobile-number">Mobile Number*</label>
-                                <input type="tel" id="mobile-number" placeholder="Mobile Number" required="">
-                            </div><!-- /.pply-loan__form__control -->
-                        </div>
-                        <div class="col-md-6">
-                            <div class="apply-loan__form__control">
-                                <label>Marital Status*</label>
-                                <select class="selectpicker" aria-label="Default select example">
-                                    <option selected="">Marital Status</option>
-                                    <option value="1">married</option>
-                                    <option value="2">single</option>
-                                    <option value="3">widowed</option>
-                                    <option value="4">divorced</option>
-                                </select>
-                            </div><!-- /.pply-loan__form__control -->
-                        </div>
-                        <div class="col-md-6">
-                            <div class="apply-loan__form__control">
-                                <label for="datepicker">Birth Date*</label>
-                                <div class="apply-loan__form__date">
-                                    <input type="text" name="date" placeholder="DD / MM / YY" id="datepicker" class="easilon-datepicker">
-                                    <span class="apply-loan__form__date__icon">
-                                            <i class="icon-down"></i>
-                                        </span><!-- /.apply-loan__form__date__icon -->
-                                </div><!-- /.apply-loan__form__field -->
-                            </div><!-- /.apply-loan__form__control -->
-                        </div>
-                        <div class="col-md-6">
-                            <div class="apply-loan__form__control">
-                                <label>Number Of Dependents*</label>
-                                <select class="selectpicker" aria-label="Default select example">
-                                    <option selected="">Number Of Dependents</option>
-                                    <option value="1">1 depends</option>
-                                    <option value="2">2 depends</option>
-                                    <option value="3">3 depends</option>
-                                    <option value="4">4 depends</option>
-                                    <option value="5">5 depends</option>
-                                </select>
-                            </div><!-- /.pply-loan__form__control -->
-                        </div>
-                    </div><!-- /.pply-loan__form -->
-                </div><!-- /.apply-loan__details -->
+                        <!-- Address Details -->
+                        <div class="apply-loan__details">
+                            <h2 class="apply-loan__details__title">Address Details</h2>
+                            <div class="apply-loan__form__row row">
+                                <div class="col-md-6">
+                                    <div class="apply-loan__form__control">
+                                        <label for="house-info">House No/Name*</label>
+                                        <input type="text" id="house-info" name="house_number" placeholder="House No/Name">
+                                    </div><!-- /.pply-loan__form__control -->
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="apply-loan__form__control">
+                                        <label for="street">Street*</label>
+                                        <input type="text" id="street" name="street" required="">
+                                    </div><!-- /.pply-loan__form__control -->
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="apply-loan__form__control">
+                                        <label for="house-info">State*</label>
+                                        <input type="text" id="state" name="state" placeholder="State" required="">
+                                    </div><!-- /.pply-loan__form__control -->
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="apply-loan__form__control">
+                                        <label for="city">LGA*</label>
+                                        <input type="text" id="lga" name="lga" placeholder="LGA" required="">
+                                    </div><!-- /.pply-loan__form__control -->
+                                </div>
+                            </div><!-- /.pply-loan__form -->
+                        </div><!-- /.apply-loan__details -->
 
-                <!-- Address Details -->
-                <div class="apply-loan__details">
-                    <h2 class="apply-loan__details__title">Address Details</h2>
-                    <div class="apply-loan__form__row row">
-                        <div class="col-md-6">
-                            <div class="apply-loan__form__control">
-                                <label for="house-info">House No/Name*</label>
-                                <input type="text" id="house-info" placeholder="House No/Name" required="">
-                            </div><!-- /.pply-loan__form__control -->
-                        </div>
-                        <div class="col-md-6">
-                            <div class="apply-loan__form__control">
-                                <label for="street">Street*</label>
-                                <input type="text" id="street" placeholder="Street" required="">
-                            </div><!-- /.pply-loan__form__control -->
-                        </div>
-                        <div class="col-md-6">
-                            <div class="apply-loan__form__control">
-                                <label for="city">City*</label>
-                                <input type="text" id="city" placeholder="City Name" required="">
-                            </div><!-- /.pply-loan__form__control -->
-                        </div>
-                        <div class="col-md-6">
-                            <div class="apply-loan__form__control">
-                                <label>State*</label>
-                                <select class="selectpicker" aria-label="Default select example">
-                                    <option selected="">State</option>
-                                    <option value="1">Barisal Division</option>
-                                    <option value="2">Chittagong Division</option>
-                                    <option value="3">Dhaka Division</option>
-                                    <option value="4">Khulna Division</option>
-                                    <option value="5">Rajshahi Division</option>
-                                    <option value="6">Rangpur Division</option>
-                                    <option value="7">Sylhet Division</option>
-                                </select>
-                            </div><!-- /.pply-loan__form__control -->
-                        </div>
-                        <div class="col-md-6">
-                            <div class="apply-loan__form__control">
-                                <label>Country*</label>
-                                <select class="selectpicker" aria-label="Default select example">
-                                    <option selected="">Country</option>
-                                    <option value="1">Bangladesh</option>
-                                    <option value="2">Afghanistan</option>
-                                    <option value="3">Russia</option>
-                                    <option value="4">Indonesia</option>
-                                    <option value="5">Jordan</option>
-                                    <option value="6">United Kingdom</option>
-                                    <option value="7">United States of America</option>
-                                </select>
-                            </div><!-- /.pply-loan__form__control -->
-                        </div>
-                        <div class="col-md-6">
-                            <div class="apply-loan__form__control">
-                                <label for="pin-code">Pin Code*</label>
-                                <input type="text" id="pin-code" placeholder="Pin Code" required="">
-                            </div><!-- /.pply-loan__form__control -->
-                        </div>
-                    </div><!-- /.pply-loan__form -->
-                </div><!-- /.apply-loan__details -->
-
-                <!-- Other Details -->
-                <div class="apply-loan__details">
-                    <h2 class="apply-loan__details__title">Other Details</h2>
-                    <div class="apply-loan__form__row row">
-                        <div class="col-md-6">
-                            <div class="apply-loan__form__control">
-                                <label for="employment-industry">Employment Industry*</label>
-                                <input type="text" id="employment-industry" placeholder="Employment Industry" required="">
-                            </div><!-- /.pply-loan__form__control -->
-                        </div>
-                        <div class="col-md-6">
-                            <div class="apply-loan__form__control">
-                                <label for="employer-name">Employer Name*</label>
-                                <input type="text" id="employer-name" placeholder="Employer Name" required="">
-                            </div><!-- /.pply-loan__form__control -->
-                        </div>
-                        <div class="col-md-6">
-                            <div class="apply-loan__form__control">
-                                <label for="employer-status">Employer Status*</label>
-                                <input type="text" id="employer-status" placeholder="Employer Status" required="">
-                            </div><!-- /.pply-loan__form__control -->
-                        </div>
-                        <div class="col-md-6">
-                            <div class="apply-loan__form__control">
-                                <label>Work Phone Number*</label>
-                                <select class="selectpicker" aria-label="Default select example">
-                                    <option selected="">Work Phone Number</option>
-                                    <option value="1">(206) 342-8631</option>
-                                    <option value="2">(717) 550-1675</option>
-                                    <option value="3">(248) 762-0356</option>
-                                    <option value="4">(252) 258-3799</option>
-                                    <option value="5">(209) 300-2557</option>
-                                </select>
-                            </div><!-- /.pply-loan__form__control -->
-                        </div>
-                    </div><!-- /.pply-loan__form -->
-                </div><!-- /.apply-loan__details -->
-                <button type="submit" class="apply-loan__form__btn easilon-btn">
-                    <span>submit now</span>
-                    <span class="easilon-btn__icon">
+                        <!-- Other Details -->
+                        <div class="apply-loan__details">
+                            <h2 class="apply-loan__details__title">Documents</h2>
+                            <div class="apply-loan__form__row row">
+                                <div class="col-md-6">
+                                    <div class="apply-loan__form__control file-input-wrapper mb-1">
+                                        <label for="account_statement">Account Statement</label>
+                                        <button type="button"
+                                                class="btn btn-primary font-bold py-2 px-4 rounded w-full text-center">
+                                            Select File
+                                        </button>
+                                        <input type="file" id="account_statement" name="account_statement">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="apply-loan__form__control file-input-wrapper mb-1">
+                                        <label for="work_id">Work ID</label>
+                                        <button type="button"
+                                                class="btn btn-primary font-bold py-2 px-4 rounded w-full text-center">
+                                            Select File
+                                        </button>
+                                        <input type="file" id="work_id" name="work_id">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="apply-loan__form__control file-input-wrapper mb-1">
+                                        <label for="employment_letter">Employment Letter</label>
+                                        <button type="button"
+                                                class="btn btn-primary font-bold py-2 px-4 rounded w-full text-center">
+                                            Select File
+                                        </button>
+                                        <input type="file" id="employment_letter" name="employment_letter">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="apply-loan__form__control file-input-wrapper mb-1">
+                                        <label for="utility_bill">Utility Bill</label>
+                                        <button type="button"
+                                                class="btn btn-primary font-bold py-2 px-4 rounded w-full text-center">
+                                            Select File
+                                        </button>
+                                        <input type="file" id="utility_bill" name="utility_bill">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="apply-loan__form__control file-input-wrapper mb-1">
+                                        <label for="passport">Passport Photograph</label>
+                                        <button type="button"
+                                                class="btn btn-primary font-bold py-2 px-4 rounded w-full text-center">
+                                            Select File
+                                        </button>
+                                        <input type="file" id="passport_photograph" name="passport">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="apply-loan__form__control file-input-wrapper mb-1">
+                                        <label for="application_form">Application Form</label>
+                                        <button type="button"
+                                                class="btn btn-primary font-bold py-2 px-4 rounded w-full text-center">
+                                            Select File
+                                        </button>
+                                        <input type="file" id="application_form" name="application_form">
+                                    </div>
+                                </div>
+                            </div><!-- /.pply-loan__form -->
+                        </div><!-- /.apply-loan__details -->
+                        <button type="submit" class="apply-loan__form__btn easilon-btn">
+                            <span>submit now</span>
+                            <span class="easilon-btn__icon">
                             <i class="icon-double-right-arrow"></i>
                         </span>
-                </button><!-- /.apply-loan__form__btn easilon-btn -->
-            </form><!-- /.apply-loan__form -->
+                        </button><!-- /.apply-loan__form__btn easilon-btn -->
+                    </form><!-- /.apply-loan__form -->
+                </div>
+            </div>
         </div><!-- /.container -->
     </section><!-- /.apply-loan section-space -->
+    @include('front.partials.quick-loan')
 @endsection

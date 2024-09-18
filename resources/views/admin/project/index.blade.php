@@ -10,7 +10,7 @@
                 </p>
                 @can('create', 'App\Models\Project')
                     <button class="px-4 py-1 text-white font-light tracking-wider bg-blue-600 rounded mb-2"
-                        onclick="location.href='{{ route('admin.project.create') }}';">Add Project</button>
+                        onclick="location.href='{{ route('admin.project.create') }}';">Add Service</button>
                 @endcan
                 <div class="bg-white overflow-auto">
                     <table class="text-left w-full border-collapse">
@@ -43,7 +43,7 @@
                             @foreach ($projects as $project)
                                 <tr class="hover:bg-grey-lighter">
                                     <td class="py-4 px-6 border-b border-grey-light">{{ $project->id }}</td>
-                                    <td class="py-4 px-6 border-b border-grey-light">{{ $project->project_title }}</td>       
+                                    <td class="py-4 px-6 border-b border-grey-light">{{ $project->project_title }}</td>
                                     <td class="py-4 px-6 border-b border-grey-light">
                                         @can('update', $project)
                                             <button
@@ -51,10 +51,10 @@
                                                 type="button"
                                                 onclick="location.href='{{ route('admin.project.edit', $project->id) }}';">Edit</button>
                                         @endcan
-                                        @can('show', $project)
-                                            <button class="px-4 py-1 text-white font-light tracking-wider bg-green-600 rounded" type="button"
-                                                onclick="location.href='{{ route('admin.project.show', $project->id) }}';">View</button>
-                                        @endcan
+{{--                                        @can('show', $project)--}}
+{{--                                            <button class="px-4 py-1 text-white font-light tracking-wider bg-green-600 rounded" type="button"--}}
+{{--                                                onclick="location.href='{{ route('admin.project.show', $project->id) }}';">View</button>--}}
+{{--                                        @endcan--}}
                                         @can('delete', $project)
                                             <form type="submit" method="POST" style="display: inline"
                                                 action="{{ route('admin.project.destroy', $project->id) }}"

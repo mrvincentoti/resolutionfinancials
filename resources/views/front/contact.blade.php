@@ -88,6 +88,7 @@
                             <div class="form-one__control form-one__control--full">
                                 <textarea name="message" placeholder="Write Message"></textarea>
                             </div><!-- /.form-one__control -->
+                            <div class="g-recaptcha" data-sitekey="6Lfoqz4qAAAAAEd_e7OhI9jnsHfJFyVrD3BbCdKC" data-action="LOGIN"></div>
                             <div class="form-one__control form-one__control--full">
                                 <button type="submit" class="contact-one__form__btn easilon-btn"><span>send message</span></button>
                             </div><!-- /.form-one__control -->
@@ -107,4 +108,5 @@
         </div><!-- /.container-fluid -->
     </section><!-- /.contact-map -->
 
+    @include('front.partials.quick-loan')
 @endsection

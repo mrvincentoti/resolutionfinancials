@@ -35,9 +35,9 @@ class AnnouncementRequest extends FormRequest
 
         $rules = [
             'project_id' => [],
-            'announcement_date' => ['required'],
-            'title' => ['required'],
-            'slug' => ['required'],
+            'announcement_date' => [],
+            'title' => [],
+            'slug' => [],
             'announcement_type_id' => [],
             'content' => [],
         ];

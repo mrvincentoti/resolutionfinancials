@@ -11,6 +11,7 @@ use App\Models\Lga;
 use Illuminate\Support\Facades\DB;
 use App\Models\Setting;
 use Illuminate\Support\Facades\Cookie;
+use App\Http\Requests\Admin\ContractRequest;
 
 class ProjectController extends Controller
 {
@@ -78,14 +79,14 @@ class ProjectController extends Controller
 
     public function getProjectBySlug($slug)
     {
-        // I've Pass Slug to Get the Category per it's Slug
-        $project = Project::with(['sector', 'phase','milestones'])->whereSlug($slug)->firstOrFail();
-
-        //$comments = $post->comments;
-        //$post_title = $post->title;
-
-        //dd($project->milestones);
+        $service = Project::where('slug', $slug)->firstOrFail();
+        $otherServices = Project::where('id', '!=', $service->id)->get();
         $settings = Setting::first();
-        return view('front.project.details', compact('project','settings'));
+        return view('front.loan-details', compact('service', 'otherServices', 'settings'));
     }
+
+    public function apply(ContractRequest $request){
+        dd($request);
+    }
+
 }
