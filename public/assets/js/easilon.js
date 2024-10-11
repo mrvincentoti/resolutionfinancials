@@ -70,30 +70,67 @@
         direction: direction
       });
 
-      monthRange.noUiSlider.on("update", function (values, handle) {
+    //   monthRange.noUiSlider.on("update", function (values, handle) {
+    //     (handle ? $(limitFieldMaxMonth) : $(limitFieldMinMonth)).attr("value", values[handle]);
+    //     let loanMoney = limitFieldMinCount.value;
+    //     let interestRatePercent = parseInt(interestRate, 10) / 100;
+    //     let totalPay = loanMoney * interestRatePercent + parseInt(loanMoney, 10);
+    //     let monthlyPay = totalPay / parseInt(values[handle], 10);
+
+    //     loanMonthElm.html(parseInt(values[handle], 10));
+    //     loanPayElm.html(parseInt(monthlyPay, 10));
+    //     loanTotalElm.html(parseInt(totalPay, 10));
+    //   });
+    monthRange.noUiSlider.on("update", function (values, handle) {
         (handle ? $(limitFieldMaxMonth) : $(limitFieldMinMonth)).attr("value", values[handle]);
+
         let loanMoney = limitFieldMinCount.value;
-        let interestRatePercent = parseInt(interestRate, 10) / 100;
-        let totalPay = loanMoney * interestRatePercent + parseInt(loanMoney, 10);
-        let monthlyPay = totalPay / parseInt(values[handle], 10);
+        let interestRateNow = parseInt(interestRate, 10) / 100; // Interest rate as a percentage
+        let loanMonth = parseInt(values[handle], 10); // Tenor in months
 
-        loanMonthElm.html(parseInt(values[handle], 10));
-        loanPayElm.html(parseInt(monthlyPay, 10));
-        loanTotalElm.html(parseInt(totalPay, 10));
-      });
+        // New calculation based on the formula provided
+        let interestPerMonth = loanMoney * interestRateNow; // Interest per month
+        let totalInterestPayable = interestPerMonth * loanMonth; // Total interest payable
+        let totalPrincipalAndInterest = totalInterestPayable + parseInt(loanMoney, 10); // Total principal and interest
+        let repaymentPerMonth = totalPrincipalAndInterest / loanMonth; // Repayment per month
 
-      countRange.noUiSlider.on("update", function (values, handle) {
+        // Update the UI with the new calculated values
+        loanMonthElm.html(loanMonth); // Update months display
+        loanPayElm.html(parseInt(repaymentPerMonth, 10)); // Update monthly payment display
+        loanTotalElm.html(parseInt(totalPrincipalAndInterest, 10)); // Update total payment display
+    });
+
+    //   countRange.noUiSlider.on("update", function (values, handle) {
+    //     (handle ? $(limitFieldMaxCount) : $(limitFieldMinCount)).attr("value", values[handle]);
+
+    //     let loanMonth = limitFieldMinMonth.value;
+    //     let interestRatePercent = parseInt(interestRate, 10) / 100;
+    //     let totalPay = values[handle] * interestRatePercent + parseInt(values[handle], 10);
+    //     let monthlyPay = totalPay / parseInt(loanMonth, 10);
+
+    //     loanMonthElm.html(parseInt(loanMonth, 10));
+    //     loanPayElm.html(parseInt(monthlyPay, 10));
+    //     loanTotalElm.html(parseInt(totalPay, 10));
+    //   });
+
+    countRange.noUiSlider.on("update", function (values, handle) {
         (handle ? $(limitFieldMaxCount) : $(limitFieldMinCount)).attr("value", values[handle]);
 
         let loanMonth = limitFieldMinMonth.value;
-        let interestRatePercent = parseInt(interestRate, 10) / 100;
-        let totalPay = values[handle] * interestRatePercent + parseInt(values[handle], 10);
-        let monthlyPay = totalPay / parseInt(loanMonth, 10);
+        let loanMoney = parseInt(values[handle], 10); // Loan amount
+        let interestRateNow = parseInt(interestRate, 10) / 100; // Interest rate as a percentage
 
-        loanMonthElm.html(parseInt(loanMonth, 10));
-        loanPayElm.html(parseInt(monthlyPay, 10));
-        loanTotalElm.html(parseInt(totalPay, 10));
-      });
+        // New calculation based on the formula provided
+        let interestPerMonth = loanMoney * interestRateNow; // Interest per month
+        let totalInterestPayable = interestPerMonth * loanMonth; // Total interest payable
+        let totalPrincipalAndInterest = totalInterestPayable + loanMoney; // Total principal and interest
+        let repaymentPerMonth = totalPrincipalAndInterest / loanMonth; // Repayment per month
+
+        // Update the UI with the new calculated values
+        loanMonthElm.html(parseInt(loanMonth, 10)); // Update months display
+        loanPayElm.html(parseInt(repaymentPerMonth, 10)); // Update monthly payment display
+        loanTotalElm.html(parseInt(totalPrincipalAndInterest, 10)); // Update total payment display
+    });
 
       let loanMoney = limitFieldMinCount.value;
       let loanMonth = limitFieldMinMonth.value;
