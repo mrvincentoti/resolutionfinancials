@@ -54,7 +54,7 @@
                                         </span><!-- /.contact-one__info__icon -->
                                     <div class="contact-one__info__content">
                                         <h4 class="contact-one__info__title">support email</h4><!-- /.contact-one__info__title -->
-                                        <a href="mailto:info@easilon.com" class="contact-one__info__text">contact@resolutionfinancelimted.com</a><!-- /.contact-one__info__text -->
+                                        <a href="contact@resolutionfinancelimted.com" class="contact-one__info__text">contact@resolutionfinancelimted.com</a><!-- /.contact-one__info__text -->
                                     </div><!-- /.contact-one__info__content -->
                                 </div><!-- /.contact-one__info__item -->
                             </div><!-- /.contact-one__info__inner -->
